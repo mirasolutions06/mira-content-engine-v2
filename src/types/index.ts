@@ -260,6 +260,12 @@ export interface DirectorClipPlan {
   lighting: string;
   colorGrade: string;
   pace: string;
+  /** Auto-detected: does this scene feature a person/model? Used for smart ref filtering. */
+  hasModel?: boolean;
+  /** Auto-detected: does this scene feature the product? Used for smart ref filtering. */
+  hasProduct?: boolean;
+  /** Auto-detected: is this a detail/close-up/hands/texture shot? Includes model refs for skin tone. */
+  isDetail?: boolean;
   /** Director-suggested variation angles for batch storyboard generation */
   variationAngles?: string[];
   /** Photography composition guidance (brand-images mode) */

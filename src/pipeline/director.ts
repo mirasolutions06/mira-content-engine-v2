@@ -36,10 +36,24 @@ BASE OUTPUT SCHEMA (mode-specific fields added below):
   "clips": [
     {
       "sceneIndex": 1,
-      "enrichedPrompt": "<scene description rewritten for AI image generation, max 400 chars>"
+      "enrichedPrompt": "<scene description rewritten for AI image generation, max 400 chars>",
+      "hasModel": <true if scene features a person/model, false if product-only or environment>,
+      "hasProduct": <true if the product appears in frame>,
+      "isDetail": <true if close-up of hands, texture, ingredients, fabric — skin may be visible but face is not the subject>
     }
   ]
 }
+
+═══ SMART REF TAGGING ═══
+
+For EVERY clip, you MUST set hasModel, hasProduct, and isDetail. These control which reference images are sent to the image generator:
+- hasModel=true → model reference photos (face, body) are included
+- hasProduct=true → product reference photos are included
+- isDetail=true → model refs included for skin tone consistency even if face isn't visible
+- A product-only flat lay: hasModel=false, hasProduct=true, isDetail=false
+- A model applying serum: hasModel=true, hasProduct=true, isDetail=false
+- A close-up of hands scooping cream: hasModel=false, hasProduct=true, isDetail=true
+- An environment/lifestyle wide shot: hasModel=false, hasProduct=false, isDetail=false
 
 ═══ VISUAL CONSISTENCY ═══
 

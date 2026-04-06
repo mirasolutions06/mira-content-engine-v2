@@ -1,6 +1,6 @@
 {
   "brandName": "Gymwear",
-  "lastUpdated": "2026-04-05T01:13:11.715Z",
+  "lastUpdated": "2026-04-06T10:07:27.979Z",
   "runs": [
     {
       "timestamp": "2026-03-17T09:55:41.612Z",
@@ -221,6 +221,15 @@
           "format": "square"
         }
       ]
+    },
+    {
+      "timestamp": "2026-04-06T10:07:27.979Z",
+      "projectName": "gymwear-selfie",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 3.48,
+      "provider": "gemini",
+      "topPrompts": []
     }
   ],
   "topPrompts": [
@@ -328,7 +337,7 @@
   "styleAnchors": [],
   "insights": {
     "bestProvider": "gemini",
-    "avgScore": 4.3,
-    "runCount": 6
+    "avgScore": 4.18,
+    "runCount": 7
   }
 }

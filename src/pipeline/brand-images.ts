@@ -3,14 +3,14 @@ import OpenAI from 'openai';
 import path from 'path';
 import fs from 'fs-extra';
 import { logger } from '../utils/logger.js';
-import { evaluateImage, saveQAResults } from '../utils/image-qa.js';
+
 import { editImage, resolveSourceImage } from './image-editor.js';
 import { compositeOverlay } from './image-compositor.js';
 import { recordBrandRun } from '../utils/brand-memory.js';
 import { recordSkillRun } from '../utils/skill-memory.js';
 import { AssetManifest } from '../utils/asset-manifest.js';
 import { FORMAT_ASPECT } from '../types/index.js';
-import type { VideoConfig, ImageFormat, ImageProvider, BrandContext, ImageQAResult } from '../types/index.js';
+import type { VideoConfig, ImageFormat, ImageProvider, BrandContext, DirectorPlan, DirectorCacheEntry } from '../types/index.js';
 
 const MODEL = 'gemini-3-pro-image-preview';
 
@@ -146,6 +146,52 @@ async function loadBrandContext(
   } catch {
     return undefined;
   }
+}
+
+// ── Director plan loader (for smart ref tags) ──────────────────────────────
+
+async function loadDirectorPlan(
+  projectsRoot: string,
+  projectName: string,
+): Promise<DirectorPlan | undefined> {
+  const planPath = path.join(projectsRoot, projectName, 'cache', 'director-plan.json');
+  if (!(await fs.pathExists(planPath))) return undefined;
+  try {
+    const cached = (await fs.readJson(planPath)) as DirectorCacheEntry;
+    return cached.plan;
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * Smart ref filtering: uses Director's hasModel/hasProduct/isDetail tags
+ * to select only the refs each scene actually needs.
+ *
+ * Falls back to all refs if no Director tags are available.
+ * Manual clip.refs always takes priority (handled by caller).
+ */
+function filterRefsByDirectorTags(
+  allRefs: string[],
+  hasModel: boolean,
+  hasProduct: boolean,
+  isDetail: boolean,
+): string[] {
+  return allRefs.filter((refPath) => {
+    const base = path.basename(refPath, path.extname(refPath)).toLowerCase();
+    const isModelRef = base.startsWith('model');
+    const isProductRef = base.startsWith('product');
+    const isStyleRef = base.startsWith('style') || base.startsWith('location');
+
+    // Model refs: include if scene has a model, OR if it's a detail shot (skin tone consistency)
+    if (isModelRef) return hasModel || isDetail;
+    // Product refs: include if scene has product
+    if (isProductRef) return hasProduct;
+    // Style/location refs: always include (they define the visual world)
+    if (isStyleRef) return true;
+    // Unknown refs: include by default
+    return true;
+  });
 }
 
 // ── Single image generation ──────────────────────────────────────────────────
@@ -404,17 +450,8 @@ export async function generateBrandImages(
     logger.info(`Using ${effectiveRefs.length} reference image(s): ${effectiveRefs.map((p) => path.basename(p)).join(', ')}`);
   }
 
-  // Split refs by type for QA comparison
-  const modelRefPaths = effectiveRefs.filter((p) => path.basename(p).startsWith('model'));
-  const productRefPaths = effectiveRefs.filter((p) => path.basename(p).startsWith('product'));
-  const styleRefPaths = effectiveRefs.filter((p) => {
-    const base = path.basename(p);
-    return base.startsWith('style') || base.startsWith('location');
-  });
-
-
   const brandContext = await loadBrandContext(projectsRoot, projectName);
-  const qaResults: ImageQAResult[] = [];
+  const directorPlan = await loadDirectorPlan(projectsRoot, projectName);
 
   // Delete targeted files so idempotency check re-generates them
   if (regenerateImages && regenerateImages.length > 0) {
@@ -480,24 +517,33 @@ export async function generateBrandImages(
           brandContext, products,
         );
       } else {
-        // Per-clip ref filtering: if clip.refs is set, only send those specific references
-        // Model sheets auto-included when clip refs any model-* image (i.e. clip features a model)
-        const clipHasModel = clip.refs?.some((r) => r.startsWith('model'));
-        const clipRefs = clip.refs
-          ? effectiveRefs.filter((p) => {
-              if (clipHasModel) {
-                const base = path.basename(p, path.extname(p));
-                if (base === 'model-sheet' || base === 'model-body') return true;
-              }
-              return clip.refs!.includes(path.basename(p));
-            })
-          : effectiveRefs;
-        if (clipRefs.length > 4) {
-          logger.warn(
-            `Scene ${clipIndex}: ${clipRefs.length} refs being sent to Gemini ` +
-            `(${clipRefs.map(p => path.basename(p)).join(', ')}). ` +
-            `Consider using per-clip "refs" in config to limit to 3-4 per scene.`,
-          );
+        // Smart ref filtering: manual clip.refs > Director tags > all refs
+        let clipRefs: string[];
+        if (clip.refs) {
+          // Manual override: user specified exact refs
+          const clipHasModel = clip.refs.some((r) => r.startsWith('model'));
+          clipRefs = effectiveRefs.filter((p) => {
+            if (clipHasModel) {
+              const base = path.basename(p, path.extname(p));
+              if (base === 'model-sheet' || base === 'model-body') return true;
+            }
+            return clip.refs!.includes(path.basename(p));
+          });
+        } else {
+          // Auto-filter using Director's ref tags
+          const directorClip = directorPlan?.clips.find((c) => c.sceneIndex === clipIndex);
+          if (directorClip?.hasModel !== undefined) {
+            clipRefs = filterRefsByDirectorTags(
+              effectiveRefs,
+              directorClip.hasModel ?? false,
+              directorClip.hasProduct ?? true,
+              directorClip.isDetail ?? false,
+            );
+            logger.info(`  Scene ${clipIndex}: smart refs → ${clipRefs.map(p => path.basename(p)).join(', ') || 'style only'}`);
+          } else {
+            // No Director tags available — send all refs (legacy behavior)
+            clipRefs = effectiveRefs;
+          }
         }
         result = await generateBrandImage(
           clipIndex, clipPrompt, brand, brief, format, outputPath,
@@ -513,13 +559,6 @@ export async function generateBrandImages(
         await compositeOverlay(result, clip.overlay, result, font);
       }
 
-      // QA evaluation
-      if (result) {
-        const sceneLabel = multiClip ? `${clipIndex}-${format}` : format;
-        const qa = await evaluateImage(result, modelRefPaths, productRefPaths, sceneLabel, styleRefPaths, clipPrompt, products, brand);
-        if (qa) qaResults.push(qa);
-      }
-
       // Use scene 1's first format output as the style anchor for all subsequent scenes
       if (clipIndex === 1 && result && !scene1AnchorPath) {
         scene1AnchorPath = result;
@@ -527,43 +566,30 @@ export async function generateBrandImages(
     }
   }
 
-  // Save QA results
-  await saveQAResults(qaResults, projectsRoot, projectName);
-
   // ── Record brand + skill memory ──────────────────────────────────────────
   const imgProvider: ImageProvider = config.imageProvider ?? 'gemini';
-  if (brand && qaResults.length > 0) {
-    const qaForMemory = qaResults.map((r) => {
-      const entry: { scene: string; score: number; prompt?: string; format?: string } = {
-        scene: r.scene,
-        score: r.score,
-      };
-      // scene label is "clipIndex-format" or just "format"
-      const parts = r.scene.split('-');
-      const clipIdx = multiClip ? parseInt(parts[0] ?? '1', 10) : 1;
-      const matchedClip = clips[clipIdx - 1];
-      if (matchedClip?.prompt) entry.prompt = matchedClip.prompt;
-      if (parts.length > 1) entry.format = parts.slice(multiClip ? 1 : 0).join('-');
-      return entry;
-    });
-    await recordBrandRun(brand, projectName, 'brand-images', imgProvider, qaForMemory);
-    await recordSkillRun(imgProvider, qaForMemory);
-  }
+  await recordBrandRun(brand, projectName, 'brand-images', imgProvider, []);
+  await recordSkillRun(imgProvider, []);
 
   // ── Save asset manifest ────────────────────────────────────────────────────
   const manifest = new AssetManifest(projectsRoot, projectName);
-  for (const qa of qaResults) {
-    const imgPath = path.join(imagesDir, `${qa.scene}.jpg`);
-    if (await fs.pathExists(imgPath)) {
-      const fmt = qa.scene.includes('-') ? (qa.scene.split('-').pop() ?? qa.scene) : qa.scene;
-      manifest.record({
-        path: imgPath,
-        type: 'image',
-        provider: imgProvider,
-        model: imgProvider === 'gpt-image' ? 'gpt-image-1' : 'gemini-3-pro-image-preview',
-        qaScore: qa.score,
-        format: fmt,
-      });
+  for (let i = 0; i < clips.length; i++) {
+    const clip = clips[i];
+    if (!clip) continue;
+    const clipIndex = i + 1;
+    const clipFormats = clip.imageFormat ? [clip.imageFormat] : formats;
+    for (const format of clipFormats) {
+      const filename = multiClip ? `${clipIndex}-${format}.jpg` : `${format}.jpg`;
+      const imgPath = path.join(imagesDir, filename);
+      if (await fs.pathExists(imgPath)) {
+        manifest.record({
+          path: imgPath,
+          type: 'image',
+          provider: imgProvider,
+          model: imgProvider === 'gpt-image' ? 'gpt-image-1' : 'gemini-3-pro-image-preview',
+          format,
+        });
+      }
     }
   }
   await manifest.save();

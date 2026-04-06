@@ -5,6 +5,7 @@ import fs from 'fs-extra';
 import { logger } from '../utils/logger.js';
 
 import { editImage, resolveSourceImage } from './image-editor.js';
+import { generateFluxBrandImage } from './flux-image.js';
 import { compositeOverlay } from './image-compositor.js';
 import { recordBrandRun } from '../utils/brand-memory.js';
 import { recordSkillRun } from '../utils/skill-memory.js';
@@ -249,6 +250,7 @@ async function generateBrandImage(
 
     let hasModelRef = false;
     let hasProductRef = false;
+    let hasLocationRef = false;
     for (const refPath of sortedRefs) {
       if (!(await fs.pathExists(refPath))) continue;
       const buffer = await fs.readFile(refPath);
@@ -272,7 +274,8 @@ async function generateBrandImage(
       } else if (basename.startsWith('style')) {
         parts.push({ text: `[STYLE REFERENCE — "${basename}". Match this visual mood and aesthetic.]` });
       } else if (basename.startsWith('location')) {
-        parts.push({ text: `[LOCATION/ENVIRONMENT REFERENCE — "${basename}". Match this environment, setting, and architectural context.]` });
+        parts.push({ text: `[LOCATION/ENVIRONMENT REFERENCE — "${basename}". CRITICAL: The background and environment must match this reference EXACTLY — same architecture, materials, surfaces, colors, and spatial layout. Do NOT invent a different setting.]` });
+        hasLocationRef = true;
       } else if (basename.startsWith('videoref')) {
         parts.push({ text: `[VIDEO STYLE REFERENCE — "${basename}". This frame is from a reference video. Match its visual style, lighting, color grade, and composition.]` });
       }
@@ -294,6 +297,7 @@ async function generateBrandImage(
     const criticals: string[] = [];
     if (hasModelRef) criticals.push('CRITICAL: The person must look identical to the MODEL/PERSON reference — same face, same features, same skin tone.');
     if (hasProductRef) criticals.push('CRITICAL: Products must match the PRODUCT references exactly.');
+    if (hasLocationRef) criticals.push('CRITICAL: The background and environment must match the LOCATION reference EXACTLY — same architecture, materials, surfaces, and spatial layout. Do NOT change or invent a different background.');
     const refSummary = criticals.length > 0 ? criticals.join(' ') + ' ' : '';
 
     parts.push({ text: refSummary + buildBrandPrompt(scenePrompt, brand, brief, brandContext, sceneIndex, hasAnchor, products) });
@@ -517,7 +521,7 @@ export async function generateBrandImages(
           brandContext, products,
         );
       } else {
-        // Smart ref filtering: manual clip.refs > Director tags > all refs
+        // Smart ref filtering applies to both Gemini and Flux 2
         let clipRefs: string[];
         if (clip.refs) {
           // Manual override: user specified exact refs
@@ -545,11 +549,19 @@ export async function generateBrandImages(
             clipRefs = effectiveRefs;
           }
         }
-        result = await generateBrandImage(
-          clipIndex, clipPrompt, brand, brief, format, outputPath,
-          clipRefs, brandContext,
-          clipIndex > 1 ? scene1AnchorPath : undefined, products,
-        );
+        if (clipProvider === 'flux-2') {
+          result = await generateFluxBrandImage(
+            clipIndex, clipPrompt, brand, brief, format, outputPath,
+            clipRefs, brandContext,
+            clipIndex > 1 ? scene1AnchorPath : undefined, products,
+          );
+        } else {
+          result = await generateBrandImage(
+            clipIndex, clipPrompt, brand, brief, format, outputPath,
+            clipRefs, brandContext,
+            clipIndex > 1 ? scene1AnchorPath : undefined, products,
+          );
+        }
       }
 
       // Apply text overlay if configured

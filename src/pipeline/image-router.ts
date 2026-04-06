@@ -1,5 +1,6 @@
 import { generateStoryboardFrame } from './storyboard.js';
 import { generateGptImage } from './gpt-image.js';
+import { generateFluxStoryboardFrame } from './flux-image.js';
 import type { ImageProvider, StoryboardGenOptions } from '../types/index.js';
 
 /**
@@ -13,6 +14,8 @@ export async function generateImage(
   switch (provider) {
     case 'gpt-image':
       return generateGptImage(options);
+    case 'flux-2':
+      return generateFluxStoryboardFrame(options);
     case 'gemini':
     default:
       return generateStoryboardFrame(options);

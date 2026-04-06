@@ -824,12 +824,14 @@ export async function sourceAssets(
   // ── 2. Style Reference ──────────────────────────────────────────────────────
   const skipAutoRefs = config.skipAutoRefs ?? [];
   const stylePath = path.join(assetsDir, 'style.png');
+  const stylePathJpg = path.join(assetsDir, 'style.jpg');
+  const existingStylePath = (await fs.pathExists(stylePathJpg)) ? stylePathJpg : (await fs.pathExists(stylePath)) ? stylePath : null;
 
   if (skipAutoRefs.includes('style')) {
     logger.skip('Asset sourcer: style reference skipped via config.skipAutoRefs.');
     result.styleSource = 'skipped';
-  } else if (await fs.pathExists(stylePath)) {
-    logger.skip('Asset sourcer: style.png already exists — skipping.');
+  } else if (existingStylePath) {
+    logger.skip(`Asset sourcer: ${path.basename(existingStylePath)} already exists — skipping.`);
     result.styleReferenceSourced = true;
     result.styleSource = 'existing';
   } else {

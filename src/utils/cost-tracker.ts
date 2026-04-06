@@ -39,6 +39,8 @@ const COST_MAP: Record<string, number> = {
   // GPT Image (gpt-image-1)
   'gpt-image-standard': 0.04,
   'gpt-image-hd': 0.08,
+  // Flux 2 Pro (via Higgsfield)
+  'flux-2-image': 0.05,
   // QA and evaluation (Haiku vision)
   'haiku-image-qa': 0.02,
   'haiku-ref-eval': 0.01,

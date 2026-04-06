@@ -1,0 +1,204 @@
+{
+  "brandName": "Gymwear 2-Piece Set — TikTok Campaign",
+  "lastUpdated": "2026-03-16T16:02:38.689Z",
+  "runs": [
+    {
+      "timestamp": "2026-03-16T14:54:20.709Z",
+      "projectName": "gymwear-2piece",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 3.42,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Editorial flat-lay of the steel blue 2-piece gym set arranged on light concrete surface — crop top folded at an angle above leggings, small dumbbell and water bottle as props, clean minimalist styling, soft diffused overhead light, no visible branding or text",
+          "score": 4.3,
+          "format": "story"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-16T15:04:51.788Z",
+      "projectName": "gymwear-2piece",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 3.96,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Fashion editorial full-body shot of Black woman with short cropped hair in steel blue crop top and matching leggings, walking confidently toward camera down a moody concrete corridor, dramatic side-light casting long shadow, slight motion in her stride, intense eye contact, cool neutral tones with the blue set as the only color pop, shot at 35mm low angle",
+          "score": 4,
+          "format": "story"
+        },
+        {
+          "prompt": "Over-the-shoulder mirror selfie composition — Black woman with short cropped hair in steel blue crop top and leggings checking her reflection in a large gym mirror, soft overhead fluorescent glow mixed with warm side light, back muscles visible, confident body language, the steel blue fabric catches the light, shot from behind at 50mm with mirror showing her face, moody locker room environment",
+          "score": 4,
+          "format": "story"
+        },
+        {
+          "prompt": "Golden hour outdoor shot — Black woman with short cropped hair in steel blue crop top and leggings leaning against a raw concrete wall, warm sunset backlighting creating a golden rim around her silhouette, the steel blue fabric glows against the warm light, relaxed confident pose with one knee bent, shot at 85mm f/1.4 with creamy warm bokeh background",
+          "score": 4,
+          "format": "square"
+        },
+        {
+          "prompt": "Moody editorial flat-lay on dark charcoal slate — steel blue crop top and leggings arranged with attitude, not perfectly folded, one strap draped off the edge, small gold jewelry scattered as props, harsh directional light from one side creating deep shadows, the blue fabric pops against the dark surface, overhead shot with cinematic contrast",
+          "score": 4.5,
+          "format": "story"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-16T15:31:53.119Z",
+      "projectName": "gymwear-2piece",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 4.52,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Fashion editorial full-body shot of Black woman with short cropped hair in steel blue crop top and matching leggings, walking confidently toward camera through a dim parking garage lit by a single warm overhead light, dramatic side-light casting long shadow on wet asphalt, slight motion in her stride, intense eye contact, cool neutral tones with the blue set as the only color pop, shot at 35mm low angle",
+          "score": 4.4,
+          "format": "story"
+        },
+        {
+          "prompt": "Soft morning light through sheer curtains — Black woman with short cropped hair in steel blue crop top and leggings sitting on the edge of an unmade bed, warm golden window light wrapping around her shoulders, one hand in her hair, relaxed and confident, the steel blue fabric glows against cream linen sheets, shot at 50mm with shallow depth of field, intimate bedroom editorial",
+          "score": 4.6,
+          "format": "story"
+        },
+        {
+          "prompt": "Rooftop golden hour — Black woman with short cropped hair in steel blue crop top and leggings standing at the edge of an urban rooftop, warm sunset backlighting creating a luminous golden rim around her silhouette, city skyline soft in background, the steel blue fabric catches amber light, wind in her posture, powerful stance, shot at 85mm f/1.4 with creamy warm bokeh",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Close-up waist-to-thigh detail shot of steel blue high-waist leggings on dark skin, hands adjusting the waistband, showing the seamless ribbed texture and body-contouring fit, dramatic directional light raking across the fabric from the side, dark moody background, the blue is rich and saturated, shot at macro distance",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Moody editorial flat-lay on dark weathered wood surface — steel blue crop top and leggings arranged with attitude, not perfectly folded, one strap draped off the edge, small gold jewelry scattered as props, a warm espresso in a ceramic cup as lifestyle accent, harsh directional light from one side creating deep shadows, the blue fabric pops against the dark surface, overhead shot with cinematic contrast",
+          "score": 4.8,
+          "format": "story"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-16T16:02:38.689Z",
+      "projectName": "gymwear-2piece",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 4.56,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Fashion editorial full-body shot of Black woman with short cropped hair in steel blue crop top and matching leggings, walking confidently toward camera down a dim warm-toned hallway, warm side-light from a doorway casting a long shadow on dark wooden floorboards, slight motion in her stride, intense eye contact, cool neutral tones with the blue set as the only color pop, shot at 35mm low angle",
+          "score": 4.4,
+          "format": "story"
+        },
+        {
+          "prompt": "Soft morning light through sheer curtains — Black woman with short cropped hair in steel blue crop top and leggings sitting on the edge of an unmade bed, warm golden window light wrapping around her shoulders, one hand in her hair, relaxed and confident, the steel blue fabric glows against cream linen sheets, shot at 50mm with shallow depth of field, intimate bedroom editorial",
+          "score": 4.4,
+          "format": "story"
+        },
+        {
+          "prompt": "Rooftop golden hour — Black woman with short cropped hair in steel blue crop top and leggings standing at the edge of an urban rooftop, warm sunset backlighting creating a luminous golden rim around her silhouette, city skyline soft in background, the steel blue fabric catches amber light, wind in her posture, powerful stance, shot at 85mm f/1.4 with creamy warm bokeh",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Close-up waist-to-thigh detail shot of steel blue high-waist leggings on dark skin, hands adjusting the waistband, showing the seamless ribbed texture and body-contouring fit, dramatic directional light raking across the fabric from the side, dark moody background, the blue is rich and saturated, shot at macro distance",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Moody editorial flat-lay on dark weathered wood surface — steel blue crop top and leggings arranged with attitude, not perfectly folded, one strap draped off the edge, small gold jewelry scattered as props, a warm espresso in a ceramic cup as lifestyle accent, harsh directional light from one side creating deep shadows, the blue fabric pops against the dark surface, overhead shot with cinematic contrast",
+          "score": 4.8,
+          "format": "story"
+        }
+      ]
+    }
+  ],
+  "topPrompts": [
+    {
+      "prompt": "Moody editorial flat-lay on dark weathered wood surface — steel blue crop top and leggings arranged with attitude, not perfectly folded, one strap draped off the edge, small gold jewelry scattered as props, a warm espresso in a ceramic cup as lifestyle accent, harsh directional light from one side creating deep shadows, the blue fabric pops against the dark surface, overhead shot with cinematic contrast",
+      "score": 4.8,
+      "format": "story"
+    },
+    {
+      "prompt": "Close-up waist-to-thigh detail shot of steel blue high-waist leggings on dark skin, hands adjusting the waistband, showing the seamless ribbed texture and body-contouring fit, dramatic directional light raking across the fabric from the side, dark moody background, the blue is rich and saturated, shot at macro distance",
+      "score": 4.8,
+      "format": "square"
+    },
+    {
+      "prompt": "Moody editorial flat-lay on dark weathered wood surface — steel blue crop top and leggings arranged with attitude, not perfectly folded, one strap draped off the edge, small gold jewelry scattered as props, a warm espresso in a ceramic cup as lifestyle accent, harsh directional light from one side creating deep shadows, the blue fabric pops against the dark surface, overhead shot with cinematic contrast",
+      "score": 4.8,
+      "format": "story"
+    },
+    {
+      "prompt": "Soft morning light through sheer curtains — Black woman with short cropped hair in steel blue crop top and leggings sitting on the edge of an unmade bed, warm golden window light wrapping around her shoulders, one hand in her hair, relaxed and confident, the steel blue fabric glows against cream linen sheets, shot at 50mm with shallow depth of field, intimate bedroom editorial",
+      "score": 4.6,
+      "format": "story"
+    },
+    {
+      "prompt": "Moody editorial flat-lay on dark charcoal slate — steel blue crop top and leggings arranged with attitude, not perfectly folded, one strap draped off the edge, small gold jewelry scattered as props, harsh directional light from one side creating deep shadows, the blue fabric pops against the dark surface, overhead shot with cinematic contrast",
+      "score": 4.5,
+      "format": "story"
+    },
+    {
+      "prompt": "Fashion editorial full-body shot of Black woman with short cropped hair in steel blue crop top and matching leggings, walking confidently toward camera through a dim parking garage lit by a single warm overhead light, dramatic side-light casting long shadow on wet asphalt, slight motion in her stride, intense eye contact, cool neutral tones with the blue set as the only color pop, shot at 35mm low angle",
+      "score": 4.4,
+      "format": "story"
+    },
+    {
+      "prompt": "Rooftop golden hour — Black woman with short cropped hair in steel blue crop top and leggings standing at the edge of an urban rooftop, warm sunset backlighting creating a luminous golden rim around her silhouette, city skyline soft in background, the steel blue fabric catches amber light, wind in her posture, powerful stance, shot at 85mm f/1.4 with creamy warm bokeh",
+      "score": 4.4,
+      "format": "square"
+    },
+    {
+      "prompt": "Close-up waist-to-thigh detail shot of steel blue high-waist leggings on dark skin, hands adjusting the waistband, showing the seamless ribbed texture and body-contouring fit, dramatic directional light raking across the fabric from the side, dark moody background, the blue is rich and saturated, shot at macro distance",
+      "score": 4.4,
+      "format": "square"
+    },
+    {
+      "prompt": "Fashion editorial full-body shot of Black woman with short cropped hair in steel blue crop top and matching leggings, walking confidently toward camera down a dim warm-toned hallway, warm side-light from a doorway casting a long shadow on dark wooden floorboards, slight motion in her stride, intense eye contact, cool neutral tones with the blue set as the only color pop, shot at 35mm low angle",
+      "score": 4.4,
+      "format": "story"
+    },
+    {
+      "prompt": "Soft morning light through sheer curtains — Black woman with short cropped hair in steel blue crop top and leggings sitting on the edge of an unmade bed, warm golden window light wrapping around her shoulders, one hand in her hair, relaxed and confident, the steel blue fabric glows against cream linen sheets, shot at 50mm with shallow depth of field, intimate bedroom editorial",
+      "score": 4.4,
+      "format": "story"
+    },
+    {
+      "prompt": "Rooftop golden hour — Black woman with short cropped hair in steel blue crop top and leggings standing at the edge of an urban rooftop, warm sunset backlighting creating a luminous golden rim around her silhouette, city skyline soft in background, the steel blue fabric catches amber light, wind in her posture, powerful stance, shot at 85mm f/1.4 with creamy warm bokeh",
+      "score": 4.4,
+      "format": "square"
+    },
+    {
+      "prompt": "Editorial flat-lay of the steel blue 2-piece gym set arranged on light concrete surface — crop top folded at an angle above leggings, small dumbbell and water bottle as props, clean minimalist styling, soft diffused overhead light, no visible branding or text",
+      "score": 4.3,
+      "format": "story"
+    },
+    {
+      "prompt": "Fashion editorial full-body shot of Black woman with short cropped hair in steel blue crop top and matching leggings, walking confidently toward camera down a moody concrete corridor, dramatic side-light casting long shadow, slight motion in her stride, intense eye contact, cool neutral tones with the blue set as the only color pop, shot at 35mm low angle",
+      "score": 4,
+      "format": "story"
+    },
+    {
+      "prompt": "Over-the-shoulder mirror selfie composition — Black woman with short cropped hair in steel blue crop top and leggings checking her reflection in a large gym mirror, soft overhead fluorescent glow mixed with warm side light, back muscles visible, confident body language, the steel blue fabric catches the light, shot from behind at 50mm with mirror showing her face, moody locker room environment",
+      "score": 4,
+      "format": "story"
+    },
+    {
+      "prompt": "Golden hour outdoor shot — Black woman with short cropped hair in steel blue crop top and leggings leaning against a raw concrete wall, warm sunset backlighting creating a golden rim around her silhouette, the steel blue fabric glows against the warm light, relaxed confident pose with one knee bent, shot at 85mm f/1.4 with creamy warm bokeh background",
+      "score": 4,
+      "format": "square"
+    }
+  ],
+  "styleAnchors": [],
+  "insights": {
+    "bestProvider": "gemini",
+    "avgScore": 4.11,
+    "runCount": 4
+  }
+}

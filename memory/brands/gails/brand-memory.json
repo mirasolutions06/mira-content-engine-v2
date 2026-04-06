@@ -1,0 +1,618 @@
+{
+  "brandName": "GAIL's",
+  "lastUpdated": "2026-03-29T00:57:11.365Z",
+  "runs": [
+    {
+      "timestamp": "2026-03-28T23:11:33.363Z",
+      "projectName": "gails-coffee",
+      "mode": "brand-images",
+      "clipCount": 10,
+      "avgQAScore": 4.54,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, standing at the marble kitchen counter pouring coffee from a glass cafetière into a white ceramic mug, the GAIL's red and white coffee bag standing upright on the counter beside her to her right, warm natural morning light from camera-left, the dark wood cabinets and warm marble backsplash visible, lifestyle editorial, 50mm f/2",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, reaching up to an open kitchen shelf with her right hand, the GAIL's red and white coffee bag held casually in her left hand at her side, warm marble kitchen with dark wood cabinets, natural light from camera-left, relaxed morning moment, 50mm f/2",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, leaning casually against the marble kitchen counter with one hand, the GAIL's red and white coffee bag standing upright on the counter next to the silver espresso machine, warm marble backsplash and dark wood cabinets, relaxed morning kitchen scene, 50mm f/2.8",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, walking toward the kitchen counter carrying a white mug in one hand, the GAIL's red and white coffee bag tucked under her other arm, warm marble kitchen with dark wood cabinets, natural morning light, candid lifestyle moment, 50mm f/2",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's red and white House Blend Coffee bag standing upright on the warm marble kitchen counter, the silver espresso machine behind it slightly out of focus, warm natural light from camera-left casting a soft realistic shadow of the bag on the marble surface, the bag zoomed in and filling a third of the frame, branding clearly readable, 85mm f/2.8",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's red and white House Blend Coffee bag standing upright on the warm marble counter next to a freshly poured cup of black coffee in a simple white ceramic mug with visible steam rising, warm natural morning light from camera-left, realistic shadow on the marble, the bag and mug in sharp focus, warm marble backsplash behind, 85mm f/2.8",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's red and white House Blend Coffee bag standing upright on the edge of the warm marble kitchen island, the rest of the kitchen blurred beautifully behind with the dark wood cabinets and black wall lights visible in bokeh, warm natural light, realistic shadow on the marble, the bag sharp and prominent in frame, 85mm f/1.8",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's red and white House Blend Coffee bag standing upright on the warm marble counter next to a glass cafetière filled with fresh coffee and a small white bowl of whole roasted coffee beans, warm natural light from camera-left, realistic shadows, the three elements arranged in a natural triangle composition on the marble, branding readable, 85mm f/2.8",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's red and white House Blend Coffee bag standing upright on a dark wooden cutting board placed on the warm marble counter, warm morning sidelight from camera-left raking across the marble and wood textures, a realistic soft shadow of the bag on the board, the warm marble backsplash behind, the wood and marble contrast framing the bag beautifully, 85mm f/2.8",
+          "score": 4.6,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-28T23:26:23.962Z",
+      "projectName": "gails-coffee",
+      "mode": "brand-images",
+      "clipCount": 10,
+      "avgQAScore": 4.66,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, standing at the warm marble kitchen counter pouring hot water from a kettle into a glass cafetière, the GAIL's red and white coffee bag standing upright on the counter to her right facing camera, warm morning window light from camera-left raking across the scene, dark wood cabinets and warm marble backsplash visible, shot slightly below eye level, lifestyle editorial, 50mm f/2",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, both hands wrapping around a white ceramic mug at the warm marble counter, the GAIL's red and white coffee bag standing upright beside her on the counter with branding facing camera, warm morning sidelight from camera-left, the silver espresso machine visible in the background, intimate morning ritual moment, 50mm f/2",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, spooning coffee grounds from the open GAIL's bag into a glass cafetière on the warm marble counter, the bag standing upright with red GAIL's branding visible, warm morning window light from camera-left, a simple white mug waiting nearby, shot from three-quarter angle, 50mm f/2.8",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "The GAIL's red and white coffee bag standing upright on the warm marble kitchen island in the foreground in sharp focus at three-quarter angle, the young blonde woman with long straight hair seen from behind in soft bokeh at the counter behind pouring coffee, white tank top and green-white striped trousers, warm morning sidelight, shot slightly below eye level so the bag looks prominent, 85mm f/1.8",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, leaning against the warm marble counter with one elbow looking out toward a window, the GAIL's red and white coffee bag standing upright on the counter beside her hip with branding facing camera, a white mug in her other hand, warm morning light from camera-left, relaxed and contemplative, 50mm f/2",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's red and white House Blend Coffee bag standing upright on the warm marble counter shot from slightly below eye level at three-quarter angle, warm morning sidelight from camera-left raking across the matte bag texture revealing the paper grain, a soft realistic shadow falling to the right on the marble, the silver espresso machine softly blurred behind, branding sharp and readable, 85mm f/2.8",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's red and white House Blend Coffee bag standing upright on the warm marble counter next to a freshly poured black coffee in a simple matte white ceramic mug with a wisp of steam, warm morning sidelight from camera-left, shot from slightly below eye level, realistic shadow on the marble, the warm marble backsplash and dark wood cabinets behind, branding readable, 85mm f/2.8",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's red and white House Blend Coffee bag standing upright on the warm marble counter beside a glass cafetière filled with fresh coffee and a small scattering of whole roasted coffee beans on the marble, warm morning sidelight from camera-left, shot at three-quarter angle slightly below eye level, the bag is the tallest element and hero of the frame, branding sharp, 85mm f/2.8",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's red and white House Blend Coffee bag standing upright on the edge of the warm marble kitchen island, shot from slightly below eye level, the rest of the kitchen beautifully blurred behind with dark wood cabinets and black wall lights in warm bokeh, warm morning sidelight from camera-left catching the bag texture, the bag commanding the frame, branding readable, 85mm f/1.8",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's red and white House Blend Coffee bag standing upright on a dark walnut cutting board placed on the warm marble counter, a folded linen napkin beside it, warm morning sidelight from camera-left raking across the wood grain and marble texture, shot from three-quarter angle slightly below eye level, the different surface textures adding warmth and depth, branding sharp and readable, 85mm f/2.8",
+          "score": 4.8,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-28T23:37:30.800Z",
+      "projectName": "gails-coffee",
+      "mode": "brand-images",
+      "clipCount": 10,
+      "avgQAScore": 4.6,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, standing at the warm marble kitchen counter pouring hot water from a kettle into a glass cafetière, the small 200g GAIL's red and white coffee bag standing upright on the counter to her right with branding facing camera, warm morning sidelight from camera-left, dark wood cabinets and warm marble backsplash, shot slightly below eye level, 50mm f/2",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, wrapping both hands around a white ceramic mug at the warm marble counter, the small 200g GAIL's red and white coffee bag standing upright on the counter beside her with branding facing camera, warm morning sidelight from camera-left, silver espresso machine in background, intimate morning moment, 50mm f/2",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, spooning coffee grounds from the small open 200g GAIL's bag into a glass cafetière on the warm marble counter, the bag held in her other hand with red GAIL's branding visible, warm morning sidelight from camera-left, a white mug waiting on the counter, 50mm f/2.8",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, leaning against the warm marble counter looking toward a window, the small 200g GAIL's red and white coffee bag standing upright on the counter beside her hip with branding facing camera, a white mug in her hand, warm morning light from camera-left, relaxed and contemplative, 50mm f/2",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "The small 200g GAIL's red and white coffee bag standing upright on the warm marble kitchen island in the foreground in sharp focus at three-quarter angle, the young blonde woman with long straight hair seen from behind in soft bokeh at the counter behind pressing down a cafetière, white tank top and green-white striped trousers, warm morning sidelight from camera-left, shot slightly below eye level, 85mm f/1.8",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, reaching for the small 200g GAIL's red and white coffee bag on the warm marble counter with one hand, her other hand resting on the counter, warm morning sidelight from camera-left, the bag branding visible as she reaches for it, natural kitchen moment, 50mm f/2",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, standing at the warm marble counter pouring coffee from a glass cafetière into a white mug, the small 200g GAIL's red and white coffee bag standing upright on the counter nearby with branding facing camera, warm morning sidelight from camera-left, the dark wood cabinets and black wall lights visible, 50mm f/2",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, walking toward the warm marble counter carrying a white mug, the small 200g GAIL's red and white coffee bag standing upright on the counter ahead of her with branding visible, warm morning sidelight from camera-left, the kitchen scene framed loosely showing the warm marble and dark wood, candid movement, 50mm f/2.8",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Close-up from behind the young blonde woman with long straight hair wearing a white tank top, her hands visible on the warm marble counter holding the small 200g GAIL's red and white coffee bag with branding facing camera, a glass cafetière and white mug beside her hands, warm morning sidelight from camera-left, intimate hands-and-product detail shot, 85mm f/2",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Young blonde woman with long straight hair seen from behind wearing a white tank top and green-white striped trousers, standing at the warm marble counter with the small 200g GAIL's red and white coffee bag standing upright beside the silver espresso machine, she is looking down at a white mug on the counter, warm morning sidelight from camera-left, the bag and espresso machine creating a premium coffee scene, 50mm f/2",
+          "score": 4.6,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-28T23:43:43.731Z",
+      "projectName": "gails-coffee",
+      "mode": "brand-images",
+      "clipCount": 10,
+      "avgQAScore": 4.16,
+      "provider": "gemini",
+      "topPrompts": []
+    },
+    {
+      "timestamp": "2026-03-29T00:02:52.778Z",
+      "projectName": "gails-a",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 4.56,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Overhead flat lay of the small GAIL's red and white coffee bag standing upright on a matte dark slate surface, a small cluster of fresh raspberries and redcurrants to one side, a few walnut halves on the other, and a shallow ceramic dish of raw cocoa nibs below, the ingredients arranged organically around the bag like a flavour map, soft diffused overhead light slightly directional from camera-left, branding readable, 35mm f/4",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "The small GAIL's red and white coffee bag standing upright on matte dark charcoal surface, shot from slightly above at 45 degrees, a small pile of dark chocolate shards beside the bag and a scatter of whole roasted coffee beans creating a trail from the bag, warm-toned soft overhead light, the dark surface making the white and red bag pop dramatically, branding sharp, 85mm f/2.8",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Overhead flat lay of the small GAIL's red and white coffee bag lying slightly angled on dark slate, surrounded by a curated arrangement of cocoa nibs in a small brass spoon, three walnut halves, and a sprig of dried red berries, whole coffee beans scattered organically connecting the elements, soft diffused overhead light, editorial ingredient storytelling, 35mm f/4",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "The small GAIL's red and white coffee bag standing upright on dark slate, a single square of dark chocolate leaning against the base of the bag and a few fresh red berries placed on the slate beside it, soft overhead light with gentle shadow, minimal and precise ingredient pairing, the red berries echoing the red of the bag, branding readable, 85mm f/2.8",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "The small GAIL's red and white coffee bag standing upright on matte dark charcoal linen textile, shot from slightly above, a small white ceramic bowl of whole roasted coffee beans to one side and two walnut halves with a piece of broken dark chocolate on the other, the textile texture adding depth beneath, soft diffused overhead light, editorial and rich, branding sharp, 85mm f/2.8",
+          "score": 4.6,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-29T00:34:55.242Z",
+      "projectName": "gails-coffee",
+      "mode": "brand-images",
+      "clipCount": 20,
+      "avgQAScore": 4.91,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a white marble countertop, a glass French press with dark brewed coffee visible inside positioned behind and to the right slightly out of focus, warm morning sunlight streaming through a window from camera-left casting soft directional shadows across the marble surface, a white ceramic mug with black coffee in the foreground-right with gentle wisps of steam rising, a folded linen napkin beside the mug, the coffee bag in sharp focus as the hero product with label fully readable, three-quarter camera angle from slightly above eye level, 85mm f/2.8 shallow depth of field, warm natural morning kitchen photography",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a light oak kitchen counter beside a glass cafetière with freshly pressed dark coffee inside the plunger halfway down, a fresh butter croissant on a small white ceramic plate to the left, soft diffused morning light from a large window behind creating a bright airy atmosphere with gentle backlight separating the bag from the background, a few whole roasted coffee beans scattered naturally on the counter near the bag base, the bag label fully readable and facing camera, eye-level straight-on composition, 70mm f/3.5, warm inviting lifestyle kitchen photography",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag upright on a white marble surface beside a brass measuring scoop with whole roasted coffee beans spilling gently from it, a ceramic pour-over dripper in soft focus behind the bag, warm golden side light from camera-right at approximately 90 degrees raking across the matte paper texture of the bag showing natural creases and material quality, subtle rim light from behind separating the white bag from the light grey wall background, bag label sharp and fully readable, low angle shot from just above table surface level looking slightly upward at the bag giving it presence, 90mm f/2.8, premium morning ritual product photography",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a sunlit windowsill with soft natural morning light flooding from behind creating a warm halo effect around the bag edges, a small potted herb plant to the left in soft focus, condensation droplets on the window glass behind adding atmosphere, the white marble or stone windowsill surface catching the light, the bag label facing camera and fully readable, a white ceramic espresso cup and saucer in the foreground slightly out of focus, three-quarter angle from slightly below eye level, 85mm f/2 shallow depth of field with dreamy morning bokeh, intimate kitchen moment photography",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on white marble counter, a woman's hands in soft focus behind the bag pressing down a glass French press cafetière, steam rising from a freshly poured white ceramic mug positioned to the right of the bag, warm morning window light from camera-left illuminating the scene with soft shadows, the bag in sharp focus in the centre of frame with label fully readable, the human element adding warmth and ritual context without showing a face, shot from three-quarter angle slightly above, 70mm f/2.8, authentic lifestyle morning coffee ritual photography",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a travertine stone surface with subtle warm veining, a single handmade ceramic cup with matte glaze positioned behind and to the left, muted warm tones throughout the scene with soft diffused overhead lighting creating barely perceptible shadows, a folded natural linen cloth beneath the cup, clean negative space surrounding the composition, the bag label facing camera and fully readable, the red packaging section providing the only saturated colour accent in the otherwise muted palette, straight-on eye-level composition with generous breathing room, 85mm f/4, quiet luxury editorial product photography",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a smooth plaster surface in warm off-white, a minimalist ceramic bowl with whole roasted coffee beans to the right, a single dried eucalyptus sprig laid flat in the foreground, soft diffused side light from camera-left wrapping gently around the matte paper bag showing texture, muted earthy background in warm putty or sand tone, understated composition with considered negative space, bag label sharp and fully readable, three-quarter angle from slightly above, 90mm f/3.5, refined minimalist editorial still life photography",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on pale limestone surface, beside a simple clear glass cup of black coffee showing the rich dark amber colour of the brew, a thin linen napkin folded neatly underneath the glass, warm neutral plaster wall as background, soft even lighting from above and slightly left with gentle fill from right preventing harsh shadows, the composition deliberately sparse and editorial with the bag as the clear focal point label fully readable, low angle from just above surface level giving the bag quiet authority, 105mm f/3.5, premium understated luxury product photography",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a matte cream ceramic tray placed on a soft linen surface, a small white porcelain milk jug beside it, two cinnamon sticks crossed casually in front, the entire scene bathed in soft warm diffused light with no harsh shadows, muted cream and warm grey tones throughout with the red bag section as the sole colour pop, generous white space above and around the product, bag label facing camera fully readable, overhead angle looking down at approximately 30 degrees, 70mm f/4.5, serene quiet luxury flat editorial product photography",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a warm concrete surface with fine aggregate texture, shot against a soft plaster wall in pale mushroom tone, a single handthrown stoneware mug with dark glaze in the background right out of focus, delicate morning light from camera-right creating a soft gradient of light across the bag surface, minimal composition with the bag positioned slightly left of centre following rule of thirds, label fully readable, the matte paper texture of the bag visible in the raking light, eye-level straight-on framing, 85mm f/2.8, contemporary minimalist editorial coffee photography",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a rustic dark wooden bakery counter with visible grain and patina, a dusting of flour on the surface beside the bag, a round sourdough loaf with flour-dusted crust positioned behind and to the left in soft focus, warm overhead pendant lighting creating focused illumination on the bag with gentle falloff into shadow at the edges, the wooden surface showing authentic wear and character, bag label facing camera fully readable, three-quarter angle from slightly above, 70mm f/2.8 isolating the bag with shallow depth, artisan bakery atmosphere product photography",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a weathered oak board surface, a wicker bread basket with a linen-lined baguette in soft focus behind, a small ceramic bowl of whole roasted coffee beans to the right, warm amber side lighting from camera-left suggesting a bakery interior with natural light from a nearby window, exposed brick wall softly blurred in the background adding rustic warmth, bag label fully readable and facing camera, eye-level composition placing the bag as the clear hero with bakery context supporting the GAIL's brand story, 85mm f/2.8, warm artisan bakery editorial photography",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a dark slate surface dusted lightly with flour, a stack of three fresh pastries — pain au chocolat — on a wire cooling rack to the right in soft focus, a wooden cutting board with breadcrumbs visible beneath, warm directional bakery lighting from above and camera-left creating defined but soft shadows, the scene feeling like an authentic behind-the-counter bakery moment, bag label fully readable facing camera, low angle shot from table level looking slightly up at the bag, 90mm f/2.8, behind-the-scenes artisan bakery product photography",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a flour-dusted marble pastry slab, a glass jar of coffee beans with a hinged lid positioned behind the bag to the right, a small chalkboard menu sign leaning against the wall in soft background blur suggesting a bakery counter, warm golden tungsten lighting mixed with soft daylight creating a cosy neighbourhood bakery atmosphere, the bag as the undeniable focal point with label fully readable, three-quarter angle from slightly above eye level, 70mm f/3.2, warm neighbourhood bakery lifestyle product photography",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a dark reclaimed wood surface, beside a hand-shaped ceramic cup holding a flat white with a rosetta latte art pattern visible, a single fresh cinnamon roll on a small white plate in soft focus behind, the scene lit by warm window light filtering through bakery glass creating dappled light patterns, exposed timber shelving softly blurred in the background, bag label fully readable facing camera, eye-level straight-on composition, 85mm f/2.5 shallow depth of field, authentic London bakery morning scene photography",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a deep burgundy painted surface, strong directional hard light from camera-left at approximately 80 degrees creating a defined sharp shadow falling to the right, the matte paper bag texture dramatically revealed by the raking light, dark moody background in near-black with a warm colour cast, high contrast between the illuminated bag face and the shadow side, bag label fully readable and sharp, the red packaging section glowing intensely where the light hits, low angle from below eye level looking slightly up, 85mm f/4, bold dramatic high-contrast product photography",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a terracotta tile surface with natural warmth and slight texture, strong single-source hard light from above and camera-right casting a crisp geometric shadow of the bag onto the tile surface, deep warm shadows filling the left side of the frame, a small scatter of whole roasted coffee beans catching the light with individual bean shadows visible, rich warm colour palette of terracotta red and deep brown complementing the red packaging, bag label fully readable, three-quarter angle from slightly above, 90mm f/3.5, Mediterranean-inspired bold product photography",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright against a deep charcoal textured background, hard side light from camera-right creating dramatic chiaroscuro across the bag face with the GAIL's red section intensely saturated against the dark surroundings, a single dark ceramic espresso cup on a matching saucer in the foreground catching a sliver of the same hard light, the scene intentionally dark and moody with light falling only on the key elements, bag label fully readable and illuminated, straight-on eye-level composition with the bag centred, 105mm f/4, dramatic editorial chiaroscuro product photography",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a matte black stone surface, strong warm directional light from camera-left creating long dramatic shadows stretching across the surface to the right, a brass coffee scoop with a few beans beside the bag catching golden light highlights, deep warm cream-coloured wall behind with the light creating a gradient from bright left to dark right, bold graphic composition with strong diagonal shadow lines, bag label fully readable and sharply lit, low angle from just above surface level, 85mm f/3.5, punchy high-contrast editorial coffee photography",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Single GAIL's coffee bag standing upright on a warm sienna-toned concrete surface, shot from directly in front at eye level, hard overhead light creating a defined shadow pool directly beneath the bag with sharp edges, the background a rich deep cream graduating to warm shadow, three whole walnuts and a few cocoa nibs scattered deliberately near the bag base referencing the tasting notes, minimal composition with bold negative space, the red packaging section vivid and saturated against the warm neutral tones, bag label fully readable, 90mm f/4, graphic minimalist bold product photography with tasting note storytelling",
+          "score": 4.8,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-29T00:47:15.649Z",
+      "projectName": "gails-coffee-d",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 4.88,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on a deep burgundy painted surface, strong directional hard light from camera-left at 80 degrees creating a defined sharp shadow falling to the right, the matte paper texture dramatically revealed by raking light, dark moody background in near-black with warm cast, the red packaging section glowing where light hits, low angle from below eye level looking slightly up, 85mm f/4",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on a terracotta tile surface with natural warmth, strong single-source hard light from above and camera-right casting a crisp geometric bag shadow onto the tile, a small scatter of whole roasted coffee beans catching the light with individual shadows visible, rich warm terracotta and deep brown palette complementing the red packaging, bag label fully readable, three-quarter angle slightly above, 90mm f/3.5",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright against a deep charcoal textured plaster background, hard side light from camera-right creating dramatic chiaroscuro across the bag face with the red section intensely saturated against the dark surroundings, a single dark ceramic espresso cup on matching saucer in the foreground catching a sliver of the same hard light, label fully readable, straight-on eye-level centred composition, 105mm f/4",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on matte black stone surface, strong warm directional light from camera-left creating long dramatic shadows stretching across the surface, a brass coffee scoop with a few beans beside the bag catching golden highlights, deep warm cream wall behind with light gradient from bright left to dark right, bold graphic shadow lines, bag label fully readable, low angle from just above surface, 85mm f/3.5",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on warm sienna concrete surface with fine texture, hard overhead light creating a defined shadow pool directly beneath the bag, background rich deep cream graduating to warm shadow, three whole walnuts and a few cocoa nibs scattered near the bag base referencing the tasting notes, minimal composition with bold negative space, the red packaging vivid against warm neutral tones, bag label fully readable, straight-on eye-level, 90mm f/4",
+          "score": 4.8,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-29T00:47:15.986Z",
+      "projectName": "gails-coffee-a",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 5,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on a white marble countertop, a glass French press cafetière with dark brewed coffee visible inside positioned behind and to the right slightly out of focus, warm morning sunlight streaming from camera-left casting soft directional shadows across the marble, a white ceramic mug with black coffee to the right, bag label sharp and fully readable, three-quarter angle from slightly above, 85mm f/2.8",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on a light oak kitchen counter beside a glass cafetière with freshly pressed dark coffee and plunger halfway down, a fresh butter croissant on a small white plate to the left, soft diffused morning window light from behind creating bright airy atmosphere, bag label fully readable facing camera, eye-level straight-on, 70mm f/3.5",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on white marble beside a brass measuring scoop with whole roasted coffee beans spilling gently from it, warm golden side light from camera-right at 90 degrees raking across the matte paper texture showing natural creases, subtle rim light from behind separating the bag from the light grey background, low angle from just above table level looking slightly up, 90mm f/2.8",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on a sunlit pale stone windowsill with soft natural morning light flooding from behind creating a warm halo around the bag edges, a small ceramic espresso cup and saucer in the foreground slightly out of focus, condensation on window glass behind adding atmosphere, bag label facing camera fully readable, three-quarter angle from slightly below eye level, 85mm f/2",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on white marble counter, a woman's hands in soft focus behind pressing down a glass French press cafetière, steam rising from a freshly poured white ceramic mug to the right, warm morning window light from camera-left, bag in sharp focus centre frame with label fully readable, the human element adding warmth without showing a face, three-quarter angle slightly above, 70mm f/2.8",
+          "score": 5,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-29T00:47:29.149Z",
+      "projectName": "gails-coffee-c",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 4.92,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on a rustic dark wooden bakery counter with visible grain and patina, a dusting of flour on the surface beside the bag, a round sourdough loaf with flour-dusted crust behind and to the left in soft focus, warm overhead pendant lighting creating focused illumination on the bag with gentle falloff, bag label facing camera fully readable, three-quarter angle slightly above, 70mm f/2.8",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on a weathered oak board surface, a wicker bread basket with a linen-lined baguette in soft focus behind, a small ceramic bowl of whole roasted coffee beans to the right, warm amber side lighting from camera-left suggesting bakery interior with window light, exposed brick wall softly blurred in background, bag label fully readable, eye-level composition, 85mm f/2.8",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on dark slate surface dusted lightly with flour, a stack of three fresh pain au chocolat on a wire cooling rack to the right in soft focus, warm directional bakery lighting from above and camera-left creating defined but soft shadows, authentic behind-the-counter bakery moment, bag label fully readable facing camera, low angle from table level looking slightly up, 90mm f/2.8",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on flour-dusted marble pastry slab, a glass jar of coffee beans with hinged lid behind the bag to the right, warm golden tungsten lighting mixed with soft daylight creating cosy neighbourhood bakery atmosphere, the bag as the undeniable focal point with label fully readable, three-quarter angle slightly above eye level, 70mm f/3.2",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on dark reclaimed wood surface, beside a hand-shaped ceramic cup holding a flat white with rosetta latte art visible, a single fresh cinnamon roll on a small white plate in soft focus behind, warm window light filtering through creating dappled light patterns, exposed timber shelving softly blurred in background, bag label fully readable, eye-level straight-on, 85mm f/2.5",
+          "score": 5,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-29T00:47:37.514Z",
+      "projectName": "gails-coffee-b",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 4.96,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on a travertine stone surface with subtle warm veining, a single handmade ceramic cup with matte glaze behind and to the left, soft diffused overhead lighting creating barely perceptible shadows, the red packaging section the only saturated colour in the muted palette, generous negative space surrounding the composition, straight-on eye-level, 85mm f/4",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on a smooth warm plaster surface in off-white, a minimalist ceramic bowl with whole roasted coffee beans to the right, soft diffused side light from camera-left wrapping gently around the matte paper showing texture, muted earthy background in warm putty tone, considered negative space, bag label sharp and facing camera, three-quarter angle slightly above, 90mm f/3.5",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on pale limestone surface beside a simple clear glass cup of black coffee showing the rich dark amber colour, a thin linen napkin folded beneath the glass, warm neutral plaster wall as background, soft even lighting from above with gentle fill preventing harsh shadows, the bag as the clear focal point, low angle from just above surface level, 105mm f/3.5",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on a raw plaster pedestal in warm sand tone, no props, soft diffused light from camera-right creating a gentle gradient across the bag face, generous negative space above and to the left, the red lower section vivid against the warm neutral environment, the bag elevated and presented like a gallery object, straight-on eye-level, 85mm f/4",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "GAIL's House Blend Coffee bag standing upright on warm concrete with fine aggregate texture, shot against a soft plaster wall in pale mushroom tone, a single handthrown stoneware mug with dark glaze in background right out of focus, delicate light from camera-right creating a soft gradient across the bag surface, bag positioned slightly left of centre following rule of thirds, label fully readable, 85mm f/2.8",
+          "score": 5,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-29T00:57:11.365Z",
+      "projectName": "gails-coffee-a",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 4.8,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "The coffee bag from the reference image standing upright on a white marble countertop, a glass French press cafetière with dark brewed coffee visible inside positioned behind and to the right slightly out of focus, warm morning sunlight streaming from camera-left casting soft directional shadows across the marble, a white ceramic mug with black coffee to the right, bag label sharp and fully readable, three-quarter angle from slightly above, 85mm f/2.8",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "The coffee bag from the reference image standing upright on a light oak kitchen counter beside a glass cafetière with freshly pressed dark coffee and plunger halfway down, a fresh butter croissant on a small white plate to the left, soft diffused morning window light from behind creating bright airy atmosphere, bag label fully readable facing camera, eye-level straight-on, 70mm f/3.5",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "The coffee bag from the reference image standing upright on white marble beside a brass measuring scoop with whole roasted coffee beans spilling gently from it, warm golden side light from camera-right at 90 degrees raking across the matte paper texture showing natural creases, subtle rim light from behind separating the bag from the light grey background, low angle from just above table level looking slightly up, 90mm f/2.8",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "The coffee bag from the reference image standing upright on a sunlit pale stone windowsill with soft natural morning light flooding from behind creating a warm halo around the bag edges, a small ceramic espresso cup and saucer in the foreground slightly out of focus, condensation on window glass behind adding atmosphere, bag label facing camera fully readable, three-quarter angle from slightly below eye level, 85mm f/2",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "The coffee bag from the reference image standing upright on white marble counter, a woman's hands in soft focus behind pressing down a glass French press cafetière, steam rising from a freshly poured white ceramic mug to the right, warm morning window light from camera-left, bag in sharp focus centre frame with label fully readable, the human element adding warmth without showing a face, three-quarter angle slightly above, 70mm f/2.8",
+          "score": 4.8,
+          "format": "square"
+        }
+      ]
+    }
+  ],
+  "topPrompts": [
+    {
+      "prompt": "Single GAIL's coffee bag standing upright on a white marble countertop, a glass French press with dark brewed coffee visible inside positioned behind and to the right slightly out of focus, warm morning sunlight streaming through a window from camera-left casting soft directional shadows across the marble surface, a white ceramic mug with black coffee in the foreground-right with gentle wisps of steam rising, a folded linen napkin beside the mug, the coffee bag in sharp focus as the hero product with label fully readable, three-quarter camera angle from slightly above eye level, 85mm f/2.8 shallow depth of field, warm natural morning kitchen photography",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "Single GAIL's coffee bag upright on a white marble surface beside a brass measuring scoop with whole roasted coffee beans spilling gently from it, a ceramic pour-over dripper in soft focus behind the bag, warm golden side light from camera-right at approximately 90 degrees raking across the matte paper texture of the bag showing natural creases and material quality, subtle rim light from behind separating the white bag from the light grey wall background, bag label sharp and fully readable, low angle shot from just above table surface level looking slightly upward at the bag giving it presence, 90mm f/2.8, premium morning ritual product photography",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "Single GAIL's coffee bag standing upright on a smooth plaster surface in warm off-white, a minimalist ceramic bowl with whole roasted coffee beans to the right, a single dried eucalyptus sprig laid flat in the foreground, soft diffused side light from camera-left wrapping gently around the matte paper bag showing texture, muted earthy background in warm putty or sand tone, understated composition with considered negative space, bag label sharp and fully readable, three-quarter angle from slightly above, 90mm f/3.5, refined minimalist editorial still life photography",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "Single GAIL's coffee bag standing upright on pale limestone surface, beside a simple clear glass cup of black coffee showing the rich dark amber colour of the brew, a thin linen napkin folded neatly underneath the glass, warm neutral plaster wall as background, soft even lighting from above and slightly left with gentle fill from right preventing harsh shadows, the composition deliberately sparse and editorial with the bag as the clear focal point label fully readable, low angle from just above surface level giving the bag quiet authority, 105mm f/3.5, premium understated luxury product photography",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "Single GAIL's coffee bag standing upright on a matte cream ceramic tray placed on a soft linen surface, a small white porcelain milk jug beside it, two cinnamon sticks crossed casually in front, the entire scene bathed in soft warm diffused light with no harsh shadows, muted cream and warm grey tones throughout with the red bag section as the sole colour pop, generous white space above and around the product, bag label facing camera fully readable, overhead angle looking down at approximately 30 degrees, 70mm f/4.5, serene quiet luxury flat editorial product photography",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "Single GAIL's coffee bag standing upright on a warm concrete surface with fine aggregate texture, shot against a soft plaster wall in pale mushroom tone, a single handthrown stoneware mug with dark glaze in the background right out of focus, delicate morning light from camera-right creating a soft gradient of light across the bag surface, minimal composition with the bag positioned slightly left of centre following rule of thirds, label fully readable, the matte paper texture of the bag visible in the raking light, eye-level straight-on framing, 85mm f/2.8, contemporary minimalist editorial coffee photography",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "Single GAIL's coffee bag standing upright on a weathered oak board surface, a wicker bread basket with a linen-lined baguette in soft focus behind, a small ceramic bowl of whole roasted coffee beans to the right, warm amber side lighting from camera-left suggesting a bakery interior with natural light from a nearby window, exposed brick wall softly blurred in the background adding rustic warmth, bag label fully readable and facing camera, eye-level composition placing the bag as the clear hero with bakery context supporting the GAIL's brand story, 85mm f/2.8, warm artisan bakery editorial photography",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "Single GAIL's coffee bag standing upright on a flour-dusted marble pastry slab, a glass jar of coffee beans with a hinged lid positioned behind the bag to the right, a small chalkboard menu sign leaning against the wall in soft background blur suggesting a bakery counter, warm golden tungsten lighting mixed with soft daylight creating a cosy neighbourhood bakery atmosphere, the bag as the undeniable focal point with label fully readable, three-quarter angle from slightly above eye level, 70mm f/3.2, warm neighbourhood bakery lifestyle product photography",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "Single GAIL's coffee bag standing upright on a dark reclaimed wood surface, beside a hand-shaped ceramic cup holding a flat white with a rosetta latte art pattern visible, a single fresh cinnamon roll on a small white plate in soft focus behind, the scene lit by warm window light filtering through bakery glass creating dappled light patterns, exposed timber shelving softly blurred in the background, bag label fully readable facing camera, eye-level straight-on composition, 85mm f/2.5 shallow depth of field, authentic London bakery morning scene photography",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "Single GAIL's coffee bag standing upright on a deep burgundy painted surface, strong directional hard light from camera-left at approximately 80 degrees creating a defined sharp shadow falling to the right, the matte paper bag texture dramatically revealed by the raking light, dark moody background in near-black with a warm colour cast, high contrast between the illuminated bag face and the shadow side, bag label fully readable and sharp, the red packaging section glowing intensely where the light hits, low angle from below eye level looking slightly up, 85mm f/4, bold dramatic high-contrast product photography",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "Single GAIL's coffee bag standing upright on a terracotta tile surface with natural warmth and slight texture, strong single-source hard light from above and camera-right casting a crisp geometric shadow of the bag onto the tile surface, deep warm shadows filling the left side of the frame, a small scatter of whole roasted coffee beans catching the light with individual bean shadows visible, rich warm colour palette of terracotta red and deep brown complementing the red packaging, bag label fully readable, three-quarter angle from slightly above, 90mm f/3.5, Mediterranean-inspired bold product photography",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "GAIL's House Blend Coffee bag standing upright on a terracotta tile surface with natural warmth, strong single-source hard light from above and camera-right casting a crisp geometric bag shadow onto the tile, a small scatter of whole roasted coffee beans catching the light with individual shadows visible, rich warm terracotta and deep brown palette complementing the red packaging, bag label fully readable, three-quarter angle slightly above, 90mm f/3.5",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "GAIL's House Blend Coffee bag standing upright on matte black stone surface, strong warm directional light from camera-left creating long dramatic shadows stretching across the surface, a brass coffee scoop with a few beans beside the bag catching golden highlights, deep warm cream wall behind with light gradient from bright left to dark right, bold graphic shadow lines, bag label fully readable, low angle from just above surface, 85mm f/3.5",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "GAIL's House Blend Coffee bag standing upright on a white marble countertop, a glass French press cafetière with dark brewed coffee visible inside positioned behind and to the right slightly out of focus, warm morning sunlight streaming from camera-left casting soft directional shadows across the marble, a white ceramic mug with black coffee to the right, bag label sharp and fully readable, three-quarter angle from slightly above, 85mm f/2.8",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "GAIL's House Blend Coffee bag standing upright on a light oak kitchen counter beside a glass cafetière with freshly pressed dark coffee and plunger halfway down, a fresh butter croissant on a small white plate to the left, soft diffused morning window light from behind creating bright airy atmosphere, bag label fully readable facing camera, eye-level straight-on, 70mm f/3.5",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "GAIL's House Blend Coffee bag standing upright on white marble beside a brass measuring scoop with whole roasted coffee beans spilling gently from it, warm golden side light from camera-right at 90 degrees raking across the matte paper texture showing natural creases, subtle rim light from behind separating the bag from the light grey background, low angle from just above table level looking slightly up, 90mm f/2.8",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "GAIL's House Blend Coffee bag standing upright on a sunlit pale stone windowsill with soft natural morning light flooding from behind creating a warm halo around the bag edges, a small ceramic espresso cup and saucer in the foreground slightly out of focus, condensation on window glass behind adding atmosphere, bag label facing camera fully readable, three-quarter angle from slightly below eye level, 85mm f/2",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "GAIL's House Blend Coffee bag standing upright on white marble counter, a woman's hands in soft focus behind pressing down a glass French press cafetière, steam rising from a freshly poured white ceramic mug to the right, warm morning window light from camera-left, bag in sharp focus centre frame with label fully readable, the human element adding warmth without showing a face, three-quarter angle slightly above, 70mm f/2.8",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "GAIL's House Blend Coffee bag standing upright on a weathered oak board surface, a wicker bread basket with a linen-lined baguette in soft focus behind, a small ceramic bowl of whole roasted coffee beans to the right, warm amber side lighting from camera-left suggesting bakery interior with window light, exposed brick wall softly blurred in background, bag label fully readable, eye-level composition, 85mm f/2.8",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "GAIL's House Blend Coffee bag standing upright on flour-dusted marble pastry slab, a glass jar of coffee beans with hinged lid behind the bag to the right, warm golden tungsten lighting mixed with soft daylight creating cosy neighbourhood bakery atmosphere, the bag as the undeniable focal point with label fully readable, three-quarter angle slightly above eye level, 70mm f/3.2",
+      "score": 5,
+      "format": "square"
+    }
+  ],
+  "styleAnchors": [],
+  "insights": {
+    "bestProvider": "gemini",
+    "avgScore": 4.73,
+    "runCount": 11
+  }
+}

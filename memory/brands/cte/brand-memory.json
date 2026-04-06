@@ -1,0 +1,164 @@
+{
+  "brandName": "CÔTE",
+  "lastUpdated": "2026-03-18T00:54:36.427Z",
+  "runs": [
+    {
+      "timestamp": "2026-03-18T00:34:55.727Z",
+      "projectName": "cote",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 4.48,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Full body shot of Black male model standing at the crest of rolling green hills, vivid blue sky with towering white cumulus clouds behind him, wearing yellow vertical-striped button-down shirt open over white tee and light blue wide-leg pinstripe trousers, hands relaxed at sides, shot from slightly below eye level looking up giving a commanding presence, warm golden hour sunlight raking sideways across the grass and fabric, natural skin texture with visible tattoos on forearms, 85mm f/1.8 shallow depth of field, HD editorial fashion photography",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Black male model mid-stride walking through lush green grass meadow, yellow striped shirt catching a gentle breeze showing natural fabric movement, light blue wide-leg trousers flowing with the walk, blue sky and white clouds above undulating green hills, waist-up framing with soft foreground grass creating depth, warm afternoon backlight with subtle rim light on shoulders, natural unposed movement, 70mm f/2 aperture priority, editorial lifestyle fashion photography",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Three-quarter body crop of Black male model seated on grassy hillside, one knee drawn up with arm resting casually on it, yellow striped shirt draped open revealing white undershirt and layered gold chain necklaces, light blue pinstripe trousers contrasting against the vivid green grass, soft diffused golden light from the left side, sweeping green hills and blue sky filling background at f/4 for environmental context, relaxed confident expression looking toward camera, editorial portrait with natural skin texture",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Tight chest-up portrait of Black male model, gold hoop earring catching the light, layered chain necklaces against collarbone, yellow striped shirt collar framing the neck, looking slightly off-camera to the right with calm confident expression, soft green bokeh of hillside behind created by shallow depth of field, warm golden rim light wrapping around jawline and cheekbone, natural skin texture with visible pores, 105mm f/1.8 compressed portrait lens, editorial menswear close-up",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Full body profile silhouette of Black male model standing on green hilltop, yellow striped shirt billowing slightly in gentle breeze revealing relaxed oversized drape, light blue wide-leg trousers with visible pinstripe texture, one hand in trouser pocket, blue sky with dramatic white cumulus clouds filling upper two-thirds of frame, strong natural backlighting creating golden edge light along the body outline, 50mm f/2.8 landscape lens for environmental scale, cinematic editorial fashion composition",
+          "score": 4.4,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-18T00:42:50.570Z",
+      "projectName": "cote",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 3.84,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Full body shot of Black male model standing at the crest of rolling green hills, vivid blue sky with towering white cumulus clouds behind him, wearing yellow vertical-striped button-down shirt open over white tee and light blue wide-leg pinstripe trousers, hands relaxed at sides, shot from slightly below eye level looking up giving a commanding presence, warm golden hour sunlight raking sideways across the grass and fabric, natural skin texture with visible tattoos on forearms, 85mm f/1.8 shallow depth of field, HD editorial fashion photography",
+          "score": 4,
+          "format": "square"
+        },
+        {
+          "prompt": "Black male model mid-stride walking through lush green grass meadow, yellow striped shirt catching a gentle breeze showing natural fabric movement, light blue wide-leg trousers flowing with the walk, blue sky and white clouds above undulating green hills, waist-up framing with soft foreground grass creating depth, warm afternoon backlight with subtle rim light on shoulders, natural unposed movement, 70mm f/2 aperture priority, editorial lifestyle fashion photography",
+          "score": 4,
+          "format": "square"
+        },
+        {
+          "prompt": "Full body profile silhouette of Black male model standing on green hilltop, yellow striped shirt billowing slightly in gentle breeze revealing relaxed oversized drape, light blue wide-leg trousers with visible pinstripe texture, one hand in trouser pocket, blue sky with dramatic white cumulus clouds filling upper two-thirds of frame, strong natural backlighting creating golden edge light along the body outline, 50mm f/2.8 landscape lens for environmental scale, cinematic editorial fashion composition",
+          "score": 4,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-18T00:54:36.426Z",
+      "projectName": "cote",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 4.16,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Full body shot of Black male model with cornrow braids standing at the crest of rolling green hills, vivid blue sky with towering white cumulus clouds behind him, wearing yellow vertical-striped button-down shirt open over white tee and light blue wide-leg pinstripe trousers, hands relaxed at sides, feet planted in thick green grass with natural ground shadow, shot from slightly below eye level looking up giving commanding presence, warm golden hour sunlight from camera-left raking sideways across the grass and fabric casting long shadows on the hillside, natural skin texture with visible tattoos on forearms, 85mm f/1.8 shallow depth of field, on-location editorial fashion photography",
+          "score": 4.2,
+          "format": "square"
+        },
+        {
+          "prompt": "Black male model with cornrow braids mid-stride walking through lush green grass meadow, grass brushing against his light blue wide-leg trousers as he moves, yellow striped shirt catching a gentle breeze showing natural fabric movement, blue sky and white clouds above undulating green hills, waist-up framing with soft foreground grass creating depth, warm afternoon backlight from behind with subtle rim light on shoulders, natural unposed movement with feet hidden in tall meadow grass, 70mm f/2 aperture priority, on-location editorial lifestyle fashion photography",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Three-quarter body crop of Black male model with cornrow braids seated on grassy hillside with grass pressed beneath him, one knee drawn up with arm resting casually on it, yellow striped shirt draped open revealing white undershirt and layered gold chain necklaces, light blue pinstripe trousers contrasting against the vivid green grass, soft diffused golden light from the left side casting gentle shadow on the slope, sweeping green hills and blue sky filling background at f/4 for environmental context, relaxed confident expression looking toward camera, on-location editorial portrait with natural skin texture",
+          "score": 4.2,
+          "format": "square"
+        },
+        {
+          "prompt": "Full body profile view of Black male model with cornrow braids standing on green hilltop with feet in thick grass, yellow striped shirt billowing slightly in gentle breeze revealing relaxed oversized drape, light blue wide-leg trousers with visible pinstripe texture, one hand in trouser pocket, blue sky with dramatic white cumulus clouds filling upper two-thirds of frame, strong natural backlighting from behind creating golden edge light along the entire body outline and grass tips, long shadow stretching across the hillside, 50mm f/2.8 for environmental scale, on-location cinematic editorial fashion composition",
+          "score": 4.2,
+          "format": "square"
+        }
+      ]
+    }
+  ],
+  "topPrompts": [
+    {
+      "prompt": "Tight chest-up portrait of Black male model, gold hoop earring catching the light, layered chain necklaces against collarbone, yellow striped shirt collar framing the neck, looking slightly off-camera to the right with calm confident expression, soft green bokeh of hillside behind created by shallow depth of field, warm golden rim light wrapping around jawline and cheekbone, natural skin texture with visible pores, 105mm f/1.8 compressed portrait lens, editorial menswear close-up",
+      "score": 4.8,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body shot of Black male model standing at the crest of rolling green hills, vivid blue sky with towering white cumulus clouds behind him, wearing yellow vertical-striped button-down shirt open over white tee and light blue wide-leg pinstripe trousers, hands relaxed at sides, shot from slightly below eye level looking up giving a commanding presence, warm golden hour sunlight raking sideways across the grass and fabric, natural skin texture with visible tattoos on forearms, 85mm f/1.8 shallow depth of field, HD editorial fashion photography",
+      "score": 4.4,
+      "format": "square"
+    },
+    {
+      "prompt": "Black male model mid-stride walking through lush green grass meadow, yellow striped shirt catching a gentle breeze showing natural fabric movement, light blue wide-leg trousers flowing with the walk, blue sky and white clouds above undulating green hills, waist-up framing with soft foreground grass creating depth, warm afternoon backlight with subtle rim light on shoulders, natural unposed movement, 70mm f/2 aperture priority, editorial lifestyle fashion photography",
+      "score": 4.4,
+      "format": "square"
+    },
+    {
+      "prompt": "Three-quarter body crop of Black male model seated on grassy hillside, one knee drawn up with arm resting casually on it, yellow striped shirt draped open revealing white undershirt and layered gold chain necklaces, light blue pinstripe trousers contrasting against the vivid green grass, soft diffused golden light from the left side, sweeping green hills and blue sky filling background at f/4 for environmental context, relaxed confident expression looking toward camera, editorial portrait with natural skin texture",
+      "score": 4.4,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body profile silhouette of Black male model standing on green hilltop, yellow striped shirt billowing slightly in gentle breeze revealing relaxed oversized drape, light blue wide-leg trousers with visible pinstripe texture, one hand in trouser pocket, blue sky with dramatic white cumulus clouds filling upper two-thirds of frame, strong natural backlighting creating golden edge light along the body outline, 50mm f/2.8 landscape lens for environmental scale, cinematic editorial fashion composition",
+      "score": 4.4,
+      "format": "square"
+    },
+    {
+      "prompt": "Black male model with cornrow braids mid-stride walking through lush green grass meadow, grass brushing against his light blue wide-leg trousers as he moves, yellow striped shirt catching a gentle breeze showing natural fabric movement, blue sky and white clouds above undulating green hills, waist-up framing with soft foreground grass creating depth, warm afternoon backlight from behind with subtle rim light on shoulders, natural unposed movement with feet hidden in tall meadow grass, 70mm f/2 aperture priority, on-location editorial lifestyle fashion photography",
+      "score": 4.4,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body shot of Black male model with cornrow braids standing at the crest of rolling green hills, vivid blue sky with towering white cumulus clouds behind him, wearing yellow vertical-striped button-down shirt open over white tee and light blue wide-leg pinstripe trousers, hands relaxed at sides, feet planted in thick green grass with natural ground shadow, shot from slightly below eye level looking up giving commanding presence, warm golden hour sunlight from camera-left raking sideways across the grass and fabric casting long shadows on the hillside, natural skin texture with visible tattoos on forearms, 85mm f/1.8 shallow depth of field, on-location editorial fashion photography",
+      "score": 4.2,
+      "format": "square"
+    },
+    {
+      "prompt": "Three-quarter body crop of Black male model with cornrow braids seated on grassy hillside with grass pressed beneath him, one knee drawn up with arm resting casually on it, yellow striped shirt draped open revealing white undershirt and layered gold chain necklaces, light blue pinstripe trousers contrasting against the vivid green grass, soft diffused golden light from the left side casting gentle shadow on the slope, sweeping green hills and blue sky filling background at f/4 for environmental context, relaxed confident expression looking toward camera, on-location editorial portrait with natural skin texture",
+      "score": 4.2,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body profile view of Black male model with cornrow braids standing on green hilltop with feet in thick grass, yellow striped shirt billowing slightly in gentle breeze revealing relaxed oversized drape, light blue wide-leg trousers with visible pinstripe texture, one hand in trouser pocket, blue sky with dramatic white cumulus clouds filling upper two-thirds of frame, strong natural backlighting from behind creating golden edge light along the entire body outline and grass tips, long shadow stretching across the hillside, 50mm f/2.8 for environmental scale, on-location cinematic editorial fashion composition",
+      "score": 4.2,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body shot of Black male model standing at the crest of rolling green hills, vivid blue sky with towering white cumulus clouds behind him, wearing yellow vertical-striped button-down shirt open over white tee and light blue wide-leg pinstripe trousers, hands relaxed at sides, shot from slightly below eye level looking up giving a commanding presence, warm golden hour sunlight raking sideways across the grass and fabric, natural skin texture with visible tattoos on forearms, 85mm f/1.8 shallow depth of field, HD editorial fashion photography",
+      "score": 4,
+      "format": "square"
+    },
+    {
+      "prompt": "Black male model mid-stride walking through lush green grass meadow, yellow striped shirt catching a gentle breeze showing natural fabric movement, light blue wide-leg trousers flowing with the walk, blue sky and white clouds above undulating green hills, waist-up framing with soft foreground grass creating depth, warm afternoon backlight with subtle rim light on shoulders, natural unposed movement, 70mm f/2 aperture priority, editorial lifestyle fashion photography",
+      "score": 4,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body profile silhouette of Black male model standing on green hilltop, yellow striped shirt billowing slightly in gentle breeze revealing relaxed oversized drape, light blue wide-leg trousers with visible pinstripe texture, one hand in trouser pocket, blue sky with dramatic white cumulus clouds filling upper two-thirds of frame, strong natural backlighting creating golden edge light along the body outline, 50mm f/2.8 landscape lens for environmental scale, cinematic editorial fashion composition",
+      "score": 4,
+      "format": "square"
+    }
+  ],
+  "styleAnchors": [],
+  "insights": {
+    "bestProvider": "gemini",
+    "avgScore": 4.16,
+    "runCount": 3
+  }
+}

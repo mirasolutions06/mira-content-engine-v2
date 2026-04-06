@@ -1,0 +1,334 @@
+{
+  "brandName": "Gymwear",
+  "lastUpdated": "2026-04-05T01:13:11.715Z",
+  "runs": [
+    {
+      "timestamp": "2026-03-17T09:55:41.612Z",
+      "projectName": "gymwear-2piece",
+      "mode": "brand-images",
+      "clipCount": 6,
+      "avgQAScore": 4.07,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Full body standing pose of Black woman with short cropped hair in the steel blue scoop-neck crop top and matching high-waist leggings, warm amber key light from camera-left painting her right side gold and catching the ribbed texture of the fabric, cool steel blue gel from camera-right filling the shadow side and blending into the garment color, dark charcoal seamless studio background, one hand resting on hip, confident direct eye contact, shot at 35mm f/2.8 low angle looking slightly up, dark polished concrete floor reflecting warm light, high-fashion editorial",
+          "score": 4.4,
+          "format": "story"
+        },
+        {
+          "prompt": "Black woman with short cropped hair in steel blue crop top and high-waist leggings standing three-quarter angle facing camera-right, one hand on hip showing the crop top silhouette and legging fit, hard amber spotlight from directly camera-left creating a sharp warm line down her right arm and leg with the left side falling into cool blue shadow, dark seamless studio background, 85mm f/2 shallow focus isolating her against the void, the steel blue fabric saturated and rich under the directional light, fashion test shoot editorial",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Black woman with short cropped hair in steel blue crop top and leggings sitting on a dark polished concrete studio floor, one knee drawn up with her arm resting on it, other leg extended, relaxed confident pose, warm amber toplight from above-left creating rich shadows beneath her jawline and across the leggings, cool blue ambient bouncing off the dark floor, the steel blue set glowing against the charcoal ground, shot at 50mm f/2 from floor level, editorial magazine energy",
+          "score": 4.6,
+          "format": "landscape"
+        },
+        {
+          "prompt": "Waist-to-knee crop of Black woman in the steel blue high-waist leggings, one hand adjusting the high waistband, dramatic side light from camera-right raking across the seamless ribbed fabric showing the body-contouring fit and texture, dark skin creating beautiful contrast against the saturated steel blue, dark moody studio background, shot at macro distance 100mm f/2.8, the blue rich and dimensional under the hard directional light, intimate product detail",
+          "score": 4.6,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-17T09:59:00.352Z",
+      "projectName": "gymwear-2piece",
+      "mode": "brand-images",
+      "clipCount": 6,
+      "avgQAScore": 4.4,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Full body standing pose of Black woman with short cropped hair in the steel blue scoop-neck crop top and matching high-waist leggings, warm amber key light from camera-left painting her right side gold and catching the ribbed texture of the fabric, cool steel blue gel from camera-right filling the shadow side and blending into the garment color, dark charcoal seamless studio background, one hand resting on hip, confident direct eye contact, shot at 35mm f/2.8 low angle looking slightly up, dark polished concrete floor reflecting warm light, high-fashion editorial",
+          "score": 4.4,
+          "format": "story"
+        },
+        {
+          "prompt": "Black woman with short cropped hair in steel blue crop top and high-waist leggings standing three-quarter angle facing camera-right, one hand on hip showing the crop top silhouette and legging fit, hard amber spotlight from directly camera-left creating a sharp warm line down her right arm and leg with the left side falling into cool blue shadow, dark seamless studio background, 85mm f/2 shallow focus isolating her against the void, the steel blue fabric saturated and rich under the directional light, fashion test shoot editorial",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Black woman with short cropped hair in steel blue crop top and leggings viewed from three-quarter back angle looking over her right shoulder toward camera, warm amber rim light from camera-left tracing her silhouette and the contour of the leggings, cool blue fill from camera-right catching the scoop-neck strap detail of the crop top, dark studio background, body-contouring fit of the leggings visible in profile, 85mm f/1.8 shallow focus, the steel blue fabric glowing where the two light sources meet on the fabric edge, editorial fashion test shoot",
+          "score": 4.2,
+          "format": "story"
+        },
+        {
+          "prompt": "Tight crop from collarbones to waist of Black woman in the steel blue crop top, arms slightly crossed with hands resting on opposite forearms, hard directional light raking from camera-left across the seamless ribbed fabric surface revealing every rib and seam of the crop top texture, dark skin warm against the cool steel blue fabric, wide straps sharp and defined, 100mm macro f/2.8 shallow depth of field, dark studio background, intimate product detail shot",
+          "score": 4.2,
+          "format": "square"
+        },
+        {
+          "prompt": "Black woman with short cropped hair in steel blue crop top and leggings sitting on a dark polished concrete studio floor, one knee drawn up with her arm resting on it, other leg extended, relaxed confident pose, warm amber toplight from above-left creating rich shadows beneath her jawline and across the leggings, cool blue ambient bouncing off the dark floor, the steel blue set glowing against the charcoal ground, shot at 50mm f/2 from floor level, editorial magazine energy",
+          "score": 4.6,
+          "format": "landscape"
+        },
+        {
+          "prompt": "Waist-to-knee crop of Black woman in the steel blue high-waist leggings, one hand adjusting the high waistband, dramatic side light from camera-right raking across the seamless ribbed fabric showing the body-contouring fit and texture, dark skin creating beautiful contrast against the saturated steel blue, dark moody studio background, shot at macro distance 100mm f/2.8, the blue rich and dimensional under the hard directional light, intimate product detail",
+          "score": 4.6,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-17T10:06:09.762Z",
+      "projectName": "gymwear-2piece",
+      "mode": "brand-images",
+      "clipCount": 6,
+      "avgQAScore": 4.37,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Full body standing pose of Black woman with short cropped hair in the steel blue scoop-neck crop top and matching high-waist leggings, warm amber key light from camera-left painting her right side gold and catching the ribbed texture of the fabric, cool steel blue gel from camera-right filling the shadow side and blending into the garment color, dark charcoal seamless studio background, one hand resting on hip, confident direct eye contact, shot at 35mm f/2.8 low angle looking slightly up, dark polished concrete floor reflecting warm light, high-fashion editorial",
+          "score": 4.4,
+          "format": "story"
+        },
+        {
+          "prompt": "Black woman with short cropped hair in steel blue crop top and high-waist leggings standing three-quarter angle facing camera-right, one hand on hip showing the crop top silhouette and legging fit, hard amber spotlight from directly camera-left creating a sharp warm line down her right arm and leg with the left side falling into cool blue shadow, dark seamless studio background, 85mm f/2 shallow focus isolating her against the void, the steel blue fabric saturated and rich under the directional light, fashion test shoot editorial",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Black woman with short cropped hair in steel blue crop top and leggings viewed from three-quarter back angle looking over her right shoulder toward camera, warm amber rim light from camera-left tracing her silhouette and the contour of the leggings, cool blue fill from camera-right catching the scoop-neck strap detail of the crop top, dark studio background, body-contouring fit of the leggings visible in profile, 85mm f/1.8 shallow focus, the steel blue fabric glowing where the two light sources meet on the fabric edge, editorial fashion test shoot",
+          "score": 4.4,
+          "format": "story"
+        },
+        {
+          "prompt": "Tight crop from collarbones to waist of Black woman in the steel blue crop top, arms slightly crossed with hands resting on opposite forearms, hard directional light raking from camera-left across the seamless ribbed fabric surface revealing every rib and seam of the crop top texture, dark skin warm against the cool steel blue fabric, wide straps sharp and defined, 100mm macro f/2.8 shallow depth of field, dark studio background, intimate product detail shot",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Black woman with short cropped hair in steel blue crop top and leggings sitting on a dark polished concrete studio floor, one knee drawn up with her arm resting on it, other leg extended, relaxed confident pose, warm amber toplight from above-left creating rich shadows beneath her jawline and across the leggings, cool blue ambient bouncing off the dark floor, the steel blue set glowing against the charcoal ground, shot at 50mm f/2 from floor level, editorial magazine energy",
+          "score": 4.4,
+          "format": "landscape"
+        },
+        {
+          "prompt": "Waist-to-knee crop of Black woman in the steel blue high-waist leggings, one hand adjusting the high waistband, dramatic side light from camera-right raking across the seamless ribbed fabric showing the body-contouring fit and texture, dark skin creating beautiful contrast against the saturated steel blue, dark moody studio background, shot at macro distance 100mm f/2.8, the blue rich and dimensional under the hard directional light, intimate product detail",
+          "score": 4.2,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-04-05T00:40:32.282Z",
+      "projectName": "gymwear-mirror-selfie",
+      "mode": "brand-images",
+      "clipCount": 10,
+      "avgQAScore": 4.44,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Full body mirror selfie, young Asian woman with shoulder-length brown hair in cream long-sleeve square-neck crop top and matching high-waist flare leggings, holding phone at chest height with both hands, weight shifted onto back hip, standing straight-on to a large wall mirror in a minimalist pilates studio with marble-effect curved walls and grey yoga mats on polished concrete floor behind her, warm recessed ceiling downlights, 50mm f/2.8, natural confident expression",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Full body mirror selfie at slight angle, young Asian woman with shoulder-length brown hair in cream square-neck crop top and cream flare leggings, phone held higher near face with right hand, left hand adjusting the high waistband of the leggings, three-quarter turn to mirror showing the fit of the flare leg, minimalist studio with marble walls and silver exercise balls visible behind her, warm overhead ambient light on polished concrete floor, 50mm f/2.8, relaxed expression",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Full body mirror selfie, young Asian woman with brown hair in cream long-sleeve crop top and matching flare leggings, standing at three-quarter angle to wall mirror, phone at eye level in right hand, left arm relaxed at side, showing the side silhouette of the crop top and flare of the leggings, minimalist pilates studio background with grey mats and marble walls, warm downlights reflecting off polished floor, 50mm f/2.8, soft natural expression",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Mirror selfie from side profile, young Asian woman with shoulder-length brown hair in cream square-neck crop top and cream high-waist flare leggings, body side-on to mirror turning head to look at phone held in near hand, showing the full silhouette of the flare leg and fitted crop top from the side, minimalist studio with marble-effect wall and exercise ball in background, warm ambient ceiling light, polished concrete floor, 50mm f/2.8, casual glance at phone",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Full body mirror selfie, young Asian woman with brown hair in cream long-sleeve crop top and flare leggings, slight hip pop to one side, phone held low at waist with one hand showing full outfit in mirror, head tilted slightly with confident direct eye contact in the reflection, minimalist pilates studio with grey yoga mats and marble curved walls behind, warm overhead downlights, polished concrete floor, 50mm f/2.8",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Full body mirror selfie, young Asian woman with brown hair in cream long-sleeve crop top and cream flare leggings, one hand running through hair pushing it back from face, phone held low in other hand capturing full outfit, showing midriff and crop top neckline, minimalist pilates studio background with marble walls and grey mats, warm ambient overhead light, polished concrete floor reflecting light, 50mm f/2.8, effortless candid moment",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Mirror selfie from slight back angle, young Asian woman with shoulder-length brown hair in cream crop top and flare leggings, back partially toward mirror showing the back detail of the square-neck crop top and the drape of the flare leggings, looking over shoulder at phone, minimalist studio with marble-effect curved walls and exercise equipment softly out of focus behind, warm overhead downlights, polished concrete floor, 50mm f/2.8, looking back at camera in mirror",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Waist-up mirror selfie, young Asian woman with brown hair in cream long-sleeve square-neck crop top, leaning slightly toward the mirror, phone at chest height, close crop showing the neckline detail and sleeve fit and fabric texture of the crop top, cream flare leggings visible at bottom of frame, minimalist studio with marble wall behind, warm ambient light from above, 85mm f/2 shallow focus on the model with background softly blurred, natural skin glow",
+          "score": 4,
+          "format": "square"
+        },
+        {
+          "prompt": "Full body mirror selfie, young Asian woman with shoulder-length brown hair in cream square-neck crop top and matching high-waist flare leggings, wide confident stance with feet apart, phone held to one side at hip level, looking directly at her reflection in the mirror with composed confident expression, minimalist pilates studio with marble curved walls and grey yoga mats and silver exercise balls arranged behind her, warm recessed ceiling downlights, polished concrete floor, 50mm f/2.8, strong presence",
+          "score": 4.6,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-04-05T00:51:46.997Z",
+      "projectName": "gymwear-mirror-selfie",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 4.6,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Full body mirror selfie, woman with long straight black hair and freckles in cream long-sleeve square-neck crop top and matching high-waist flare leggings, holding phone at chest height with both hands, weight shifted onto back hip, standing in front of a large black-framed floor mirror leaning against warm beige wall, dark wood fluted side table with glass vase of dried branches beside the mirror, light oak floor, soft warm natural light from camera-left, 50mm f/2.8, natural confident expression",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Full body mirror selfie at slight angle, woman with long straight black hair and freckled warm brown skin in cream square-neck crop top and cream flare leggings, phone held higher near face with right hand, left hand adjusting the high waistband, three-quarter turn to black-framed floor mirror showing the fit of the flare leg, warm beige wall behind, fluted wood side table with dried branches in glass vase to one side, light oak floor, soft warm light from camera-left, 50mm f/2.8, relaxed expression",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Full body mirror selfie, woman with long black hair and freckles in cream long-sleeve crop top and matching flare leggings, slight hip pop to one side, phone held low at waist with one hand showing full outfit in mirror, head tilted slightly with confident direct eye contact in the reflection, large black-framed floor mirror against warm beige wall, dark wood fluted pedestal table with glass vase of curly dried branches, light oak wood floor, soft warm natural light from camera-left, 50mm f/2.8",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Full body mirror selfie, woman with long straight black hair and warm brown freckled skin in cream long-sleeve crop top and cream flare leggings, one hand running through hair pushing it back, phone held low in other hand capturing full outfit, showing midriff and crop top neckline, large black-framed floor mirror leaning against warm beige wall, fluted wood side table with dried branches in glass vase, light oak floor, soft warm light from camera-left, 50mm f/2.8, effortless candid moment",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Full body mirror selfie, woman with long straight black hair and freckles in cream square-neck crop top and matching high-waist flare leggings, wide confident stance with feet apart, phone held to one side at hip level, looking directly at her reflection in the black-framed floor mirror with composed confident expression, warm beige wall, dark wood fluted pedestal side table with clear glass vase of dried curly branches, light oak wood floor, soft warm natural light from camera-left, 50mm f/2.8, strong presence",
+          "score": 4.6,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-04-05T01:13:11.715Z",
+      "projectName": "gymwear-mirror-selfie",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 3.92,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Tight-framed mirror selfie, woman with long straight black hair and freckles in cream long-sleeve square-neck crop top and matching high-waist flare leggings, standing very close to a large black-framed floor mirror leaning against warm beige wall, holding phone at chest height with both hands, weight shifted onto back hip, model fills most of the frame, dark wood fluted side table with dried branches just visible at edge, light oak floor, soft warm natural light from camera-left, 85mm f/2, natural confident expression",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Tight-framed mirror selfie, woman with long straight black hair and freckles in cream square-neck crop top and matching high-waist flare leggings, standing close to black-framed floor mirror, wide confident stance, phone held to one side at hip level, looking directly at her reflection with composed expression, model fills most of the frame, warm beige wall, side table with dried branches at edge of frame, light oak floor, soft warm natural light from camera-left, 85mm f/2, strong presence",
+          "score": 4.2,
+          "format": "square"
+        }
+      ]
+    }
+  ],
+  "topPrompts": [
+    {
+      "prompt": "Black woman with short cropped hair in steel blue crop top and leggings sitting on a dark polished concrete studio floor, one knee drawn up with her arm resting on it, other leg extended, relaxed confident pose, warm amber toplight from above-left creating rich shadows beneath her jawline and across the leggings, cool blue ambient bouncing off the dark floor, the steel blue set glowing against the charcoal ground, shot at 50mm f/2 from floor level, editorial magazine energy",
+      "score": 4.6,
+      "format": "landscape"
+    },
+    {
+      "prompt": "Waist-to-knee crop of Black woman in the steel blue high-waist leggings, one hand adjusting the high waistband, dramatic side light from camera-right raking across the seamless ribbed fabric showing the body-contouring fit and texture, dark skin creating beautiful contrast against the saturated steel blue, dark moody studio background, shot at macro distance 100mm f/2.8, the blue rich and dimensional under the hard directional light, intimate product detail",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Black woman with short cropped hair in steel blue crop top and leggings sitting on a dark polished concrete studio floor, one knee drawn up with her arm resting on it, other leg extended, relaxed confident pose, warm amber toplight from above-left creating rich shadows beneath her jawline and across the leggings, cool blue ambient bouncing off the dark floor, the steel blue set glowing against the charcoal ground, shot at 50mm f/2 from floor level, editorial magazine energy",
+      "score": 4.6,
+      "format": "landscape"
+    },
+    {
+      "prompt": "Waist-to-knee crop of Black woman in the steel blue high-waist leggings, one hand adjusting the high waistband, dramatic side light from camera-right raking across the seamless ribbed fabric showing the body-contouring fit and texture, dark skin creating beautiful contrast against the saturated steel blue, dark moody studio background, shot at macro distance 100mm f/2.8, the blue rich and dimensional under the hard directional light, intimate product detail",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body mirror selfie, young Asian woman with shoulder-length brown hair in cream long-sleeve square-neck crop top and matching high-waist flare leggings, holding phone at chest height with both hands, weight shifted onto back hip, standing straight-on to a large wall mirror in a minimalist pilates studio with marble-effect curved walls and grey yoga mats on polished concrete floor behind her, warm recessed ceiling downlights, 50mm f/2.8, natural confident expression",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body mirror selfie at slight angle, young Asian woman with shoulder-length brown hair in cream square-neck crop top and cream flare leggings, phone held higher near face with right hand, left hand adjusting the high waistband of the leggings, three-quarter turn to mirror showing the fit of the flare leg, minimalist studio with marble walls and silver exercise balls visible behind her, warm overhead ambient light on polished concrete floor, 50mm f/2.8, relaxed expression",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body mirror selfie, young Asian woman with brown hair in cream long-sleeve crop top and matching flare leggings, standing at three-quarter angle to wall mirror, phone at eye level in right hand, left arm relaxed at side, showing the side silhouette of the crop top and flare of the leggings, minimalist pilates studio background with grey mats and marble walls, warm downlights reflecting off polished floor, 50mm f/2.8, soft natural expression",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Mirror selfie from side profile, young Asian woman with shoulder-length brown hair in cream square-neck crop top and cream high-waist flare leggings, body side-on to mirror turning head to look at phone held in near hand, showing the full silhouette of the flare leg and fitted crop top from the side, minimalist studio with marble-effect wall and exercise ball in background, warm ambient ceiling light, polished concrete floor, 50mm f/2.8, casual glance at phone",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body mirror selfie, young Asian woman with brown hair in cream long-sleeve crop top and flare leggings, slight hip pop to one side, phone held low at waist with one hand showing full outfit in mirror, head tilted slightly with confident direct eye contact in the reflection, minimalist pilates studio with grey yoga mats and marble curved walls behind, warm overhead downlights, polished concrete floor, 50mm f/2.8",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body mirror selfie, young Asian woman with brown hair in cream long-sleeve crop top and cream flare leggings, one hand running through hair pushing it back from face, phone held low in other hand capturing full outfit, showing midriff and crop top neckline, minimalist pilates studio background with marble walls and grey mats, warm ambient overhead light, polished concrete floor reflecting light, 50mm f/2.8, effortless candid moment",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Mirror selfie from slight back angle, young Asian woman with shoulder-length brown hair in cream crop top and flare leggings, back partially toward mirror showing the back detail of the square-neck crop top and the drape of the flare leggings, looking over shoulder at phone, minimalist studio with marble-effect curved walls and exercise equipment softly out of focus behind, warm overhead downlights, polished concrete floor, 50mm f/2.8, looking back at camera in mirror",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body mirror selfie, young Asian woman with shoulder-length brown hair in cream square-neck crop top and matching high-waist flare leggings, wide confident stance with feet apart, phone held to one side at hip level, looking directly at her reflection in the mirror with composed confident expression, minimalist pilates studio with marble curved walls and grey yoga mats and silver exercise balls arranged behind her, warm recessed ceiling downlights, polished concrete floor, 50mm f/2.8, strong presence",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body mirror selfie, woman with long straight black hair and freckles in cream long-sleeve square-neck crop top and matching high-waist flare leggings, holding phone at chest height with both hands, weight shifted onto back hip, standing in front of a large black-framed floor mirror leaning against warm beige wall, dark wood fluted side table with glass vase of dried branches beside the mirror, light oak floor, soft warm natural light from camera-left, 50mm f/2.8, natural confident expression",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body mirror selfie at slight angle, woman with long straight black hair and freckled warm brown skin in cream square-neck crop top and cream flare leggings, phone held higher near face with right hand, left hand adjusting the high waistband, three-quarter turn to black-framed floor mirror showing the fit of the flare leg, warm beige wall behind, fluted wood side table with dried branches in glass vase to one side, light oak floor, soft warm light from camera-left, 50mm f/2.8, relaxed expression",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body mirror selfie, woman with long black hair and freckles in cream long-sleeve crop top and matching flare leggings, slight hip pop to one side, phone held low at waist with one hand showing full outfit in mirror, head tilted slightly with confident direct eye contact in the reflection, large black-framed floor mirror against warm beige wall, dark wood fluted pedestal table with glass vase of curly dried branches, light oak wood floor, soft warm natural light from camera-left, 50mm f/2.8",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body mirror selfie, woman with long straight black hair and warm brown freckled skin in cream long-sleeve crop top and cream flare leggings, one hand running through hair pushing it back, phone held low in other hand capturing full outfit, showing midriff and crop top neckline, large black-framed floor mirror leaning against warm beige wall, fluted wood side table with dried branches in glass vase, light oak floor, soft warm light from camera-left, 50mm f/2.8, effortless candid moment",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body mirror selfie, woman with long straight black hair and freckles in cream square-neck crop top and matching high-waist flare leggings, wide confident stance with feet apart, phone held to one side at hip level, looking directly at her reflection in the black-framed floor mirror with composed confident expression, warm beige wall, dark wood fluted pedestal side table with clear glass vase of dried curly branches, light oak wood floor, soft warm natural light from camera-left, 50mm f/2.8, strong presence",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body standing pose of Black woman with short cropped hair in the steel blue scoop-neck crop top and matching high-waist leggings, warm amber key light from camera-left painting her right side gold and catching the ribbed texture of the fabric, cool steel blue gel from camera-right filling the shadow side and blending into the garment color, dark charcoal seamless studio background, one hand resting on hip, confident direct eye contact, shot at 35mm f/2.8 low angle looking slightly up, dark polished concrete floor reflecting warm light, high-fashion editorial",
+      "score": 4.4,
+      "format": "story"
+    },
+    {
+      "prompt": "Black woman with short cropped hair in steel blue crop top and high-waist leggings standing three-quarter angle facing camera-right, one hand on hip showing the crop top silhouette and legging fit, hard amber spotlight from directly camera-left creating a sharp warm line down her right arm and leg with the left side falling into cool blue shadow, dark seamless studio background, 85mm f/2 shallow focus isolating her against the void, the steel blue fabric saturated and rich under the directional light, fashion test shoot editorial",
+      "score": 4.4,
+      "format": "square"
+    },
+    {
+      "prompt": "Full body standing pose of Black woman with short cropped hair in the steel blue scoop-neck crop top and matching high-waist leggings, warm amber key light from camera-left painting her right side gold and catching the ribbed texture of the fabric, cool steel blue gel from camera-right filling the shadow side and blending into the garment color, dark charcoal seamless studio background, one hand resting on hip, confident direct eye contact, shot at 35mm f/2.8 low angle looking slightly up, dark polished concrete floor reflecting warm light, high-fashion editorial",
+      "score": 4.4,
+      "format": "story"
+    }
+  ],
+  "styleAnchors": [],
+  "insights": {
+    "bestProvider": "gemini",
+    "avgScore": 4.3,
+    "runCount": 6
+  }
+}

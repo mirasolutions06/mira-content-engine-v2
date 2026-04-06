@@ -1,0 +1,274 @@
+{
+  "brandName": "Aesop",
+  "lastUpdated": "2026-03-17T09:28:28.733Z",
+  "runs": [
+    {
+      "timestamp": "2026-03-17T01:02:57.576Z",
+      "projectName": "test-skincare",
+      "mode": "brand-images",
+      "clipCount": 10,
+      "avgQAScore": 4.46,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "The amber Aesop bottle on a wet marble shelf with steam curling around it, a sprig of fresh eucalyptus beside it, soft diffused morning light from frosted glass window, editorial bathroom still life, no people",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Overhead view of the Aesop bottle centered in a shallow stone tray with water and floating eucalyptus leaves and small fern fronds, minimal botanical flat lay, soft even light, no people",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "The glass dropper releasing a single golden serum drop toward steaming water in a stone basin, the drop caught mid-fall, soft backlight making the serum glow, macro detail, no people",
+          "score": 4.2,
+          "format": "square"
+        },
+        {
+          "prompt": "The Aesop bottle nestled among wet river stones with fresh eucalyptus and small ferns, a thin stream of water trickling over the stones, the bathroom reimagined as a forest floor, natural and editorial, no people",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Blonde woman with blue-green eyes wrapped in a white towel, holding the amber Aesop bottle in both hands near her collarbone, looking down at it with a soft smile, steam in a marble bathroom, soft diffused morning light from frosted window camera-left, medium shot, editorial beauty",
+          "score": 4.2,
+          "format": "square"
+        },
+        {
+          "prompt": "Close-up of blonde woman's hands cradling the amber Aesop dropper bottle, one hand holding the bottle and the other unscrewing the dropper cap, water droplets on her fingers, marble surface beneath, soft diffused morning light from camera-left, intimate product detail",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Blonde woman with blue-green eyes pressing the glass dropper gently along her jawline, the amber Aesop bottle held in her other hand at chin level, eyes closed, dewy skin, steam around her, soft diffused morning light from frosted window camera-left, close-up from shoulders up, sensory skincare moment",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Blonde woman with blue-green eyes standing in a marble bathroom beside a frosted glass window, holding the amber Aesop dropper bottle at chest height, looking down at it with a calm smile, steam rising gently around her, eucalyptus on the marble shelf beside her, soft morning light from the frosted window camera-left, medium shot from waist up, serene and still",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Blonde woman with blue-green eyes applying serum from the amber Aesop dropper to her cheek with one hand, the bottle in her other hand, eyes closed peacefully, steam and eucalyptus around her, soft morning light from frosted window camera-left, close-up from shoulders up, intimate skincare ritual",
+          "score": 4.4,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-17T01:43:39.498Z",
+      "projectName": "test-skincare",
+      "mode": "brand-images",
+      "clipCount": 10,
+      "avgQAScore": 4.44,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "The amber Aesop bottle on a sunlit wooden kitchen counter beside a white coffee cup and a small succulent plant, bright morning sunlight streaming through a large window, warm and golden, editorial lifestyle still life, no people",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "The amber Aesop bottle on a marble bathroom vanity with the edge of a round mirror visible, morning sun reflecting off the mirror creating a bright warm glow, clean minimal bathroom, no people",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "The amber Aesop bottle on white linen bedsheets with soft morning light falling across the fabric, a book and reading glasses nearby, bedroom morning light, warm and soft, no people",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Overhead flat lay of the amber Aesop bottle centered on a wooden tray with a sliced lemon, a sprig of fresh rosemary, and a small white ceramic dish, soft morning light from above-left, bright and clean, no people",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Blonde woman with blue-green eyes sitting on the edge of her bed in a white linen robe, reaching for the amber Aesop bottle on the nightstand, just woken up, soft morning sunlight across the bedsheets from a window camera-left, medium shot, natural and sleepy",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Close-up of blonde woman's hands holding the amber Aesop dropper bottle, squeezing golden serum onto her fingertips, soft bright morning light catching the golden serum, warm and intimate product detail",
+          "score": 4.2,
+          "format": "square"
+        },
+        {
+          "prompt": "Blonde woman with blue-green eyes looking into a bathroom mirror, her skin glowing and dewy, the amber Aesop bottle on the vanity in front of her, soft smile of satisfaction, bright morning light from a window camera-left, medium shot, natural morning beauty",
+          "score": 4.2,
+          "format": "square"
+        },
+        {
+          "prompt": "Blonde woman with blue-green eyes leaning in a bright bathroom doorframe in a white linen robe, holding the amber Aesop bottle casually at her side, morning sunlight streaming through a window behind her, relaxed and confident, medium shot",
+          "score": 4.2,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-17T09:28:28.733Z",
+      "projectName": "test-skincare",
+      "mode": "brand-images",
+      "clipCount": 10,
+      "avgQAScore": 4.64,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "The small amber Aesop dropper bottle with white serif label standing alone on a light oak surface, hard morning sunlight from a large window camera-right casting a long diagonal shadow across the wood grain, the golden serum inside the bottle glowing warm where the light passes through the glass, nothing else in frame, shot at surface level on 50mm f/2.8, the wood grain texture sharp in the foreground falling to soft bokeh behind the bottle, minimal Aesop product photography, no people",
+          "score": 5,
+          "format": "landscape"
+        },
+        {
+          "prompt": "The small amber Aesop dropper bottle centered on a white Carrara marble bathroom vanity, the curved brass frame of a round vanity mirror visible behind it, warm morning sun reflecting off the mirror edge creating a soft golden flare camera-left, the black ribbed cap and white label sharp in focus against the marble veining, nothing else on the vanity, 85mm f/2, clean minimal product photography, no people",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "The small amber Aesop dropper bottle standing upright on rumpled white linen bedsheets, soft golden morning light raking across the fabric folds from a window camera-left creating long shadows in the linen creases, the amber glass warm against the cool white fabric, shallow depth of field with a wooden headboard softly blurred behind, shot from slightly above on 50mm f/1.8, intimate and quiet, no people",
+          "score": 5,
+          "format": "story"
+        },
+        {
+          "prompt": "The small amber Aesop dropper bottle standing on a wet dark slate surface, a single beam of morning sunlight from camera-left cutting across the frame and illuminating the amber glass, the golden serum glowing inside, a warm reflection of the bottle visible on the wet stone, the rest of the frame falls into soft shadow, 85mm f/2 with shallow depth of field, moody minimal contrast, no people",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "The small amber Aesop dropper bottle on a white floating bathroom shelf mounted on a white subway tile wall, soft morning light from a window camera-left, a single green trailing pothos leaf entering the frame from the top edge, the bottle label facing camera, clean and architectural with geometric tile lines framing the composition, 35mm f/2.8, bright and airy, no people",
+          "score": 4.6,
+          "format": "landscape"
+        },
+        {
+          "prompt": "Tight close-up of a young woman's hands holding the small palm-sized amber Aesop dropper bottle in her left hand and squeezing the black rubber bulb with her right, a single golden serum droplet suspended at the glass pipette tip catching the morning light like liquid amber, soft bright window light from camera-right illuminating the golden serum inside the bottle, the white label partially visible, shallow depth of field on 100mm macro f/2.8 with a bright bathroom blurred behind, intimate product detail moment",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Young woman early 30s with warm honey-blonde hair and blue-green eyes touching both cheeks gently with her fingertips after applying serum, eyes softly closed, slight relaxed smile, skin glowing with natural dewiness in the morning light, the small amber Aesop bottle standing on the marble vanity beside her right elbow, warm directional light from a window camera-left creating a soft rim light along her jawline and catching the fine hair at her temple, close-up from collarbones up on 85mm f/1.8, beauty editorial post-application moment",
+          "score": 4.4,
+          "format": "landscape"
+        },
+        {
+          "prompt": "Young woman early 30s with warm honey-blonde hair and blue-green eyes looking into a round brass-framed bathroom mirror, her reflection showing glowing dewy skin and a soft satisfied smile, the small amber Aesop bottle on the marble vanity directly in front of her in sharp focus as the foreground anchor, shot from behind and slightly to the right on 50mm f/2 with the mirror reflection in focus and the back of her head softly blurred, bright morning light from a window reflected in the mirror, white subway tile wall visible, beauty editorial",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Young woman early 30s with warm honey-blonde hair and blue-green eyes leaning against a bright white bathroom doorframe in a white linen robe, holding the small amber Aesop bottle casually in both hands at waist height, morning sunlight streaming through a window behind her creating a warm backlight halo on her hair, looking directly at camera with a relaxed confident expression, full body from knees up on 35mm f/2.8, the bottle label facing camera, bright airy hallway with pale wooden floorboards, Aesop beauty editorial",
+          "score": 4.4,
+          "format": "story"
+        }
+      ]
+    }
+  ],
+  "topPrompts": [
+    {
+      "prompt": "The Aesop bottle nestled among wet river stones with fresh eucalyptus and small ferns, a thin stream of water trickling over the stones, the bathroom reimagined as a forest floor, natural and editorial, no people",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "The amber Aesop bottle on a sunlit wooden kitchen counter beside a white coffee cup and a small succulent plant, bright morning sunlight streaming through a large window, warm and golden, editorial lifestyle still life, no people",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "The amber Aesop bottle on a marble bathroom vanity with the edge of a round mirror visible, morning sun reflecting off the mirror creating a bright warm glow, clean minimal bathroom, no people",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "The amber Aesop bottle on white linen bedsheets with soft morning light falling across the fabric, a book and reading glasses nearby, bedroom morning light, warm and soft, no people",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "The small amber Aesop dropper bottle with white serif label standing alone on a light oak surface, hard morning sunlight from a large window camera-right casting a long diagonal shadow across the wood grain, the golden serum inside the bottle glowing warm where the light passes through the glass, nothing else in frame, shot at surface level on 50mm f/2.8, the wood grain texture sharp in the foreground falling to soft bokeh behind the bottle, minimal Aesop product photography, no people",
+      "score": 5,
+      "format": "landscape"
+    },
+    {
+      "prompt": "The small amber Aesop dropper bottle centered on a white Carrara marble bathroom vanity, the curved brass frame of a round vanity mirror visible behind it, warm morning sun reflecting off the mirror edge creating a soft golden flare camera-left, the black ribbed cap and white label sharp in focus against the marble veining, nothing else on the vanity, 85mm f/2, clean minimal product photography, no people",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "The small amber Aesop dropper bottle standing upright on rumpled white linen bedsheets, soft golden morning light raking across the fabric folds from a window camera-left creating long shadows in the linen creases, the amber glass warm against the cool white fabric, shallow depth of field with a wooden headboard softly blurred behind, shot from slightly above on 50mm f/1.8, intimate and quiet, no people",
+      "score": 5,
+      "format": "story"
+    },
+    {
+      "prompt": "The small amber Aesop dropper bottle standing on a wet dark slate surface, a single beam of morning sunlight from camera-left cutting across the frame and illuminating the amber glass, the golden serum glowing inside, a warm reflection of the bottle visible on the wet stone, the rest of the frame falls into soft shadow, 85mm f/2 with shallow depth of field, moody minimal contrast, no people",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "The amber Aesop bottle on a wet marble shelf with steam curling around it, a sprig of fresh eucalyptus beside it, soft diffused morning light from frosted glass window, editorial bathroom still life, no people",
+      "score": 4.8,
+      "format": "square"
+    },
+    {
+      "prompt": "Tight close-up of a young woman's hands holding the small palm-sized amber Aesop dropper bottle in her left hand and squeezing the black rubber bulb with her right, a single golden serum droplet suspended at the glass pipette tip catching the morning light like liquid amber, soft bright window light from camera-right illuminating the golden serum inside the bottle, the white label partially visible, shallow depth of field on 100mm macro f/2.8 with a bright bathroom blurred behind, intimate product detail moment",
+      "score": 4.8,
+      "format": "square"
+    },
+    {
+      "prompt": "Overhead view of the Aesop bottle centered in a shallow stone tray with water and floating eucalyptus leaves and small fern fronds, minimal botanical flat lay, soft even light, no people",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Close-up of blonde woman's hands cradling the amber Aesop dropper bottle, one hand holding the bottle and the other unscrewing the dropper cap, water droplets on her fingers, marble surface beneath, soft diffused morning light from camera-left, intimate product detail",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Blonde woman with blue-green eyes standing in a marble bathroom beside a frosted glass window, holding the amber Aesop dropper bottle at chest height, looking down at it with a calm smile, steam rising gently around her, eucalyptus on the marble shelf beside her, soft morning light from the frosted window camera-left, medium shot from waist up, serene and still",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Overhead flat lay of the amber Aesop bottle centered on a wooden tray with a sliced lemon, a sprig of fresh rosemary, and a small white ceramic dish, soft morning light from above-left, bright and clean, no people",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Blonde woman with blue-green eyes sitting on the edge of her bed in a white linen robe, reaching for the amber Aesop bottle on the nightstand, just woken up, soft morning sunlight across the bedsheets from a window camera-left, medium shot, natural and sleepy",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "The small amber Aesop dropper bottle on a white floating bathroom shelf mounted on a white subway tile wall, soft morning light from a window camera-left, a single green trailing pothos leaf entering the frame from the top edge, the bottle label facing camera, clean and architectural with geometric tile lines framing the composition, 35mm f/2.8, bright and airy, no people",
+      "score": 4.6,
+      "format": "landscape"
+    },
+    {
+      "prompt": "Blonde woman with blue-green eyes pressing the glass dropper gently along her jawline, the amber Aesop bottle held in her other hand at chin level, eyes closed, dewy skin, steam around her, soft diffused morning light from frosted window camera-left, close-up from shoulders up, sensory skincare moment",
+      "score": 4.4,
+      "format": "square"
+    },
+    {
+      "prompt": "Blonde woman with blue-green eyes applying serum from the amber Aesop dropper to her cheek with one hand, the bottle in her other hand, eyes closed peacefully, steam and eucalyptus around her, soft morning light from frosted window camera-left, close-up from shoulders up, intimate skincare ritual",
+      "score": 4.4,
+      "format": "square"
+    },
+    {
+      "prompt": "Young woman early 30s with warm honey-blonde hair and blue-green eyes touching both cheeks gently with her fingertips after applying serum, eyes softly closed, slight relaxed smile, skin glowing with natural dewiness in the morning light, the small amber Aesop bottle standing on the marble vanity beside her right elbow, warm directional light from a window camera-left creating a soft rim light along her jawline and catching the fine hair at her temple, close-up from collarbones up on 85mm f/1.8, beauty editorial post-application moment",
+      "score": 4.4,
+      "format": "landscape"
+    },
+    {
+      "prompt": "Young woman early 30s with warm honey-blonde hair and blue-green eyes looking into a round brass-framed bathroom mirror, her reflection showing glowing dewy skin and a soft satisfied smile, the small amber Aesop bottle on the marble vanity directly in front of her in sharp focus as the foreground anchor, shot from behind and slightly to the right on 50mm f/2 with the mirror reflection in focus and the back of her head softly blurred, bright morning light from a window reflected in the mirror, white subway tile wall visible, beauty editorial",
+      "score": 4.4,
+      "format": "square"
+    }
+  ],
+  "styleAnchors": [],
+  "insights": {
+    "bestProvider": "gemini",
+    "avgScore": 4.51,
+    "runCount": 3
+  }
+}

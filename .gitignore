@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.env
+*.mp4
+*.mp3
+
+# macOS
+.DS_Store
+
+# Project directories (client configs + generated assets)
+projects/*/
+!projects/_shared/
+!projects/_templates/

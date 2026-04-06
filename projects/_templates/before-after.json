@@ -1,0 +1,11 @@
+{
+  "title": "Before & After",
+  "mode": "brand-images",
+  "imageFormats": ["story", "square"],
+  "clips": [
+    { "prompt": "The 'before' state — the problem, pain point, or starting condition. Muted tones, real and relatable", "imageFormat": "story" },
+    { "prompt": "The transformation moment — applying or using the product, action shot, anticipation building", "imageFormat": "square" },
+    { "prompt": "The 'after' state — the result, glowing and vibrant. Same angle as the 'before' for visual comparison", "imageFormat": "story" },
+    { "prompt": "Product hero with results — the product alongside the transformation outcome, aspirational and clean", "imageFormat": "square" }
+  ]
+}

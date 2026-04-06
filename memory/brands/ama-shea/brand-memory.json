@@ -1,0 +1,104 @@
+{
+  "brandName": "Ama Shea",
+  "lastUpdated": "2026-03-15T23:15:35.498Z",
+  "runs": [
+    {
+      "timestamp": "2026-03-15T23:15:35.498Z",
+      "projectName": "ama-shea-gift-set",
+      "mode": "brand-images",
+      "clipCount": 8,
+      "avgQAScore": 4.72,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Luxury gift box partially open revealing three skincare products nestled inside on dark satin lining, warm golden key light from camera-left, dramatic chiaroscuro, shallow depth of field on the box edge, dark moody background, premium unboxing moment, editorial product photography",
+          "score": 4.8,
+          "format": "landscape"
+        },
+        {
+          "prompt": "Three skincare products arranged in a row on dark weathered wood — glass jar with wooden lid, glass dropper bottle, small round tin — evenly spaced, warm amber side light, clean symmetrical composition, product lineup family portrait, luxury minimalist aesthetic",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Hero close-up of whipped shea body butter in glass jar with wooden lid, surrounded by raw shea nuts and dried botanicals, warm golden-amber key light from camera-right, shallow depth of field, earthy muted tones, editorial product photography",
+          "score": 4.8,
+          "format": "square"
+        },
+        {
+          "prompt": "Glass dropper bottle of golden shea oil with dropper pulled out, single drop of oil catching the light mid-fall, warm backlight creating a golden glow through the oil, dark background, macro lens detail, dramatic beauty product photography",
+          "score": 4.8,
+          "format": "story"
+        },
+        {
+          "prompt": "Small round tin of shea lip balm open to show creamy texture inside, a single raw shea nut beside it on dark slate, warm directional light, intimate macro composition, 85mm lens shallow focus, earthy tones with warm highlights",
+          "score": 5,
+          "format": "square"
+        },
+        {
+          "prompt": "Woman's hands lifting the glass dropper bottle from the open gift box, warm brown skin tones, soft diffused golden window light, close-up on hands and box, editorial lifestyle photography, intimate gifting moment",
+          "score": 4.5,
+          "format": "story"
+        },
+        {
+          "prompt": "Close-up of golden shea oil being applied to woman's collarbone and décolletage, the oil catching warm backlight creating a luminous sheen on brown skin, shallow depth of field, golden hour through sheer curtain, intimate beauty editorial",
+          "score": 4.3,
+          "format": "story"
+        },
+        {
+          "prompt": "Overhead flat lay of closed gift box centered on woven kente cloth, raw shea nuts and dried lavender scattered around edges, gold leaf accents, dark slate surface peeking through, soft even studio lighting, luxury heritage composition",
+          "score": 4.8,
+          "format": "landscape"
+        }
+      ]
+    }
+  ],
+  "topPrompts": [
+    {
+      "prompt": "Small round tin of shea lip balm open to show creamy texture inside, a single raw shea nut beside it on dark slate, warm directional light, intimate macro composition, 85mm lens shallow focus, earthy tones with warm highlights",
+      "score": 5,
+      "format": "square"
+    },
+    {
+      "prompt": "Luxury gift box partially open revealing three skincare products nestled inside on dark satin lining, warm golden key light from camera-left, dramatic chiaroscuro, shallow depth of field on the box edge, dark moody background, premium unboxing moment, editorial product photography",
+      "score": 4.8,
+      "format": "landscape"
+    },
+    {
+      "prompt": "Three skincare products arranged in a row on dark weathered wood — glass jar with wooden lid, glass dropper bottle, small round tin — evenly spaced, warm amber side light, clean symmetrical composition, product lineup family portrait, luxury minimalist aesthetic",
+      "score": 4.8,
+      "format": "square"
+    },
+    {
+      "prompt": "Hero close-up of whipped shea body butter in glass jar with wooden lid, surrounded by raw shea nuts and dried botanicals, warm golden-amber key light from camera-right, shallow depth of field, earthy muted tones, editorial product photography",
+      "score": 4.8,
+      "format": "square"
+    },
+    {
+      "prompt": "Glass dropper bottle of golden shea oil with dropper pulled out, single drop of oil catching the light mid-fall, warm backlight creating a golden glow through the oil, dark background, macro lens detail, dramatic beauty product photography",
+      "score": 4.8,
+      "format": "story"
+    },
+    {
+      "prompt": "Overhead flat lay of closed gift box centered on woven kente cloth, raw shea nuts and dried lavender scattered around edges, gold leaf accents, dark slate surface peeking through, soft even studio lighting, luxury heritage composition",
+      "score": 4.8,
+      "format": "landscape"
+    },
+    {
+      "prompt": "Woman's hands lifting the glass dropper bottle from the open gift box, warm brown skin tones, soft diffused golden window light, close-up on hands and box, editorial lifestyle photography, intimate gifting moment",
+      "score": 4.5,
+      "format": "story"
+    },
+    {
+      "prompt": "Close-up of golden shea oil being applied to woman's collarbone and décolletage, the oil catching warm backlight creating a luminous sheen on brown skin, shallow depth of field, golden hour through sheer curtain, intimate beauty editorial",
+      "score": 4.3,
+      "format": "story"
+    }
+  ],
+  "styleAnchors": [],
+  "insights": {
+    "bestProvider": "gemini",
+    "avgScore": 4.72,
+    "runCount": 1
+  }
+}

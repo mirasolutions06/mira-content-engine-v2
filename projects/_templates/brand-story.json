@@ -1,0 +1,18 @@
+{
+  "title": "Brand Story",
+  "mode": "video",
+  "format": "youtube-short",
+  "captions": true,
+  "captionTheme": "editorial",
+  "clips": [
+    { "prompt": "Wide establishing shot — the brand's world, cinematic atmosphere, sets the mood and tone for the story", "duration": 4 },
+    { "prompt": "Medium shot — the founder or key person, authentic and passionate, speaking to camera or working", "duration": 5 },
+    { "prompt": "Close-up detail — the craft, the process, hands working with materials, attention to quality", "duration": 4 },
+    { "prompt": "Product reveal — the result of the craft, beautifully lit, hero moment", "duration": 4 },
+    { "prompt": "Community impact — real people using and loving the product, emotional connection", "duration": 5 },
+    { "prompt": "Brand signature moment — the final frame that captures the brand essence, memorable and shareable", "duration": 3 }
+  ],
+  "transition": "crossfade",
+  "music": true,
+  "musicVolume": 0.12
+}

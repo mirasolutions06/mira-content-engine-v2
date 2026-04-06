@@ -1,0 +1,12 @@
+{
+  "title": "Product Launch",
+  "mode": "brand-images",
+  "imageFormats": ["story", "square", "landscape"],
+  "clips": [
+    { "prompt": "Hero product shot — dramatic studio lighting, dark background, product centered with premium feel, shallow depth of field" },
+    { "prompt": "Product in use — lifestyle moment, warm natural light, authentic environment, person interacting with the product" },
+    { "prompt": "Detail close-up — macro photography showing texture, quality, and craftsmanship of the product" },
+    { "prompt": "Flat lay arrangement — top-down editorial styling with the product and complementary props on a clean surface" },
+    { "prompt": "Aspirational lifestyle shot — the product as part of a desirable moment, cinematic wide framing, golden hour light" }
+  ]
+}

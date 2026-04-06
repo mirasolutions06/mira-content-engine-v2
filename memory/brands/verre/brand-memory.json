@@ -1,0 +1,154 @@
+{
+  "brandName": "VERRE",
+  "lastUpdated": "2026-03-18T15:32:47.475Z",
+  "runs": [
+    {
+      "timestamp": "2026-03-18T14:38:36.451Z",
+      "projectName": "verre",
+      "mode": "brand-images",
+      "clipCount": 4,
+      "avgQAScore": 4,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Hero product shot of a frosted glass serum dropper bottle and a smooth cream ceramic cream jar arranged together on a warm sandstone plaster pedestal, warm natural sunlight raking from upper left casting soft palm leaf shadows across the textured plaster wall behind, the glass bottle refracting golden light, the ceramic jar catching a warm highlight on its dome lid, warm sand and cream color palette throughout, a single eucalyptus sprig resting beside the products, 85mm f/2.8, warm Mediterranean luxury skincare product photography, HD 4K",
+          "score": 4,
+          "format": "square"
+        },
+        {
+          "prompt": "Chest-up portrait of a young woman with freckled dewy skin, slicked-back dark hair, green eyes, small gold hoop earrings, eyes closed in a calm expression, fingertips gently pressing serum into her cheekbone, warm golden sunlight from a window to camera-left wrapping across her face highlighting the freckles and natural dewiness, visible skin texture with natural pores and healthy glow, warm cream plaster wall softly out of focus behind, no heavy makeup, 105mm f/1.8 portrait lens, warm luminous clean beauty editorial skincare photography",
+          "score": 4.2,
+          "format": "square"
+        },
+        {
+          "prompt": "Single smooth cream ceramic cream jar with rounded dome lid placed on a warm sandstone ledge, warm sunlight casting a long soft shadow behind the jar, delicate palm leaf shadows falling across the textured plaster wall above, fine water mist droplets on the jar surface catching golden light, shallow depth of field with the dome lid sharp and the plaster background softly blurred, warm sand and cream tones throughout, 85mm f/2.8 macro detail, warm Mediterranean product photography",
+          "score": 4.6,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-18T15:02:08.923Z",
+      "projectName": "verre",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 4.04,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Hero product shot of a frosted glass serum dropper bottle and a smooth cream ceramic cream jar arranged together on a warm sandstone plaster pedestal, warm natural sunlight raking from upper left casting soft palm leaf shadows across the textured plaster wall behind, the glass bottle refracting golden light, the ceramic jar catching a warm highlight on its dome lid, warm sand and cream color palette throughout, a single eucalyptus sprig resting beside the products, 85mm f/2.8, warm Mediterranean luxury skincare product photography, HD 4K",
+          "score": 4,
+          "format": "square"
+        },
+        {
+          "prompt": "Chest-up portrait of a young woman with freckled dewy skin, slicked-back dark hair, green eyes, small gold hoop earrings, eyes closed in a calm expression, fingertips gently pressing serum into her cheekbone, warm golden sunlight from a window to camera-left wrapping across her face highlighting the freckles and natural dewiness, visible skin texture with natural pores and healthy glow, warm cream plaster wall softly out of focus behind, no heavy makeup, 105mm f/1.8 portrait lens, warm luminous clean beauty editorial skincare photography",
+          "score": 4.4,
+          "format": "square"
+        },
+        {
+          "prompt": "Single smooth cream ceramic cream jar with rounded dome lid placed on a warm sandstone ledge, warm sunlight casting a long soft shadow behind the jar, delicate palm leaf shadows falling across the textured plaster wall above, fine water mist droplets on the jar surface catching golden light, shallow depth of field with the dome lid sharp and the plaster background softly blurred, warm sand and cream tones throughout, 85mm f/2.8 macro detail, warm Mediterranean product photography",
+          "score": 4.2,
+          "format": "square"
+        },
+        {
+          "prompt": "Overhead flat lay on a warm textured linen surface of a complete skincare ritual: frosted glass serum dropper bottle, smooth cream ceramic cream jar with dome lid, a small ceramic dish with a few drops of golden serum, a dried eucalyptus sprig, and scattered water droplets across the linen, warm directional sunlight from upper-right casting soft long shadows and creating a golden warmth across the scene, the linen weave texture clearly visible, warm sand cream and amber palette, 35mm f/5.6, warm editorial overhead skincare flat lay product photography",
+          "score": 4.6,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-18T15:22:00.246Z",
+      "projectName": "verre",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 3.4,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Single smooth cream ceramic cream jar with a minimal gold front label reading \"VERRE\" in thin uppercase serif at the top, \"Renewal Crème\" in smaller lowercase italic below, and \"50ml\" in tiny text at the bottom, a small embossed V on the rounded dome lid, the label facing camera and clearly legible, placed on a warm sandstone ledge, warm sunlight casting a long soft shadow behind the jar, delicate palm leaf shadows falling across the textured plaster wall above, fine water mist droplets on the jar surface catching golden light, the gold lettering catching a warm highlight, shallow depth of field with the dome lid sharp and the plaster background softly blurred, warm sand and cream tones throughout, 85mm f/2.8 macro detail, warm Mediterranean product photography",
+          "score": 4,
+          "format": "square"
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-03-18T15:32:47.475Z",
+      "projectName": "verre",
+      "mode": "brand-images",
+      "clipCount": 5,
+      "avgQAScore": 3.96,
+      "provider": "gemini",
+      "topPrompts": [
+        {
+          "prompt": "Hero product shot of a frosted glass serum dropper bottle with a minimal gold label reading \"VERRE\" at the top in thin uppercase serif, \"Radiance Serum\" below in smaller italic, and \"30ml\" in tiny text at the bottom, and beside it a smooth cream ceramic cream jar with a matching gold label reading \"VERRE\" at the top, \"Renewal Crème\" below in smaller italic, \"50ml\" at the bottom, and a small embossed V on the dome lid. Both products arranged together on a warm sandstone plaster pedestal, warm natural sunlight raking from upper left casting soft palm leaf shadows across the textured plaster wall behind, the glass bottle refracting golden light, the ceramic jar catching a warm highlight on its dome lid, warm sand and cream color palette throughout, a single eucalyptus sprig resting beside the products, labels facing camera and clearly legible, 85mm f/2.8, warm Mediterranean luxury skincare product photography, HD 4K",
+          "score": 4.6,
+          "format": "square"
+        },
+        {
+          "prompt": "Single smooth cream ceramic cream jar with a minimal gold front label reading \"VERRE\" in thin uppercase serif at the top, \"Renewal Crème\" in smaller lowercase italic below, and \"50ml\" in tiny text at the bottom, a small embossed V on the rounded dome lid, the label facing camera and clearly legible, placed on a warm sandstone ledge, warm sunlight casting a long soft shadow behind the jar, delicate palm leaf shadows falling across the textured plaster wall above, fine water mist droplets on the jar surface catching golden light, the gold lettering catching a warm highlight, shallow depth of field with the dome lid sharp and the plaster background softly blurred, warm sand and cream tones throughout, 85mm f/2.8 macro detail, warm Mediterranean product photography",
+          "score": 4.6,
+          "format": "square"
+        }
+      ]
+    }
+  ],
+  "topPrompts": [
+    {
+      "prompt": "Single smooth cream ceramic cream jar with rounded dome lid placed on a warm sandstone ledge, warm sunlight casting a long soft shadow behind the jar, delicate palm leaf shadows falling across the textured plaster wall above, fine water mist droplets on the jar surface catching golden light, shallow depth of field with the dome lid sharp and the plaster background softly blurred, warm sand and cream tones throughout, 85mm f/2.8 macro detail, warm Mediterranean product photography",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Overhead flat lay on a warm textured linen surface of a complete skincare ritual: frosted glass serum dropper bottle, smooth cream ceramic cream jar with dome lid, a small ceramic dish with a few drops of golden serum, a dried eucalyptus sprig, and scattered water droplets across the linen, warm directional sunlight from upper-right casting soft long shadows and creating a golden warmth across the scene, the linen weave texture clearly visible, warm sand cream and amber palette, 35mm f/5.6, warm editorial overhead skincare flat lay product photography",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Hero product shot of a frosted glass serum dropper bottle with a minimal gold label reading \"VERRE\" at the top in thin uppercase serif, \"Radiance Serum\" below in smaller italic, and \"30ml\" in tiny text at the bottom, and beside it a smooth cream ceramic cream jar with a matching gold label reading \"VERRE\" at the top, \"Renewal Crème\" below in smaller italic, \"50ml\" at the bottom, and a small embossed V on the dome lid. Both products arranged together on a warm sandstone plaster pedestal, warm natural sunlight raking from upper left casting soft palm leaf shadows across the textured plaster wall behind, the glass bottle refracting golden light, the ceramic jar catching a warm highlight on its dome lid, warm sand and cream color palette throughout, a single eucalyptus sprig resting beside the products, labels facing camera and clearly legible, 85mm f/2.8, warm Mediterranean luxury skincare product photography, HD 4K",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Single smooth cream ceramic cream jar with a minimal gold front label reading \"VERRE\" in thin uppercase serif at the top, \"Renewal Crème\" in smaller lowercase italic below, and \"50ml\" in tiny text at the bottom, a small embossed V on the rounded dome lid, the label facing camera and clearly legible, placed on a warm sandstone ledge, warm sunlight casting a long soft shadow behind the jar, delicate palm leaf shadows falling across the textured plaster wall above, fine water mist droplets on the jar surface catching golden light, the gold lettering catching a warm highlight, shallow depth of field with the dome lid sharp and the plaster background softly blurred, warm sand and cream tones throughout, 85mm f/2.8 macro detail, warm Mediterranean product photography",
+      "score": 4.6,
+      "format": "square"
+    },
+    {
+      "prompt": "Chest-up portrait of a young woman with freckled dewy skin, slicked-back dark hair, green eyes, small gold hoop earrings, eyes closed in a calm expression, fingertips gently pressing serum into her cheekbone, warm golden sunlight from a window to camera-left wrapping across her face highlighting the freckles and natural dewiness, visible skin texture with natural pores and healthy glow, warm cream plaster wall softly out of focus behind, no heavy makeup, 105mm f/1.8 portrait lens, warm luminous clean beauty editorial skincare photography",
+      "score": 4.4,
+      "format": "square"
+    },
+    {
+      "prompt": "Chest-up portrait of a young woman with freckled dewy skin, slicked-back dark hair, green eyes, small gold hoop earrings, eyes closed in a calm expression, fingertips gently pressing serum into her cheekbone, warm golden sunlight from a window to camera-left wrapping across her face highlighting the freckles and natural dewiness, visible skin texture with natural pores and healthy glow, warm cream plaster wall softly out of focus behind, no heavy makeup, 105mm f/1.8 portrait lens, warm luminous clean beauty editorial skincare photography",
+      "score": 4.2,
+      "format": "square"
+    },
+    {
+      "prompt": "Single smooth cream ceramic cream jar with rounded dome lid placed on a warm sandstone ledge, warm sunlight casting a long soft shadow behind the jar, delicate palm leaf shadows falling across the textured plaster wall above, fine water mist droplets on the jar surface catching golden light, shallow depth of field with the dome lid sharp and the plaster background softly blurred, warm sand and cream tones throughout, 85mm f/2.8 macro detail, warm Mediterranean product photography",
+      "score": 4.2,
+      "format": "square"
+    },
+    {
+      "prompt": "Hero product shot of a frosted glass serum dropper bottle and a smooth cream ceramic cream jar arranged together on a warm sandstone plaster pedestal, warm natural sunlight raking from upper left casting soft palm leaf shadows across the textured plaster wall behind, the glass bottle refracting golden light, the ceramic jar catching a warm highlight on its dome lid, warm sand and cream color palette throughout, a single eucalyptus sprig resting beside the products, 85mm f/2.8, warm Mediterranean luxury skincare product photography, HD 4K",
+      "score": 4,
+      "format": "square"
+    },
+    {
+      "prompt": "Hero product shot of a frosted glass serum dropper bottle and a smooth cream ceramic cream jar arranged together on a warm sandstone plaster pedestal, warm natural sunlight raking from upper left casting soft palm leaf shadows across the textured plaster wall behind, the glass bottle refracting golden light, the ceramic jar catching a warm highlight on its dome lid, warm sand and cream color palette throughout, a single eucalyptus sprig resting beside the products, 85mm f/2.8, warm Mediterranean luxury skincare product photography, HD 4K",
+      "score": 4,
+      "format": "square"
+    },
+    {
+      "prompt": "Single smooth cream ceramic cream jar with a minimal gold front label reading \"VERRE\" in thin uppercase serif at the top, \"Renewal Crème\" in smaller lowercase italic below, and \"50ml\" in tiny text at the bottom, a small embossed V on the rounded dome lid, the label facing camera and clearly legible, placed on a warm sandstone ledge, warm sunlight casting a long soft shadow behind the jar, delicate palm leaf shadows falling across the textured plaster wall above, fine water mist droplets on the jar surface catching golden light, the gold lettering catching a warm highlight, shallow depth of field with the dome lid sharp and the plaster background softly blurred, warm sand and cream tones throughout, 85mm f/2.8 macro detail, warm Mediterranean product photography",
+      "score": 4,
+      "format": "square"
+    }
+  ],
+  "styleAnchors": [],
+  "insights": {
+    "bestProvider": "gemini",
+    "avgScore": 3.85,
+    "runCount": 4
+  }
+}

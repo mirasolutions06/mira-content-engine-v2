@@ -139,7 +139,7 @@ The skill (`skills/content-engine/SKILL.md`) defines the full prompt writing sys
 - Light physics matter: glass refracts (backlight), matte absorbs (side-light), metal reflects (large soft source)
 - Same lighting setup across ALL scenes
 - 200-600 chars per prompt
-- Per-clip refs assigned explicitly — never flood all refs to every scene
+- Smart ref filtering — Director auto-tags scenes, pipeline sends only relevant refs per image
 - No text/logos in Gemini prompts (GPT Image can handle text when needed)
 - One frozen moment per prompt
 

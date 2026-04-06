@@ -168,14 +168,18 @@ Every prompt follows this pattern — think of it as a shot card:
 9. **4-8 scenes** for images, 3-5 for video
 10. **Mix formats deliberately** — story (9:16) for portraits, square for products, landscape for wide shots
 
-### Per-Clip Refs (CRITICAL)
+### Smart Ref Filtering (Automatic)
 
-ALWAYS assign per-clip `refs`. Without them, every ref floods every generation — Gemini tries to include everything and quality drops.
+The Director reads each prompt and tags it (`hasModel`, `hasProduct`, `isDetail`). The pipeline auto-filters refs per scene — each image gets only the refs it needs:
 
-- **Product-only scenes:** `"refs": ["product-1.jpg"]` — no model refs
-- **Model scenes:** `"refs": ["model-1.jpg", "model-sheet.jpg", "model-body.jpg", "product-1.jpg"]` — ALL model refs
-- **Detail/hands scenes:** include model refs for skin tone consistency
-- **Never omit model-sheet.jpg from model scenes** — it's the identity anchor
+| Scene type | Refs sent to Gemini |
+|---|---|
+| Product only | product refs + style/location |
+| Model + product | all model refs (including sheets) + product + style |
+| Detail/hands/texture | model refs (skin tone) + product |
+| Environment/flat lay | style/location only |
+
+No manual `refs` needed in config. You can still override with `"refs": ["product-1.jpg"]` on any clip if the auto-filtering gets it wrong.
 
 ### Config
 

@@ -121,4 +121,4 @@ The skill covers what good prompts look like. This table covers specific failure
 | Conflicting light sources | "golden hour" + "studio lighting" — impossible in reality | Pick one setup. Same setup every scene |
 | "Perfect skin" / "flawless" | Triggers AI smoothing — skin looks plastic, waxy | "Natural skin texture, visible pores" for realism |
 | Keyword spam | "luxury premium high-end elegant" — no visual information | Every word must describe something the camera can see |
-| Expecting consistency without refs | Each generation is independent, AI has no memory | Reference images + per-clip refs + scene 1 anchoring (see skill) |
+| Expecting consistency without refs | Each generation is independent, AI has no memory | Reference images + smart ref filtering (automatic) + scene 1 anchoring |

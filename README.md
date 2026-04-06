@@ -120,7 +120,7 @@ More refs = better consistency. The engine uses up to 14 per image.
 - Light physics: "warm golden key light from camera-left at 45 degrees"
 - Lens behavior: "85mm f/1.4 shallow focus"
 - Same lighting across all scenes
-- Per-clip refs: product scenes get product refs, model scenes get model refs
+- Smart ref filtering: Director auto-tags scenes, each gets only the refs it needs
 
 ### Step 3: Generate
 
@@ -243,20 +243,16 @@ The single biggest quality lever. These go in the project root:
 | `style.jpg` | Visual mood — lighting setup, palette, surfaces |
 | `location.jpg` | Environment, textures, spatial context |
 
-**Per-clip `refs` are critical.** Always specify which refs each scene uses:
+**Refs are filtered automatically.** The Director reads each prompt and sends only the refs that scene needs:
 
-```json
-{
-  "prompt": "Product on marble surface...",
-  "refs": ["product-1.jpg"]
-},
-{
-  "prompt": "Woman applying serum...",
-  "refs": ["model-1.jpg", "model-sheet.jpg", "model-body.jpg", "product-1.jpg"]
-}
-```
+| Scene type | Refs sent to Gemini |
+|---|---|
+| Product only | product refs + style |
+| Model + product | all model refs + product + style |
+| Detail/hands | model refs (skin tone) + product |
+| Environment | style/location only |
 
-Without per-clip refs, all references flood every generation — degrading quality.
+No manual `refs` field needed in config. You can override with `"refs": ["product-1.jpg"]` on any clip if needed.
 
 ---
 
@@ -394,5 +390,5 @@ All steps are idempotent. Re-running skips completed work. Delete a file to rege
 | FFmpeg not found | `brew install ffmpeg` |
 | Remotion error on short clips | Raw clip at `output/clips/scene-N.mp4` is the deliverable |
 | Re-run regenerates everything | It shouldn't — steps are idempotent. Delete specific files to force regeneration |
-| Images look inconsistent | Add more reference photos. Use per-clip `refs`. Check same lighting in every prompt |
+| Images look inconsistent | Add more reference photos. Smart refs handles filtering automatically. Check same lighting in every prompt |
 | Wrong person in model shots | Add `modelSheet: true` and include all 3 model refs per clip |

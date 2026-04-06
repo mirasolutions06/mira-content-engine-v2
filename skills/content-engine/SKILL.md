@@ -183,6 +183,10 @@ No manual `refs` needed in config. You can still override with `"refs": ["produc
 
 ### Config
 
+You write fully enriched prompts — the pipeline does not need a separate Director API call. Every config gets `skipDirector: true` by default.
+
+Tag each clip with `hasModel`, `hasProduct`, `isDetail` so the pipeline sends only the right refs to Gemini.
+
 ```json
 {
   "mode": "brand-images",
@@ -192,9 +196,18 @@ No manual `refs` needed in config. You can still override with `"refs": ["produc
   "products": ["whipped shea butter in glass jar with wooden lid"],
   "clips": [
     {
-      "prompt": "[full photography brief — 200-600 chars]",
+      "prompt": "Glass jar of whipped ivory shea butter on dark weathered oak, warm amber key light from camera-right at 45°, 85mm f/1.4, subject sharp, background dissolved to warm bokeh",
       "imageFormat": "square",
-      "refs": ["product-1.jpg"]
+      "hasModel": false,
+      "hasProduct": true,
+      "isDetail": false
+    },
+    {
+      "prompt": "Woman's hands scooping cream from glass jar, warm brown skin catching golden rim light, 100mm macro f/2.8, shallow focus on fingertips pressing into cream surface",
+      "imageFormat": "story",
+      "hasModel": false,
+      "hasProduct": true,
+      "isDetail": true
     }
   ]
 }
@@ -368,7 +381,7 @@ Save `projects/{name}/output/monetization-plan.json` with revenue streams, proje
 
 | Step | Cost |
 |---|---|
-| Director (Claude) | ~$0.10 (cached) |
+| Director (Claude API) | ~$0.10 — skipped by default, you write the prompts |
 | Brand image (Gemini) | ~$0.08 |
 | Brand image (GPT Image) | ~$0.04 |
 | Video clip 5s (Higgsfield) | ~$0.80 |

@@ -201,12 +201,16 @@ export async function runPipeline(projectName: string, runOpts?: RunOptions): Pr
 
   // ── Brand-images mode: generate multi-format images only ──────────────
   if (mode === 'brand-images') {
-    // Run Director for brand-images too — enriches prompts and writes brand-context.json
-    // for downstream skills (Copy Engine). Cheap (~$0.10) and cached.
+    // Director enriches prompts and writes brand-context.json.
+    // Skipped by default when skill writes enriched prompts directly (skipDirector defaults true).
     const loader = new AssetLoader(PROJECTS_ROOT, projectName);
     const assets = await loader.load();
-    const directorPlan = await runDirector(config, assets, PROJECTS_ROOT, projectName, videoAnalysis ?? undefined);
-    costTracker.logStep('director', directorPlan !== null);
+    const shouldRunDirector = config.skipDirector === false;
+    const directorPlan = shouldRunDirector
+      ? await runDirector(config, assets, PROJECTS_ROOT, projectName, videoAnalysis ?? undefined)
+      : null;
+    if (shouldRunDirector) costTracker.logStep('director', directorPlan !== null);
+    if (!shouldRunDirector) logger.info('Director: skipped (prompts enriched by skill)');
 
     if (runOpts?.directorOnly === true) {
       await costTracker.save();
@@ -325,9 +329,13 @@ export async function runPipeline(projectName: string, runOpts?: RunOptions): Pr
     `└────────────────────────────────────────────────────┘`,
   );
 
-  // ── Director step (runs even in dry-run — cheap and cached) ────────────
-  const directorPlan = await runDirector(config, assets, PROJECTS_ROOT, projectName, videoAnalysis ?? undefined);
-  costTracker.logStep('director', directorPlan !== null);
+  // ── Director step — skipped by default when skill enriches prompts ──────
+  const shouldRunDirector = config.skipDirector === false;
+  const directorPlan = shouldRunDirector
+    ? await runDirector(config, assets, PROJECTS_ROOT, projectName, videoAnalysis ?? undefined)
+    : null;
+  if (shouldRunDirector) costTracker.logStep('director', directorPlan !== null);
+  if (!shouldRunDirector) logger.info('Director: skipped (prompts enriched by skill)');
 
   if (runOpts?.directorOnly === true) {
     await costTracker.save();

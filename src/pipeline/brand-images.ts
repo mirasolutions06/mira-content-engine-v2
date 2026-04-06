@@ -530,18 +530,18 @@ export async function generateBrandImages(
             return clip.refs!.includes(path.basename(p));
           });
         } else {
-          // Auto-filter using Director's ref tags
-          const directorClip = directorPlan?.clips.find((c) => c.sceneIndex === clipIndex);
-          if (directorClip?.hasModel !== undefined) {
+          // Auto-filter using ref tags from config (set by skill) or Director plan
+          const clipTags = clip.hasModel !== undefined ? clip : directorPlan?.clips.find((c) => c.sceneIndex === clipIndex);
+          if (clipTags?.hasModel !== undefined) {
             clipRefs = filterRefsByDirectorTags(
               effectiveRefs,
-              directorClip.hasModel ?? false,
-              directorClip.hasProduct ?? true,
-              directorClip.isDetail ?? false,
+              clipTags.hasModel ?? false,
+              clipTags.hasProduct ?? true,
+              clipTags.isDetail ?? false,
             );
             logger.info(`  Scene ${clipIndex}: smart refs → ${clipRefs.map(p => path.basename(p)).join(', ') || 'style only'}`);
           } else {
-            // No Director tags available — send all refs (legacy behavior)
+            // No tags available — send all refs (legacy behavior)
             clipRefs = effectiveRefs;
           }
         }

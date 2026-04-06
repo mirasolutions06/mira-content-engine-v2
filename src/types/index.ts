@@ -88,8 +88,14 @@ export interface VideoClip {
   sourceImage?: string;
   /** Text overlay to composite on the final image output. Only applies to image-type clips. */
   overlay?: ImageOverlay;
-  /** Per-clip reference image filenames (e.g. ["product-1.jpg"]). Only these refs are sent to Gemini for this clip. If omitted, all project refs are sent. */
+  /** Per-clip reference image filenames (e.g. ["product-1.jpg"]). Only these refs are sent to Gemini for this clip. If omitted, smart ref filtering uses hasModel/hasProduct/isDetail tags. */
   refs?: string[];
+  /** Does this scene feature a person/model? Used for smart ref filtering. Set by skill or Director. */
+  hasModel?: boolean;
+  /** Does this scene feature the product? Used for smart ref filtering. Set by skill or Director. */
+  hasProduct?: boolean;
+  /** Is this a detail/close-up/hands/texture shot? Includes model refs for skin tone. Set by skill or Director. */
+  isDetail?: boolean;
 }
 
 export interface VideoConfig {
@@ -145,7 +151,7 @@ export interface VideoConfig {
   products?: string[];
   /** Skip auto-sourcing style references. Use when auto-generated refs add noise (e.g. studio skincare campaigns). */
   skipAutoRefs?: ('style')[];
-  /** Skip Director enrichment — use raw config prompts as-is. For projects where prompts are already detailed (300+ chars with lens, lighting, mood). */
+  /** Skip Director API call — prompts in config are already enriched by the skill. Default: true. Set false to use the API Director for standalone/automated runs. */
   skipDirector?: boolean;
   /** Additional output formats to render. Clips generated once, Remotion renders each format. */
   outputFormats?: VideoFormat[];

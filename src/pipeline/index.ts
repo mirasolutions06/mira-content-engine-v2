@@ -11,6 +11,8 @@ import { AssetLoader } from './assets.js';
 import { generateVoiceover } from './elevenlabs.js';
 import { transcribeAudio } from './whisper.js';
 import { generateHiggsfieldClip } from './higgsfield.js';
+import { generateSeedanceClip } from './seedance.js';
+import { generateKlingClip } from './kling.js';
 import { packageFinalVideo } from './export.js';
 import { AirtableLogger, AirtableReviewer } from './airtable.js';
 import { runDirector } from './director.js';
@@ -78,9 +80,21 @@ function buildVideoPrompt(
   const colorGrade = plan.enrichedClipPlan?.colorGrade;
 
   switch (provider) {
+    case 'seedance': {
+      // Seedance auto-enhances prompts internally; keep it clean and direct.
+      // Avoid the cinematic-modifier suffix that DoP gets — Seedance's internal
+      // prompt rewriter handles tone/mood without it.
+      return plan.prompt;
+    }
+    case 'kling': {
+      // Kling auto-enhances via enhance_prompt: true. Negative-prompt (camera lock,
+      // anti-dance) is handled in the provider module, not here — return the raw
+      // scene prompt untouched.
+      return plan.prompt;
+    }
     case 'higgsfield':
     default: {
-      // Higgsfield benefits from rich descriptions + Cinema Studio lens context
+      // Higgsfield DoP benefits from rich descriptions + Cinema Studio lens context.
       const hfParts = [plan.prompt];
       if (cameraMove) hfParts.push(cameraMove);
       if (lighting) hfParts.push(lighting);
@@ -88,13 +102,10 @@ function buildVideoPrompt(
       hfParts.push('Cinematic, photorealistic, consistent identity.');
       return hfParts.join('. ');
     }
-      if (hasImage && cameraMove) {
-        return `${plan.prompt}. ${cameraMove}. Photorealistic, cinematic, smooth subtle motion.`;
-      }
-      return continuityNote
-        ? `${plan.prompt}. ${continuityNote}`
-        : plan.prompt;
   }
+  // Unreachable — kept for type narrowing
+  void hasImage; void continuityNote;
+  return plan.prompt;
 }
 
 
@@ -367,7 +378,7 @@ export async function runPipeline(projectName: string, runOpts?: RunOptions): Pr
   const shouldCaption = config.captions ?? formatMeta.defaultCaptions;
   let voiceoverFlow: Promise<void> | null = null;
 
-  if (config.script && config.script.trim().length > 0 && config.voiceId && !isDraft) {
+  if (config.script && config.script.trim().length > 0 && config.voiceId && !isDraft && config.render !== false) {
     if (dryRun) {
       const script = directorPlan?.voice.enrichedScript ?? config.script;
       logger.info(`[DRY RUN] Would generate voiceover: voice=${config.voiceId}, script="${script.slice(0, 80)}..."`);
@@ -411,8 +422,14 @@ export async function runPipeline(projectName: string, runOpts?: RunOptions): Pr
   const imgProvider = resolveImageProvider(config);
   const videoProvider: VideoProvider = isDraft ? 'higgsfield' : resolveVideoProvider(config);
 
-  function getVideoCostKey(_provider: VideoProvider, durationSec: number): { key: string; label: string } {
+  function getVideoCostKey(provider: VideoProvider, durationSec: number): { key: string; label: string } {
     const dur = durationSec > 5;
+    if (provider === 'seedance') {
+      return { key: dur ? 'seedance-10s' : 'seedance-5s', label: `Seedance ${dur ? '10s' : '5s'}` };
+    }
+    if (provider === 'kling') {
+      return { key: dur ? 'kling-10s' : 'kling-5s', label: `Kling 2.1 master ${dur ? '10s' : '5s'}` };
+    }
     return { key: dur ? 'higgsfield-10s' : 'higgsfield-5s', label: `Higgsfield ${dur ? '10s' : '5s'}` };
   }
 
@@ -675,16 +692,29 @@ export async function runPipeline(projectName: string, runOpts?: RunOptions): Pr
         const isAnimation = plan.outputType === 'animation';
         const clipDuration = isAnimation ? Math.min(plan.clip.duration ?? 3, 5) : (plan.clip.duration ?? 5);
 
+        // Resolve imageReferenceEnd to an absolute path (config paths are project-relative).
+        const imageRefEndAbs = plan.clip.imageReferenceEnd
+          ? path.isAbsolute(plan.clip.imageReferenceEnd)
+            ? plan.clip.imageReferenceEnd
+            : path.join(PROJECTS_ROOT, projectName, plan.clip.imageReferenceEnd)
+          : undefined;
+
         const options: VideoGenOptions = {
           aspectRatio: formatMeta.aspectRatio,
           duration: clipDuration,
           projectName,
           sceneIndex: plan.sceneIndex,
+          ...(plan.clip.motions ? { motions: plan.clip.motions } : {}),
+          ...(imageRefEndAbs ? { imageReferenceEnd: imageRefEndAbs } : {}),
         };
 
         const videoPrompt = buildVideoPrompt(plan, videoProvider, imageRef);
 
-        const clipPath = await generateHiggsfieldClip(videoPrompt, options, PROJECTS_ROOT, imageRef, config.soulId);
+        const clipPath = videoProvider === 'seedance'
+          ? await generateSeedanceClip(videoPrompt, options, PROJECTS_ROOT, imageRef)
+          : videoProvider === 'kling'
+            ? await generateKlingClip(videoPrompt, options, PROJECTS_ROOT, imageRef)
+            : await generateHiggsfieldClip(videoPrompt, options, PROJECTS_ROOT, imageRef, config.soulId);
 
         const { key } = getVideoCostKey(videoProvider, clipDuration);
         costTracker.logStep(key, false);
@@ -764,6 +794,49 @@ export async function runPipeline(projectName: string, runOpts?: RunOptions): Pr
 
     await costTracker.save();
     return storyboardDir;
+  }
+
+  // ── render: false exit — raw clips only, no Remotion, no VO/captions overlay ──
+  if (config.render === false) {
+    const clipsDir = path.join(PROJECTS_ROOT, projectName, 'output', 'clips');
+    const finalDir = path.join(PROJECTS_ROOT, projectName, 'output', 'final');
+    await fs.ensureDir(finalDir);
+
+    // Copy each generated clip to output/final/{title}-{timestamp}-N.mp4 for the
+    // same delivery shape as a Remotion-rendered final video.
+    const ts = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+    const finalPaths: string[] = [];
+    for (let i = 0; i < clipPaths.length; i++) {
+      const suffix = clipPaths.length > 1 ? `-${i + 1}` : '';
+      const finalPath = path.join(finalDir, `${config.title}-${format}-${ts}${suffix}.mp4`);
+      await fs.copy(clipPaths[i]!, finalPath);
+      finalPaths.push(finalPath);
+    }
+
+    const primaryFinal = finalPaths[0]!;
+    const sizeMB = (await fs.stat(primaryFinal)).size / 1024 / 1024;
+    logger.success(`\n[render: false] Raw clip(s) delivered without Remotion.`);
+    logger.info(`Clip directory: ${clipsDir}`);
+    logger.info(`Final: ${primaryFinal} (${sizeMB.toFixed(2)} MB)`);
+
+    const elapsedSeconds = (Date.now() - startTime) / 1000;
+    await airtable.completeRun(airtableRecordId, primaryFinal, elapsedSeconds);
+    await costTracker.save();
+    await saveConfigSnapshot(config, PROJECTS_ROOT, projectName);
+
+    if (runOpts?.jsonOutput === true) {
+      const summary = costTracker.getSummary();
+      return {
+        success: true,
+        outputPath: primaryFinal,
+        projectDir,
+        mode,
+        assets: resultAssets,
+        estimatedCost: summary.totalEstimated,
+        cachedSteps: summary.entries.filter((e) => e.cached).map((e) => e.step),
+      };
+    }
+    return primaryFinal;
   }
 
   // ── Draft mode exit: raw clips only, no Remotion ──────────────────────

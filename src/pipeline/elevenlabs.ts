@@ -81,14 +81,36 @@ export async function generateVoiceover(
 
   await fs.ensureDir(path.dirname(outputPath));
 
-  // Collect chunks from the Node.js Readable stream and write to file
-  await new Promise<void>((resolve, reject) => {
-    const writeStream = fs.createWriteStream(outputPath);
-    audioStream.pipe(writeStream);
-    writeStream.on('finish', resolve);
-    writeStream.on('error', reject);
-    audioStream.on('error', reject);
-  });
+  // Collect chunks from the audio stream and write to file.
+  // ElevenLabs SDK may return a Node Readable, a Web ReadableStream, or an async iterable
+  // depending on version — handle all three.
+  const chunks: Buffer[] = [];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const stream = audioStream as any;
+  if (typeof stream?.pipe === 'function') {
+    await new Promise<void>((resolve, reject) => {
+      const writeStream = fs.createWriteStream(outputPath);
+      stream.pipe(writeStream);
+      writeStream.on('finish', resolve);
+      writeStream.on('error', reject);
+      stream.on('error', reject);
+    });
+  } else if (typeof stream?.[Symbol.asyncIterator] === 'function') {
+    for await (const chunk of stream) {
+      chunks.push(Buffer.isBuffer(chunk) ? chunk : Buffer.from(chunk));
+    }
+    await fs.writeFile(outputPath, Buffer.concat(chunks));
+  } else if (typeof stream?.getReader === 'function') {
+    const reader = stream.getReader();
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      if (value) chunks.push(Buffer.from(value));
+    }
+    await fs.writeFile(outputPath, Buffer.concat(chunks));
+  } else {
+    throw new Error(`ElevenLabs returned an unrecognized stream type: ${typeof stream}`);
+  }
 
   // Save to hash-based cache for future runs
   await fs.ensureDir(cacheDir);

@@ -5,7 +5,6 @@ import fs from 'fs-extra';
 import { logger } from '../utils/logger.js';
 
 import { editImage, resolveSourceImage } from './image-editor.js';
-import { generateFluxBrandImage } from './flux-image.js';
 import { compositeOverlay } from './image-compositor.js';
 import { recordBrandRun } from '../utils/brand-memory.js';
 import { recordSkillRun } from '../utils/skill-memory.js';
@@ -521,7 +520,7 @@ export async function generateBrandImages(
           brandContext, products,
         );
       } else {
-        // Smart ref filtering applies to both Gemini and Flux 2
+        // Smart ref filtering
         let clipRefs: string[];
         if (clip.refs) {
           // Manual override: user specified exact refs
@@ -549,19 +548,11 @@ export async function generateBrandImages(
             clipRefs = effectiveRefs;
           }
         }
-        if (clipProvider === 'flux-2') {
-          result = await generateFluxBrandImage(
-            clipIndex, clipPrompt, brand, brief, format, outputPath,
-            clipRefs, brandContext,
-            clipIndex > 1 ? scene1AnchorPath : undefined, products,
-          );
-        } else {
-          result = await generateBrandImage(
-            clipIndex, clipPrompt, brand, brief, format, outputPath,
-            clipRefs, brandContext,
-            clipIndex > 1 ? scene1AnchorPath : undefined, products,
-          );
-        }
+        result = await generateBrandImage(
+          clipIndex, clipPrompt, brand, brief, format, outputPath,
+          clipRefs, brandContext,
+          clipIndex > 1 ? scene1AnchorPath : undefined, products,
+        );
       }
 
       // Apply text overlay if configured

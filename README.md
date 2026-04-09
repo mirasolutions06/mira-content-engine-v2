@@ -1,6 +1,6 @@
 # Mira Content Engine
 
-AI product photography and video from a single brief. One skill, one session.
+AI product photography and video from a single brief. One skill, one session. Multiple state-of-the-art video providers — pick the right one per shot.
 
 ---
 
@@ -22,8 +22,40 @@ You stay in control at every step — the engine pauses for your approval before
 | Mode | What you get | Cost per image |
 |------|-------------|----------------|
 | `brand-images` | Multi-format images (story 9:16, square 1:1, landscape 16:9) | ~$0.08 |
-| `video` | AI video with voiceover, captions, transitions | ~$0.80-1.60/clip |
+| `video` | AI video with optional voiceover, captions, transitions | ~$0.80-3.00/clip |
 | `full` | Brand images + video in one run | Combined |
+
+---
+
+## Video Providers
+
+Three image-to-video models, all reachable through Higgsfield's API. Pick by use case:
+
+| Provider | Model | Best for | Cost (10s) | Speed |
+|---|---|---|---|---|
+| `higgsfield` | DoP (turbo) | Higgsfield's own model with motion-preset catalog (`/v1/motions`) — explicit camera moves like Catwalk, 3D Rotation, Static, Handheld | ~$1.60 | ~1 min |
+| `seedance` | `seedance_pro` | ByteDance Seedance 1.0 Pro. Smooth subtle motion, has `camera_fixed: true` flag, fast generation. Best default for "natural standing person" shots. | ~$1.60 | ~2 min |
+| `kling` | `kling-v2-1-master` *or* `kling-v2-1` | Kling 2.1 (Kuaishou). Premium tier. Very prompt-driven motion control, native `negative_prompt` support, **plus keyframe interpolation** when you supply both `imageReference` + `imageReferenceEnd`. | ~$3.00 | ~7 min (master), ~80s (standard) |
+
+Pick the provider per project with `"videoProvider": "higgsfield" | "seedance" | "kling"` in `config.json`.
+
+### Kling keyframe interpolation (the killer feature)
+
+Pass two frames — a start and an end — and Kling animates the in-between. Perfect for product/outfit reveals where you want a deterministic motion path:
+
+```json
+{
+  "videoProvider": "kling",
+  "clips": [{
+    "prompt": "Woman smoothly turns from facing camera to three-quarter rear view",
+    "duration": 5,
+    "imageReference": "storyboard/scene-1.jpg",
+    "imageReferenceEnd": "storyboard/scene-1-end.jpg"
+  }]
+}
+```
+
+The pipeline auto-switches to `kling-v2-1` (standard, not master) for keyframe runs because the master variant silently rejects `input_image_end`. Standard variant generates in ~80 seconds and produces a smooth interpolation between the two poses.
 
 ---
 
@@ -213,11 +245,11 @@ Review the frames. If they look good, run the full pipeline:
 npm start -- --project summer-campaign --json-output
 ```
 
-Higgsfield only runs on approved frames. Everything else is cached.
+The video provider only runs on approved frames. Everything else is cached.
 
 ### Character consistency (SOUL ID)
 
-For video with people, add a `soulId` to lock character identity across all clips:
+For Higgsfield DoP video with people, add a `soulId` to lock character identity across all clips:
 
 ```json
 {
@@ -226,7 +258,25 @@ For video with people, add a `soulId` to lock character identity across all clip
 }
 ```
 
-This prevents face drift between clips — the same person looks the same in every scene.
+This prevents face drift between clips — the same person looks the same in every scene. (Seedance and Kling get character consistency from the input image itself.)
+
+### Skip Remotion — raw provider clip as final output
+
+Set `"render": false` to skip the entire voiceover/captions/Remotion pipeline and deliver the raw provider clip directly. Useful when you want to hand-edit the clip in DaVinci/Premiere, or when iterating on prompts without re-billing $0.50 of voiceover each time:
+
+```json
+{
+  "videoProvider": "seedance",
+  "render": false,
+  "clips": [{
+    "prompt": "...",
+    "duration": 10,
+    "imageReference": "storyboard/scene-1.jpg"
+  }]
+}
+```
+
+The pipeline copies the raw mp4 from `output/clips/` into `output/final/` and exits — no audio, no captions, no re-encode (full provider quality preserved).
 
 ---
 
@@ -347,10 +397,14 @@ npm start -- --project {name} --list-voices      # ElevenLabs voices
 | Step | Provider | Cost |
 |------|----------|------|
 | Director | Claude Sonnet | ~$0.10 (cached) |
-| Brand image | Gemini | ~$0.08 |
+| Brand image | Gemini 3 Pro Image | ~$0.08 |
 | Brand image | GPT Image | ~$0.04 |
-| Video clip 5s | Higgsfield | ~$0.80 |
-| Video clip 10s | Higgsfield | ~$1.60 |
+| Video clip 5s | Higgsfield DoP | ~$0.80 |
+| Video clip 10s | Higgsfield DoP | ~$1.60 |
+| Video clip 5s | Seedance 1.0 Pro | ~$0.80 |
+| Video clip 10s | Seedance 1.0 Pro | ~$1.60 |
+| Video clip 5s | Kling 2.1 master | ~$1.50 |
+| Video clip 10s | Kling 2.1 master | ~$3.00 |
 | Voiceover | ElevenLabs | ~$0.50 |
 | Captions | Whisper | ~$0.02 |
 | Model sheet | Gemini x2 | ~$0.16 |
@@ -373,10 +427,15 @@ All steps are idempotent. Re-running skips completed work. Delete a file to rege
 | **Claude Sonnet** | Director AI — enriches prompts with cinematography |
 | **Gemini 3 Pro Image** | Brand images + storyboard frames (14 refs max) |
 | **GPT Image 1** | Alternative image provider (better text rendering) |
-| **Higgsfield** | Video generation with SOUL ID character consistency |
+| **Higgsfield DoP** | Video — motion preset catalog (`/v1/motions`), camera moves |
+| **Seedance 1.0 Pro** | Video — natural subtle motion, `camera_fixed` flag, fast |
+| **Kling 2.1 master** | Video — premium tier, prompt-driven motion, native negative prompts |
+| **Kling 2.1 standard** | Video — supports keyframe interpolation (start + end frame) |
 | **ElevenLabs** | Voiceover generation |
 | **OpenAI Whisper** | Word-level caption transcription |
-| **Remotion** | Programmatic video composition |
+| **Remotion** | Programmatic video composition (skip with `render: false`) |
+
+All three video providers (Higgsfield DoP, Seedance, Kling) reach the user via Higgsfield's REST API at `platform.higgsfield.ai`. One set of credentials (`HF_API_KEY` + `HF_API_SECRET`) gives access to all three.
 
 ---
 

@@ -32,6 +32,12 @@ const COST_MAP: Record<string, number> = {
   // Higgsfield (SOUL ID + Popcorn consistency)
   'higgsfield-5s': 0.80,
   'higgsfield-10s': 1.60,
+  // Seedance 1.0 Pro via Higgsfield (estimated — refine after first run)
+  'seedance-5s': 0.80,
+  'seedance-10s': 1.60,
+  // Kling 2.1 master via Higgsfield (estimated — premium tier, refine after first run)
+  'kling-5s': 1.50,
+  'kling-10s': 3.00,
   // Video reference analysis
   'gemini-video-analysis': 0.05,
   // Storyboard variation (same cost as primary frame)
@@ -39,8 +45,6 @@ const COST_MAP: Record<string, number> = {
   // GPT Image (gpt-image-1)
   'gpt-image-standard': 0.04,
   'gpt-image-hd': 0.08,
-  // Flux 2 Pro (via Higgsfield)
-  'flux-2-image': 0.05,
   // QA and evaluation (Haiku vision)
   'haiku-image-qa': 0.02,
   'haiku-ref-eval': 0.01,

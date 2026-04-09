@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "0.78.0",
+    "@fal-ai/client": "^1.9.5",
     "@google/genai": "1.43.0",
     "@higgsfield/client": "^0.2.1",
     "@remotion/bundler": "^4.0.0",

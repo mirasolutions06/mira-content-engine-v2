@@ -11,8 +11,8 @@ export type CaptionStyle = 'word-by-word' | 'line-by-line';
 export type CaptionTheme = 'bold' | 'editorial' | 'minimal';
 export type TransitionType = 'crossfade' | 'cut' | 'wipe';
 export type AspectRatio = '9:16' | '16:9' | '1:1';
-export type VideoProvider = 'higgsfield';
-export type ImageProvider = 'gemini' | 'gpt-image' | 'flux-2';
+export type VideoProvider = 'higgsfield' | 'seedance' | 'kling';
+export type ImageProvider = 'gemini' | 'gpt-image';
 export type ClipOutputType = 'image' | 'video' | 'animation';
 export type ImageSource = 'generate' | 'original' | 'edit';
 export type MoodBoardEntry = string | { url: string; type?: 'style' | 'product' | 'model' };
@@ -70,6 +70,9 @@ export interface VideoClip {
   shotType?: BrandShotType;
   /** Absolute or project-relative path to storyboard image (enables image-to-video mode) */
   imageReference?: string;
+  /** Optional END frame for keyframe interpolation (Kling supports this — Kling only for now).
+   *  When set, the provider generates motion interpolating from imageReference → imageReferenceEnd. */
+  imageReferenceEnd?: string;
   /** Pre-generated clip URL — skip generation entirely */
   url?: string;
   /** Clip duration in seconds (1-15). Default: 5 */
@@ -96,6 +99,9 @@ export interface VideoClip {
   hasProduct?: boolean;
   /** Is this a detail/close-up/hands/texture shot? Includes model refs for skin tone. Set by skill or Director. */
   isDetail?: boolean;
+  /** Higgsfield motion presets to apply to this clip. Each entry references a motion id from /v1/motions
+   *  with a strength 0-1. Multiple motions can be combined. Only used with videoProvider: 'higgsfield'. */
+  motions?: Array<{ id: string; strength: number }>;
 }
 
 export interface VideoConfig {
@@ -137,6 +143,11 @@ export interface VideoConfig {
   videoProvider?: VideoProvider;
   /** Higgsfield SOUL ID for character identity lock across all clips. Only used with videoProvider: 'higgsfield'. */
   soulId?: string;
+  /** Skip the Remotion render step. When false, the pipeline exits after clip generation
+   *  and the raw provider clips become the final output (no captions, no VO overlay, no transitions).
+   *  Use this when you want a clean Seedance/Higgsfield clip and intend to compose it yourself in an editor.
+   *  Default: true (Remotion runs as normal). */
+  render?: boolean;
   /** Apply a subtle brand-colored overlay on clips to unify color temperature. Default: false */
   colorUnify?: boolean;
   /** Opacity of the color unity overlay (0-1). Default: 0.06 */
@@ -175,6 +186,10 @@ export interface VideoGenOptions {
   duration: number;
   projectName: string;
   sceneIndex: number;
+  /** Higgsfield motion presets (id + strength). Forwarded to /v1/image2video/dop. */
+  motions?: Array<{ id: string; strength: number }>;
+  /** Optional end-frame image path for keyframe interpolation. Kling-only for now. */
+  imageReferenceEnd?: string;
 }
 
 export interface ClipCacheEntry {

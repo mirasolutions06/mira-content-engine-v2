@@ -76,7 +76,7 @@ export function validateConfig(config: VideoConfig): void {
   }
 
   if (config.videoProvider !== undefined) {
-    const VALID_PROVIDERS = ['higgsfield'] as const;
+    const VALID_PROVIDERS = ['higgsfield', 'seedance', 'kling'] as const;
     if (!VALID_PROVIDERS.includes(config.videoProvider as typeof VALID_PROVIDERS[number])) {
       throw new Error(
         `config.json "videoProvider" value "${config.videoProvider}" is not valid. ` +
@@ -86,7 +86,7 @@ export function validateConfig(config: VideoConfig): void {
   }
 
   if (config.imageProvider !== undefined) {
-    const VALID_IMAGE_PROVIDERS = ['gemini', 'gpt-image', 'flux-2'] as const;
+    const VALID_IMAGE_PROVIDERS = ['gemini', 'gpt-image'] as const;
     if (!VALID_IMAGE_PROVIDERS.includes(config.imageProvider as typeof VALID_IMAGE_PROVIDERS[number])) {
       throw new Error(
         `config.json "imageProvider" value "${config.imageProvider}" is not valid. ` +

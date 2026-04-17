@@ -16,6 +16,18 @@ dist/
 # QA screenshots
 web/qa-*.png
 
+# Runtime data (generated per-user)
+memory/brands/
+memory/skills/
+docs/superpowers/
+
+# Web app build + frames
+web/.next/
+web/public/frames/
+
+# Archived skills (internal reference only)
+skills/_archived/
+
 # Project directories (client configs + generated assets)
 projects/*/
 !projects/_shared/

@@ -77,13 +77,6 @@ export function getModel(key: ModelKey): string {
 }
 
 /**
- * Get fallback model ID, if one exists.
- */
-export function getModelFallback(key: ModelKey): string | undefined {
-  return 'fallback' in MODELS[key] ? (MODELS[key] as { fallback: string }).fallback : undefined;
-}
-
-/**
  * Get the full model entry (id + fallback).
  */
 export function getModelEntry(key: ModelKey): ModelEntry {

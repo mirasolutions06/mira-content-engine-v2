@@ -1,6 +1,30 @@
 # Mira Content Engine
 
-AI product photography and video from a single brief. One skill, one session. Multiple state-of-the-art video providers — pick the right one per shot.
+AI product photography and video from a single brief. One skill, one session. Billboard-ready brand images and video — powered by Gemini, Kling, Seedance, and Claude.
+
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Node](https://img.shields.io/badge/Node-18%2B-green)](https://nodejs.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+---
+
+## Table of Contents
+
+- [How It Works](#how-it-works)
+- [Features](#features)
+- [Quick Start](#quick-start)
+- [Modes](#modes)
+- [Video Providers](#video-providers)
+- [Brand Images Example](#brand-images-example)
+- [Video Example](#video-example)
+- [Reference Photos](#reference-photos)
+- [Prompt Writing Guide](#prompt-writing-guide)
+- [Project Structure](#project-structure)
+- [CLI Reference](#cli-reference)
+- [Cost Reference](#cost-reference)
+- [AI Stack](#ai-stack)
+- [Troubleshooting](#troubleshooting)
+- [License](#license)
 
 ---
 
@@ -10,85 +34,58 @@ Open Claude Code. Describe what you want. The engine handles everything through 
 
 ```
 Phase 1: Understand     →  Phase 2: Translate     →  Phase 3: Generate
-"What are we shooting?"    Your vision → prompts      Run pipeline, review, iterate
+"What are we shooting?"    Your vision → config       Run pipeline, review, iterate
 ```
 
 You stay in control at every step — the engine pauses for your approval before spending money.
 
 ---
 
-## Modes
+## Features
 
-| Mode | What you get | Cost per image |
-|------|-------------|----------------|
-| `brand-images` | Multi-format images (story 9:16, square 1:1, landscape 16:9) | ~$0.08 |
-| `video` | AI video with optional voiceover, captions, transitions | ~$0.80-3.00/clip |
-| `full` | Brand images + video in one run | Combined |
-
----
-
-## Video Providers
-
-Three image-to-video models, all reachable through Higgsfield's API. Pick by use case:
-
-| Provider | Model | Best for | Cost (10s) | Speed |
-|---|---|---|---|---|
-| `higgsfield` | DoP (turbo) | Higgsfield's own model with motion-preset catalog (`/v1/motions`) — explicit camera moves like Catwalk, 3D Rotation, Static, Handheld | ~$1.60 | ~1 min |
-| `seedance` | `seedance_pro` | ByteDance Seedance 1.0 Pro. Smooth subtle motion, has `camera_fixed: true` flag, fast generation. Best default for "natural standing person" shots. | ~$1.60 | ~2 min |
-| `kling` | `kling-v2-1-master` *or* `kling-v2-1` | Kling 2.1 (Kuaishou). Premium tier. Very prompt-driven motion control, native `negative_prompt` support, **plus keyframe interpolation** when you supply both `imageReference` + `imageReferenceEnd`. | ~$3.00 | ~7 min (master), ~80s (standard) |
-
-Pick the provider per project with `"videoProvider": "higgsfield" | "seedance" | "kling"` in `config.json`.
-
-### Kling keyframe interpolation (the killer feature)
-
-Pass two frames — a start and an end — and Kling animates the in-between. Perfect for product/outfit reveals where you want a deterministic motion path:
-
-```json
-{
-  "videoProvider": "kling",
-  "clips": [{
-    "prompt": "Woman smoothly turns from facing camera to three-quarter rear view",
-    "duration": 5,
-    "imageReference": "storyboard/scene-1.jpg",
-    "imageReferenceEnd": "storyboard/scene-1-end.jpg"
-  }]
-}
-```
-
-The pipeline auto-switches to `kling-v2-1` (standard, not master) for keyframe runs because the master variant silently rejects `input_image_end`. Standard variant generates in ~80 seconds and produces a smooth interpolation between the two poses.
+- **Three video providers** — Higgsfield DoP, Seedance 1.0 Pro, and Kling 2.1 via a single API
+- **Keyframe interpolation** — Give Kling a start and end frame, it animates the in-between
+- **Smart ref filtering** — Director AI auto-tags each scene; only relevant references get sent to the image model
+- **Idempotent pipeline** — Re-running skips completed work. Delete a file to regenerate just that step
+- **Content-hash caching** — API calls cached by content hash. Changing unrelated config fields doesn't re-bill
+- **Multi-format output** — Story (9:16), square (1:1), landscape (16:9) from the same prompt set
+- **Scene anchoring** — Scene 1 becomes the style anchor; all subsequent images auto-match its lighting and mood
+- **Brand memory** — Per-brand context accumulates across runs in `memory/brands/`
+- **Cost transparency** — Estimated cost shown before every pipeline run, logged per project
+- **Raw clip mode** — `render: false` skips Remotion and delivers the raw provider clip at full quality
 
 ---
 
 ## Quick Start
 
-### 1. Install
+### 1. Clone and install
 
 ```bash
-git clone <repo-url>
-cd mira-content-engine
+git clone https://github.com/mirasolutions06/mira-content-engine-v2.git
+cd mira-content-engine-v2
 npm install
 ```
 
-### 2. API Keys
+### 2. API keys
 
-Create `.env`:
+Create `.env` in the project root:
 
 ```env
-GEMINI_API_KEY=          # Images (storyboard + brand photos)
-ANTHROPIC_API_KEY=       # Director AI (prompt enrichment)
-HF_API_KEY=              # Higgsfield video generation
-HF_API_SECRET=           # Higgsfield API secret
-ELEVENLABS_API_KEY=      # Voiceover (video mode only)
+GEMINI_API_KEY=          # Images — storyboard + brand photos (required)
+ANTHROPIC_API_KEY=       # Director AI — prompt enrichment (required)
+HF_API_KEY=              # Higgsfield — all 3 video providers (video mode)
+HF_API_SECRET=           # Higgsfield secret (video mode)
+ELEVENLABS_API_KEY=      # Voiceover (video mode with script)
 OPENAI_API_KEY=          # Whisper captions + GPT Image (optional)
 ```
 
-| Mode | Required |
-|------|----------|
+| Mode | Required keys |
+|------|---------------|
 | `brand-images` | `GEMINI_API_KEY`, `ANTHROPIC_API_KEY` |
 | `video` | + `HF_API_KEY`, `HF_API_SECRET` |
-| `video` with voiceover | + `ELEVENLABS_API_KEY`, `OPENAI_API_KEY` |
+| `video` + voiceover | + `ELEVENLABS_API_KEY`, `OPENAI_API_KEY` |
 
-### 3. Talk to Claude
+### 3. Run
 
 > "Create content for Ama Shea — luxury African shea butter. Hero product is whipped body butter in a glass jar with wooden lid."
 
@@ -96,24 +93,72 @@ The engine asks about your visual world, builds the config, shows the cost, and 
 
 ---
 
-## Image-Only Example (brand-images)
+## Modes
 
-The most common workflow. Generate product photography for social media.
+| Mode | Output | Cost |
+|------|--------|------|
+| `brand-images` | Multi-format images (story 9:16, square 1:1, landscape 16:9) | ~$0.08/image |
+| `video` | AI video with optional voiceover, captions, transitions | ~$0.80–3.00/clip |
+| `full` | Brand images + video in one run | Combined |
 
-### Step 1: Provide references
+---
 
-Drop these in `projects/your-project/`:
+## Video Providers
+
+Three image-to-video models, all via Higgsfield's REST API. One set of credentials covers all three.
+
+| Provider | Model | Best for | Cost (10s) | Speed |
+|----------|-------|----------|------------|-------|
+| `higgsfield` | DoP Turbo | Motion presets (Catwalk, 3D Rotation, Static, Handheld), SOUL ID character consistency | ~$1.60 | ~1 min |
+| `seedance` | Seedance 1.0 Pro | Smooth subtle motion, `camera_fixed` flag, natural standing shots | ~$1.60 | ~2 min |
+| `kling` | Kling 2.1 Master | Premium prompt-driven motion, native negative prompts, keyframe interpolation | ~$3.00 | ~7 min |
+
+Set per project: `"videoProvider": "higgsfield" | "seedance" | "kling"` in config.json.
+
+### Keyframe interpolation (Kling)
+
+Supply a start and end frame — Kling animates the transition between them:
+
+```json
+{
+  "videoProvider": "kling",
+  "clips": [{
+    "prompt": "Woman smoothly turns from facing camera to three-quarter rear view",
+    "duration": 10,
+    "imageReference": "storyboard/scene-1.jpg",
+    "imageReferenceEnd": "storyboard/scene-1-end.jpg"
+  }]
+}
+```
+
+Auto-switches to `kling-v2-1` (standard) for keyframe runs — the master variant silently rejects `input_image_end`.
+
+### Raw clip mode
+
+Skip voiceover, captions, and Remotion — deliver the raw provider clip at full quality:
+
+```json
+{
+  "render": false
+}
+```
+
+The pipeline copies the raw mp4 from `output/clips/` into `output/final/` and exits.
+
+---
+
+## Brand Images Example
+
+### Step 1: References
+
+Drop reference images in `projects/your-project/`:
 
 | File | What it tells the engine |
 |------|--------------------------|
-| `product.jpg` | Packaging material, color, shape, how light interacts with it |
-| `product-1.jpg`, `product-2.jpg` | Multiple angles |
-| `model.jpg` | Skin tone, features — informs lighting ratios |
-| `model-sheet.jpg` | Multi-angle face reference (auto-generated if `modelSheet: true`) |
-| `style.jpg` | THE creative direction — lighting, palette, surfaces, mood |
+| `product.jpg` | Packaging material, color, shape, how light hits it |
+| `model.jpg` | Face, skin tone, features — informs lighting ratios |
+| `style.jpg` | Creative direction — lighting, palette, surfaces, mood |
 | `location.jpg` | Environment, textures, natural light |
-
-More refs = better consistency. The engine uses up to 14 per image.
 
 ### Step 2: Config
 
@@ -122,37 +167,20 @@ More refs = better consistency. The engine uses up to 14 per image.
   "mode": "brand-images",
   "title": "ama-shea-gift-set",
   "brand": "Ama Shea",
-  "brief": "Luxury African shea butter skincare. Warm golden amber lighting, dark wood surfaces, raw ingredients. Premium but grounded — handmade, not factory.",
-  "products": [
-    "whipped shea body butter in glass jar with wooden lid",
-    "raw shea oil in glass dropper bottle with gold cap"
-  ],
+  "brief": "Luxury African shea butter skincare. Warm golden amber lighting, dark wood surfaces, raw ingredients.",
   "clips": [
     {
-      "prompt": "Gift box partially open revealing skincare products on dark satin lining, warm golden key light from camera-left at 45 degrees, 50mm f/2.8, shallow depth of field on box edge, dark weathered wood surface",
+      "prompt": "Gift box open on dark wood surface, warm golden key light 45 degrees camera-left, 50mm f/2.8, shallow DOF on box edge",
       "imageFormat": "landscape",
       "refs": ["product-1.jpg", "product-2.jpg"]
     },
     {
-      "prompt": "Hero close-up of whipped shea butter in glass jar with wooden lid, raw shea nuts scattered beside it, warm amber side light from camera-right, 85mm f/1.4 shallow focus, dark cracked wood surface",
-      "imageFormat": "square",
-      "refs": ["product-1.jpg"]
-    },
-    {
-      "prompt": "Woman's hands lifting glass dropper bottle from open gift box, warm brown skin catching golden rim light, soft fill from left, 85mm f/2, intimate editorial moment",
-      "imageFormat": "story",
-      "refs": ["model-1.jpg", "model-sheet.jpg", "product-2.jpg"]
+      "prompt": "Hero close-up of whipped shea butter in glass jar, raw shea nuts beside it, warm amber side light, 85mm f/1.4",
+      "imageFormat": "square"
     }
   ]
 }
 ```
-
-**What makes these prompts work:**
-- Specific materials: "glass jar with wooden lid" not "bottle"
-- Light physics: "warm golden key light from camera-left at 45 degrees"
-- Lens behavior: "85mm f/1.4 shallow focus"
-- Same lighting across all scenes
-- Smart ref filtering: Director auto-tags scenes, each gets only the refs it needs
 
 ### Step 3: Generate
 
@@ -160,26 +188,13 @@ More refs = better consistency. The engine uses up to 14 per image.
 npm start -- --project ama-shea-gift-set
 ```
 
-Images generate immediately (~$0.08 each). Scene 1 becomes the style anchor — all subsequent images match its lighting, color temperature, and mood automatically.
-
-### What you get
-
-```
-output/images/
-├── 1-landscape.jpg    ← gift box shot
-├── 2-square.jpg       ← butter jar hero
-└── 3-story.jpg        ← hands + dropper
-```
-
-3 clips x 1 format each = 3 images. Or set `"imageFormats": ["story", "square", "landscape"]` for all three formats per clip.
+Scene 1 becomes the style anchor — all subsequent images auto-match its look.
 
 ### Iterate
 
-```
-"scene 2 is too dark"           → updates prompt, regenerates just that scene
-"give me 3 options for scene 1" → npm start -- --project X --variations 3
-"redo scenes 2 and 3"           → npm start -- --project X --regenerate 2,3
-"start completely fresh"        → delete cache/ and output/, re-run
+```bash
+npm start -- --project X --variations 3        # 3 options for each scene
+npm start -- --project X --regenerate 2,5      # Redo specific scenes
 ```
 
 ---
@@ -193,35 +208,25 @@ output/images/
   "mode": "video",
   "format": "youtube-short",
   "title": "summer-campaign",
-  "client": "Nike",
-  "script": "This summer, move like never before. The new Air Max — built for the streets.",
+  "script": "This summer, move like never before.",
   "voiceId": "pNInz6obpgDQGcFmaJgB",
-  "videoProvider": "higgsfield",
+  "videoProvider": "seedance",
   "clips": [
     {
-      "prompt": "Runner sprints through neon-lit city street at dusk, wet asphalt reflecting orange streetlights, 35mm anamorphic lens with natural flare, tracking shot",
+      "prompt": "Runner sprints through neon-lit city street at dusk, wet asphalt reflecting orange streetlights, 35mm anamorphic",
       "duration": 5
     },
     {
-      "prompt": "Extreme low-angle close-up of Nike Alphafly shoes mid-stride through puddle, water frozen in mid-splash, 85mm macro, shallow depth of field",
-      "duration": 5
-    },
-    {
-      "prompt": "Runner stops and looks at camera, confident, city lights dissolved to warm bokeh circles, golden hour rim light catching jaw and shoulder, 85mm f/1.4",
+      "prompt": "Low-angle close-up of shoes mid-stride through puddle, water frozen mid-splash, 85mm macro",
       "duration": 5
     }
   ],
-  "transition": "cut",
   "captions": true,
-  "captionTheme": "bold",
-  "hookText": "MOVE DIFFERENT",
-  "cta": { "text": "Shop Air Max", "subtext": "nike.com" },
-  "music": true,
-  "musicVolume": 0.12
+  "music": true
 }
 ```
 
-### Pipeline
+### Pipeline flow
 
 ```
 1. Director AI (Claude)        Enriches prompts, plans cinematography     ~$0.10
@@ -229,86 +234,39 @@ output/images/
 3. Captions (Whisper)          Word-level transcription                   ~$0.02
 4. Storyboard (Gemini)         Static frames for each scene               ~$0.08/frame
    ── YOU REVIEW FRAMES ──
-5. Video (Higgsfield)          Animates frames into clips                 ~$0.80/clip
+5. Video generation            Animates frames into clips                 ~$0.80–3.00/clip
 6. Render (Remotion)           Composites into final MP4                  free
 ```
 
 ### Two-phase workflow
 
-Run storyboard first (cheap):
+Generate frames first (cheap), then video (expensive):
+
 ```bash
-npm start -- --project summer-campaign --storyboard-only
+npm start -- --project summer-campaign --storyboard-only   # Review frames
+npm start -- --project summer-campaign                      # Full pipeline
 ```
-
-Review the frames. If they look good, run the full pipeline:
-```bash
-npm start -- --project summer-campaign --json-output
-```
-
-The video provider only runs on approved frames. Everything else is cached.
-
-### Character consistency (SOUL ID)
-
-For Higgsfield DoP video with people, add a `soulId` to lock character identity across all clips:
-
-```json
-{
-  "videoProvider": "higgsfield",
-  "soulId": "your-soul-id-here"
-}
-```
-
-This prevents face drift between clips — the same person looks the same in every scene. (Seedance and Kling get character consistency from the input image itself.)
-
-### Skip Remotion — raw provider clip as final output
-
-Set `"render": false` to skip the entire voiceover/captions/Remotion pipeline and deliver the raw provider clip directly. Useful when you want to hand-edit the clip in DaVinci/Premiere, or when iterating on prompts without re-billing $0.50 of voiceover each time:
-
-```json
-{
-  "videoProvider": "seedance",
-  "render": false,
-  "clips": [{
-    "prompt": "...",
-    "duration": 10,
-    "imageReference": "storyboard/scene-1.jpg"
-  }]
-}
-```
-
-The pipeline copies the raw mp4 from `output/clips/` into `output/final/` and exits — no audio, no captions, no re-encode (full provider quality preserved).
 
 ---
 
 ## Reference Photos
 
-The single biggest quality lever. These go in the project root:
+The single biggest quality lever. Smart ref filtering sends each scene only the refs it needs:
 
-| File pattern | What it's for |
-|-------------|---------------|
-| `product.jpg`, `product-1.jpg` | Product packaging — material, color, shape, label |
-| `model.jpg`, `model-1.jpg` | Person to feature — face, skin tone, features |
-| `model-sheet.jpg` | Multi-angle face sheet (auto-generated with `modelSheet: true`) |
-| `model-body.jpg` | Full-body reference (auto-generated with `modelSheet: true`) |
-| `style.jpg` | Visual mood — lighting setup, palette, surfaces |
-| `location.jpg` | Environment, textures, spatial context |
-
-**Refs are filtered automatically.** The Director reads each prompt and sends only the refs that scene needs:
-
-| Scene type | Refs sent to Gemini |
+| Scene type | Refs sent |
 |---|---|
 | Product only | product refs + style |
 | Model + product | all model refs + product + style |
 | Detail/hands | model refs (skin tone) + product |
 | Environment | style/location only |
 
-No manual `refs` field needed in config. You can override with `"refs": ["product-1.jpg"]` on any clip if needed.
+Override per clip with `"refs": ["product-1.jpg"]` if needed.
 
 ---
 
 ## Prompt Writing Guide
 
-Every prompt describes a real photograph. Not a mood, not a vibe — a camera direction.
+Every prompt describes a real photograph — a camera direction, not a mood.
 
 ### Structure
 
@@ -318,36 +276,34 @@ Every prompt describes a real photograph. Not a mood, not a vibe — a camera di
 [depth of field], [color temperature]
 ```
 
-### Light + Material Cheat Sheet
+### Light + Material
 
 | Material | Best light | Why |
 |----------|-----------|-----|
-| Glass/liquid | Backlight or side-light | Makes it glow, shows transparency |
-| Matte surface | Side-light at 90° | Reveals texture |
+| Glass/liquid | Backlight or side-light | Shows transparency |
+| Matte surface | Side-light at 90 degrees | Reveals texture |
 | Metal/chrome | Large soft source | Clean reflections |
-| Dark skin | Key 30-45° off-axis, strong fill (1.5:1) | Rim light separates from background |
-| Light skin | Harder ratios OK (3:1+) | Dramatic shadow works |
+| Dark skin | Key 30-45 degrees off-axis, strong fill (1.5:1) | Rim light separates from background |
 | Fabric | Side-light | Reveals weave and texture |
 
-### Lens Cheat Sheet
+### Lens
 
-| Lens | Effect | Use for |
-|------|--------|---------|
-| 24-35mm | Wide, environmental | Location shots, flat lays |
-| 50mm | Natural perspective | Product on surface |
-| 85mm f/1.4 | Compression, shallow DOF | Portraits, hero products |
-| 100mm macro | Extreme detail | Texture, ingredients |
+| Lens | Use for |
+|------|---------|
+| 24-35mm | Location shots, flat lays |
+| 50mm | Product on surface |
+| 85mm f/1.4 | Portraits, hero products |
+| 100mm macro | Texture, ingredients |
 
 ### Rules
 
-1. 200-600 chars per prompt
-2. No text/logos — AI can't render them
+1. 200–600 chars per prompt
+2. No text or logos (AI can't render them reliably — use GPT Image if text is needed)
 3. Specific materials — "amber glass jar with bamboo lid" not "bottle"
 4. Camera language in every prompt
 5. Lighting direction in every prompt
 6. Same lighting across all scenes
-7. Same background across all scenes
-8. One frozen moment per prompt
+7. One frozen moment per prompt
 
 ---
 
@@ -355,34 +311,33 @@ Every prompt describes a real photograph. Not a mood, not a vibe — a camera di
 
 ```
 projects/your-project/
-├── config.json              ← required
-├── product.jpg              ← references (optional, recommended)
+├── config.json              <- required
+├── product.jpg              <- references (optional, recommended)
 ├── model.jpg
 ├── style.jpg
-├── music.mp3                ← background music (video mode)
+├── music.mp3                <- background music (video mode)
 ├── brand/
-│   ├── brand.json           ← colors { primary, secondary, accent }
-│   ├── logo.png
-│   └── font-bold.ttf
-├── cache/                   ← auto-managed
-├── output/
-│   ├── images/              ← brand images
-│   ├── clips/               ← video clips
-│   ├── audio/               ← voiceover
-│   └── final/               ← rendered video
-└── storyboard/              ← generated frames
+│   ├── brand.json           <- colors { primary, secondary, accent }
+│   └── logo.png
+├── cache/                   <- auto-managed
+├── storyboard/              <- generated frames
+└── output/
+    ├── images/              <- brand images
+    ├── clips/               <- video clips
+    ├── audio/               <- voiceover
+    └── final/               <- rendered video
 ```
 
 ---
 
-## CLI
+## CLI Reference
 
 ```bash
 npm start -- --project {name}                    # Full run
 npm start -- --project {name} --dry-run          # Preview API calls + cost
-npm start -- --project {name} --storyboard-only  # Frames only (video mode)
+npm start -- --project {name} --storyboard-only  # Frames only
 npm start -- --project {name} --json-output      # JSON summary
-npm start -- --project {name} --variations 3     # Variations per scene
+npm start -- --project {name} --variations 3     # N variations per scene
 npm start -- --project {name} --regenerate 2,5   # Redo specific scenes
 npm start -- --project {name} --draft            # Cheap video preview
 npm start -- --project {name} --resume           # Continue from checkpoint
@@ -392,29 +347,31 @@ npm start -- --project {name} --list-voices      # ElevenLabs voices
 
 ---
 
-## Costs
+## Cost Reference
 
 | Step | Provider | Cost |
 |------|----------|------|
-| Director | Claude Sonnet | ~$0.10 (cached) |
-| Brand image | Gemini 3 Pro Image | ~$0.08 |
+| Director | Claude Sonnet | ~$0.10 |
+| Brand image | Gemini 3 Pro | ~$0.08 |
 | Brand image | GPT Image | ~$0.04 |
 | Video clip 5s | Higgsfield DoP | ~$0.80 |
 | Video clip 10s | Higgsfield DoP | ~$1.60 |
-| Video clip 5s | Seedance 1.0 Pro | ~$0.80 |
-| Video clip 10s | Seedance 1.0 Pro | ~$1.60 |
-| Video clip 5s | Kling 2.1 master | ~$1.50 |
-| Video clip 10s | Kling 2.1 master | ~$3.00 |
+| Video clip 5s | Seedance Pro | ~$0.80 |
+| Video clip 10s | Seedance Pro | ~$1.60 |
+| Video clip 5s | Kling 2.1 | ~$1.50 |
+| Video clip 10s | Kling 2.1 | ~$3.00 |
 | Voiceover | ElevenLabs | ~$0.50 |
 | Captions | Whisper | ~$0.02 |
-| Model sheet | Gemini x2 | ~$0.16 |
 | Render | Remotion | Free |
 
 **Typical costs:**
-- 5-image brand shoot: ~$0.50
-- 8-image multi-format campaign: ~$1.92
-- 3-clip video short: ~$3.50
-- Full campaign (images + video): ~$5-8
+
+| Project type | Cost |
+|---|---|
+| 5-image brand shoot | ~$0.50 |
+| 8-image multi-format campaign | ~$1.92 |
+| 3-clip video short (Seedance) | ~$5.50 |
+| Full campaign (images + video) | ~$5–8 |
 
 All steps are idempotent. Re-running skips completed work. Delete a file to regenerate just that step.
 
@@ -424,18 +381,17 @@ All steps are idempotent. Re-running skips completed work. Delete a file to rege
 
 | Service | Role |
 |---------|------|
-| **Claude Sonnet** | Director AI — enriches prompts with cinematography |
+| **Claude Sonnet** | Director AI — prompt enrichment, cinematography planning |
 | **Gemini 3 Pro Image** | Brand images + storyboard frames (14 refs max) |
 | **GPT Image 1** | Alternative image provider (better text rendering) |
-| **Higgsfield DoP** | Video — motion preset catalog (`/v1/motions`), camera moves |
-| **Seedance 1.0 Pro** | Video — natural subtle motion, `camera_fixed` flag, fast |
-| **Kling 2.1 master** | Video — premium tier, prompt-driven motion, native negative prompts |
-| **Kling 2.1 standard** | Video — supports keyframe interpolation (start + end frame) |
+| **Higgsfield DoP** | Video — motion preset catalog, explicit camera moves |
+| **Seedance 1.0 Pro** | Video — natural subtle motion, `camera_fixed` flag |
+| **Kling 2.1** | Video — premium motion control, keyframe interpolation |
 | **ElevenLabs** | Voiceover generation |
 | **OpenAI Whisper** | Word-level caption transcription |
-| **Remotion** | Programmatic video composition (skip with `render: false`) |
+| **Remotion** | Programmatic video composition |
 
-All three video providers (Higgsfield DoP, Seedance, Kling) reach the user via Higgsfield's REST API at `platform.higgsfield.ai`. One set of credentials (`HF_API_KEY` + `HF_API_SECRET`) gives access to all three.
+All three video providers reach the user via Higgsfield's REST API at `platform.higgsfield.ai`. One set of credentials gives access to all three.
 
 ---
 
@@ -447,7 +403,17 @@ All three video providers (Higgsfield DoP, Seedance, Kling) reach the user via H
 | `HF_API_KEY not set` | Add to `.env` — [cloud.higgsfield.ai](https://cloud.higgsfield.ai) |
 | Gemini returns no image | Check API key. Frame generation is non-fatal — continues without it |
 | FFmpeg not found | `brew install ffmpeg` |
-| Remotion error on short clips | Raw clip at `output/clips/scene-N.mp4` is the deliverable |
 | Re-run regenerates everything | It shouldn't — steps are idempotent. Delete specific files to force regeneration |
-| Images look inconsistent | Add more reference photos. Smart refs handles filtering automatically. Check same lighting in every prompt |
-| Wrong person in model shots | Add `modelSheet: true` and include all 3 model refs per clip |
+| Images look inconsistent | Add more reference photos. Check that lighting language is consistent across all prompts |
+| Wrong person in model shots | Add `modelSheet: true` and include all model refs per clip |
+| Video clip too short/long | Kling only supports 5 or 10 seconds. Seedance supports 3–12. Higgsfield supports 5 or 10 |
+| Kling keyframe fails silently | Only `kling-v2-1` (standard) supports keyframe interpolation, not master. The pipeline auto-switches |
+| Subject starts dancing | Add negative prompt language. Seedance uses `camera_fixed: true` by default |
+
+---
+
+## License
+
+MIT
+
+

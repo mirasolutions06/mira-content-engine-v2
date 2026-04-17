@@ -165,7 +165,7 @@ export async function generateKlingClip(
     prompt,
     input_image: { type: 'image_url', image_url: publicUrl },
     duration,
-    cfg_scale: 0.5,
+    cfg_scale: 0.3,
     enhance_prompt: true,
   };
 

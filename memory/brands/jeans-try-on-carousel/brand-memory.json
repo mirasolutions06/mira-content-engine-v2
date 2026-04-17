@@ -1,0 +1,40 @@
+{
+  "brandName": "Jeans Try-On Carousel",
+  "lastUpdated": "2026-04-15T23:51:58.437Z",
+  "runs": [
+    {
+      "timestamp": "2026-04-15T23:45:14.180Z",
+      "projectName": "jeans-tiktok-carousel",
+      "mode": "brand-images",
+      "clipCount": 0,
+      "avgQAScore": 0,
+      "provider": "gemini",
+      "topPrompts": []
+    },
+    {
+      "timestamp": "2026-04-15T23:49:46.948Z",
+      "projectName": "jeans-tiktok-carousel",
+      "mode": "brand-images",
+      "clipCount": 0,
+      "avgQAScore": 0,
+      "provider": "gemini",
+      "topPrompts": []
+    },
+    {
+      "timestamp": "2026-04-15T23:51:58.437Z",
+      "projectName": "jeans-tiktok-carousel",
+      "mode": "brand-images",
+      "clipCount": 0,
+      "avgQAScore": 0,
+      "provider": "gemini",
+      "topPrompts": []
+    }
+  ],
+  "topPrompts": [],
+  "styleAnchors": [],
+  "insights": {
+    "bestProvider": "",
+    "avgScore": 0,
+    "runCount": 3
+  }
+}

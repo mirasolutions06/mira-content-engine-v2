@@ -14,7 +14,7 @@ Phase 2: Translate  — vision + physics → photography-grade config.json
 Phase 3: Generate   — run pipeline, review, iterate
 ```
 
-One video provider (Higgsfield). One image provider (Gemini, with GPT Image as alternative). No QA scoring — you review images yourself.
+Three video providers (Higgsfield DoP, Seedance, Kling) — all via Higgsfield's REST API. Two image providers (Gemini primary, GPT Image alternative). No QA scoring — you review images yourself.
 
 ---
 
@@ -26,7 +26,9 @@ One video provider (Higgsfield). One image provider (Gemini, with GPT Image as a
 | `projects/_shared/prompt-best-practices.md` | Companion — SEAL CAM/BOPA frameworks, provider-specific tuning, anti-patterns |
 | `src/pipeline/index.ts` | Main pipeline orchestrator |
 | `src/pipeline/director.ts` | Claude AI Director — prompt enrichment, cinematography planning |
-| `src/pipeline/higgsfield.ts` | Higgsfield video generation with SOUL ID |
+| `src/pipeline/higgsfield.ts` | Higgsfield DoP video + shared helpers (auth, upload, polling) |
+| `src/pipeline/seedance.ts` | Seedance 1.0 Pro video generation |
+| `src/pipeline/kling.ts` | Kling 2.1 video generation + keyframe interpolation |
 | `src/pipeline/brand-images.ts` | Multi-format image generation |
 | `src/pipeline/storyboard.ts` | Gemini storyboard frame generation |
 | `src/pipeline/gpt-image.ts` | GPT Image alternative provider |
@@ -39,6 +41,7 @@ One video provider (Higgsfield). One image provider (Gemini, with GPT Image as a
 | `src/utils/brand-memory.ts` | Per-brand learning from past runs |
 | `src/utils/cache.ts` | Content-hash caching for API calls |
 | `memory/brands/` | Per-brand context (accumulated across runs) |
+| `scripts/` | Active utilities (polling, inspection). One-off probes archived in `scripts/_archive/` |
 
 ---
 
@@ -48,11 +51,15 @@ One video provider (Higgsfield). One image provider (Gemini, with GPT Image as a
 |---|---|---|
 | **Gemini 3 Pro Image** | Brand images + storyboard frames (14 refs max) | ~$0.08/image |
 | **GPT Image 1** | Alternative image provider (98% text accuracy) | ~$0.04/image |
-| **Higgsfield** | Video generation — SOUL ID for character consistency | ~$0.80/5s, ~$1.60/10s |
+| **Higgsfield DoP** | Video — motion presets, camera moves, SOUL ID | ~$0.80/5s, ~$1.60/10s |
+| **Seedance 1.0 Pro** | Video — smooth subtle motion, `camera_fixed` flag | ~$0.80/5s, ~$1.60/10s |
+| **Kling 2.1** | Video — prompt-driven motion, negative prompts, keyframe interpolation | ~$1.50/5s, ~$3.00/10s |
 | **Claude Sonnet** | Director AI — prompt enrichment, cinematography | ~$0.10 (cached) |
 | **ElevenLabs** | Voiceover generation | ~$0.50 |
 | **OpenAI Whisper** | Word-level caption transcription | ~$0.02 |
-| **Remotion** | Programmatic video composition | Free (local) |
+| **Remotion** | Programmatic video composition (skip with `render: false`) | Free (local) |
+
+All three video providers use Higgsfield's REST API (`platform.higgsfield.ai`). One set of credentials (`HF_API_KEY` + `HF_API_SECRET`) covers all three.
 
 ---
 
@@ -61,7 +68,7 @@ One video provider (Higgsfield). One image provider (Gemini, with GPT Image as a
 ```env
 GEMINI_API_KEY=          # Images (required)
 ANTHROPIC_API_KEY=       # Director AI (required)
-HF_API_KEY=              # Higgsfield video (required for video mode)
+HF_API_KEY=              # Higgsfield/Seedance/Kling video (required for video mode)
 HF_API_SECRET=           # Higgsfield secret (required for video mode)
 ELEVENLABS_API_KEY=      # Voiceover (video mode with script)
 OPENAI_API_KEY=          # Whisper + GPT Image (optional)
@@ -74,7 +81,7 @@ OPENAI_API_KEY=          # Whisper + GPT Image (optional)
 | Mode | Output | Cost |
 |---|---|---|
 | `brand-images` | Multi-format images (story 9:16, square 1:1, landscape 16:9) | ~$0.08/image |
-| `video` | Full video with voiceover, captions, transitions | ~$0.80-1.60/clip + overhead |
+| `video` | Full video with voiceover, captions, transitions | ~$0.80-3.00/clip + overhead |
 | `full` | Brand images + video | Combined |
 
 ---
@@ -162,7 +169,7 @@ See `projects/_shared/prompt-best-practices.md` for frameworks (SEAL CAM, BOPA),
 
 ```
 @google/genai          — Gemini image generation
-@higgsfield/client     — Higgsfield video generation
+@higgsfield/client     — Higgsfield REST API (DoP, Seedance, Kling)
 @anthropic-ai/sdk      — Claude Director
 @remotion/bundler      — video composition
 @remotion/renderer     — video rendering

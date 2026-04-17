@@ -137,10 +137,10 @@ export async function listVoices(): Promise<void> {
   const client = new ElevenLabsClient({ apiKey });
   const response = await client.voices.getAll();
 
-  console.log('\nAvailable ElevenLabs voices:\n');
+  logger.info('\nAvailable ElevenLabs voices:\n');
   for (const voice of response.voices) {
     const name = voice.name ?? '(unnamed)';
-    console.log(`  ${name.padEnd(30)} ID: ${voice.voice_id}`);
+    logger.info(`  ${name.padEnd(30)} ID: ${voice.voice_id}`);
   }
-  console.log('');
+  logger.info('');
 }
